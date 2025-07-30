@@ -1,4 +1,3 @@
-import luminaSurface from "@/assets/lumina-surface.png";
 
 const Education = () => {
   return (
@@ -37,7 +36,7 @@ const Education = () => {
             <div className="bg-card rounded-2xl p-8 border border-border shadow-premium overflow-hidden">
               <div className="relative">
                 <img 
-                  src={luminaSurface} 
+                  src="/lovable-uploads/4e5fd5b8-af7d-47e5-9f93-360d3e4d50aa.png" 
                   alt="Lumina nano-technology surface" 
                   className="w-full h-80 object-cover rounded-xl"
                 />

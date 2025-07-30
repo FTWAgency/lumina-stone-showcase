@@ -1,3 +1,5 @@
+import luminaSurface from "@/assets/lumina-surface.png";
+
 const Education = () => {
   return (
     <section className="py-24 px-6">
@@ -30,39 +32,23 @@ const Education = () => {
             </div>
           </div>
           
-          {/* Right visual comparison */}
+          {/* Right visual */}
           <div className="relative">
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-premium">
-              <h3 className="font-serif text-2xl font-semibold mb-6 text-center">Traditional vs. Lumina</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-4 bg-destructive/10 rounded-lg border border-destructive/20">
-                  <span className="font-sans text-sm">Silica Content</span>
-                  <div className="flex items-center gap-3">
-                    <div className="text-destructive font-semibold">95%+</div>
-                    <div className="w-4 h-4 rounded-full bg-destructive"></div>
-                    <span className="text-xs text-muted-foreground">vs</span>
-                    <div className="w-4 h-4 rounded-full bg-primary"></div>
-                    <div className="text-primary font-semibold">0%</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg border border-primary/20">
-                  <span className="font-sans text-sm">Fabricator Safety</span>
-                  <div className="flex items-center gap-3">
-                    <div className="text-destructive font-semibold">❌</div>
-                    <span className="text-xs text-muted-foreground">vs</span>
-                    <div className="text-primary font-semibold">✅</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg border border-primary/20">
-                  <span className="font-sans text-sm">Natural Beauty</span>
-                  <div className="flex items-center gap-3">
-                    <div className="text-accent font-semibold">✅</div>
-                    <span className="text-xs text-muted-foreground">and</span>
-                    <div className="text-primary font-semibold">✅</div>
-                  </div>
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-premium overflow-hidden">
+              <div className="relative">
+                <img 
+                  src={luminaSurface} 
+                  alt="Lumina nano-technology surface" 
+                  className="w-full h-80 object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent rounded-xl"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="font-serif text-2xl font-semibold text-white mb-2">
+                    Advanced Nano-Technology
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    Engineered at the molecular level for superior performance
+                  </p>
                 </div>
               </div>
             </div>

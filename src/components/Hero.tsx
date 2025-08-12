@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
         
         <p className="font-sans text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-          Introducing Lumina Surfaces — the next evolution in 3D-printed stone.<br />
+          Introducing Lumina Surfaces — the next evolution in 3D-printed stone.
           Silica-free, health-forward, and artfully crafted.
         </p>
         

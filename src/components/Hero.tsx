@@ -21,7 +21,7 @@ const Hero = () => {
           <img 
             src="/lovable-uploads/4344fe9a-3d52-4f67-b5e4-193deaa82902.png" 
             alt="Lumina Surfaces Logo" 
-            className="h-20 md:h-24 lg:h-28 mx-auto"
+            className="h-32 md:h-40 lg:h-48 mx-auto"
           />
         </div>
         

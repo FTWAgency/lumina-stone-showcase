@@ -9,7 +9,7 @@ const NanoTech = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-premium">
               <img 
-                src="/lovable-uploads/72d7805c-a8a3-47e8-bf01-bff9ce3372b8.png" 
+                src="/lovable-uploads/b651a1d0-8dc4-429b-a31b-0aea3fa0f48c.png" 
                 alt="Nano-Ink Technology" 
                 className="w-full h-96 object-cover"
               />

@@ -53,6 +53,33 @@ const TechnicalFeatures = () => {
       ),
       title: "Lifetime Warranty",
       description: "Industry-leading coverage for complete peace of mind"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12V7a5 5 0 0110 0v5m-5 7a5 5 0 01-5-5v-5h10v5a5 5 0 01-5 5z" />
+        </svg>
+      ),
+      title: "Recycled Water",
+      description: "We reuse 100% of the water required in the slab manufacturing process"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m0-14h6a2 2 0 012 2v6a2 2 0 01-2 2h-6m0-14v14" />
+        </svg>
+      ),
+      title: "Bookmatched",
+      description: "Every slab is bookmatched for easier pattern alignment and seamless installation"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      title: "Fullbody Design",
+      description: "The color and pattern run through the full thickness for flawless edge finishes"
     }
   ];
 
@@ -90,21 +117,6 @@ const TechnicalFeatures = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <div className="bg-card p-8 rounded-2xl border border-border shadow-premium inline-block">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <div className="text-left">
-                <h3 className="font-serif text-lg font-semibold text-foreground">Certified Safe</h3>
-                <p className="font-sans text-sm text-muted-foreground">GREENGUARD Gold & OSHA compliant</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -36,8 +36,8 @@ const Education = () => {
             <div className="bg-card rounded-2xl p-8 border border-border shadow-premium overflow-hidden">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/4e5fd5b8-af7d-47e5-9f93-360d3e4d50aa.png" 
-                  alt="Lumina nano-technology surface" 
+                  src="/lovable-uploads/bbf2ac32-1cb7-48b7-8c1d-87c932660f88.png" 
+                  alt="3D printing technology creating Lumina surfaces" 
                   className="w-full h-80 object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent rounded-xl"></div>

@@ -19,9 +19,9 @@ const Hero = () => {
         {/* Logo */}
         <div className="mb-8">
           <img 
-            src="/lovable-uploads/4344fe9a-3d52-4f67-b5e4-193deaa82902.png" 
+            src="/lovable-uploads/287c93a8-a3a8-4fdd-9836-c34efa2a13c5.png" 
             alt="Lumina Surfaces Logo" 
-            className="h-32 md:h-40 lg:h-48 mx-auto"
+            className="h-65 mx-auto"
           />
         </div>
         

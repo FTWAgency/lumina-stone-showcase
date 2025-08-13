@@ -1,4 +1,4 @@
-import nanoTechImage from "@/assets/nano-tech.jpg";
+
 
 const NanoTech = () => {
   return (
@@ -9,7 +9,7 @@ const NanoTech = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-premium">
               <img 
-                src={nanoTechImage} 
+                src="/lovable-uploads/72d7805c-a8a3-47e8-bf01-bff9ce3372b8.png" 
                 alt="Nano-Ink Technology" 
                 className="w-full h-96 object-cover"
               />

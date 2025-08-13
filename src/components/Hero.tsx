@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-6">
           <img 
             src="/lovable-uploads/287c93a8-a3a8-4fdd-9836-c34efa2a13c5.png" 
             alt="Lumina Surfaces Logo" 

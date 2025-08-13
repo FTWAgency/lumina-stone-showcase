@@ -36,7 +36,7 @@ const Education = () => {
             <div className="bg-card rounded-2xl p-8 border border-border shadow-premium overflow-hidden">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/bbf2ac32-1cb7-48b7-8c1d-87c932660f88.png" 
+                  src="/lovable-uploads/dafaf34d-6f49-4c3e-bdeb-180c1199dbb5.png" 
                   alt="3D printing technology creating Lumina surfaces" 
                   className="w-full h-80 object-cover rounded-xl"
                 />

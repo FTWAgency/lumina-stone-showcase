@@ -1,4 +1,4 @@
-import nanoTechImage from "/lovable-uploads/55fc080c-9050-44f4-9b6c-36bdc14bdf5c.png";
+import nanoTechImage from "@/assets/nano-tech.jpg";
 
 const NanoTech = () => {
   return (

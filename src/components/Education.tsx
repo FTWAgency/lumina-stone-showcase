@@ -43,10 +43,10 @@ const Education = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent rounded-xl"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="font-serif text-2xl font-semibold text-white mb-2">
-                    Advanced Nano-Technology
+                    Crystalline Silica-Free Composition
                   </h3>
                   <p className="text-white/80 text-sm">
-                    Engineered at the molecular level for superior performance
+                    Made from 90% recycled glass and engineered without crystalline silica eliminating the risk of airborne particles during fabrication and protecting fabricators' health.
                   </p>
                 </div>
               </div>

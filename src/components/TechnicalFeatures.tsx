@@ -118,7 +118,7 @@ const TechnicalFeatures = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-block p-6 rounded-xl border border-border shadow-sm" style={{ backgroundColor: '#D6C68A' }}>
+          <div className="inline-block p-6 rounded-xl border border-border shadow-sm bg-gradient-accent">
             <img 
               src="/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png" 
               alt="EPD Environmental Product Declaration Certificate" 

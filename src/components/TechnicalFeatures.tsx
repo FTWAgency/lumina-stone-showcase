@@ -1,3 +1,5 @@
+import { Droplets } from "lucide-react";
+
 const TechnicalFeatures = () => {
   const features = [
     {
@@ -55,11 +57,7 @@ const TechnicalFeatures = () => {
       description: "Industry-leading coverage for complete peace of mind"
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12V7a5 5 0 0110 0v5m-5 7a5 5 0 01-5-5v-5h10v5a5 5 0 01-5 5z" />
-        </svg>
-      ),
+      icon: <Droplets className="w-8 h-8" />,
       title: "Recycled Water",
       description: "We reuse 100% of the water required in the slab manufacturing process"
     },

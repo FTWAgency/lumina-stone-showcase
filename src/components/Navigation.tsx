@@ -14,7 +14,11 @@ const Navigation = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="text-xl font-bold text-primary">Lumina</div>
+          <img 
+            src="/lovable-uploads/15a58520-bd5d-4630-8a78-c33ff14e8248.png" 
+            alt="Lumina Surfaces Logo" 
+            className="h-8"
+          />
         </div>
 
         {/* Navigation Menu */}

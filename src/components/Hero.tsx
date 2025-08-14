@@ -16,14 +16,6 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
-        {/* Logo */}
-        <div className="mb-6">
-          <img 
-            src="/lovable-uploads/4ad1487a-76f8-4980-943a-748decc450bd.png" 
-            alt="Lumina Surfaces Logo" 
-            className="h-48 mx-auto"
-          />
-        </div>
         
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent leading-tight">
           Safer by Design.<br />

@@ -22,7 +22,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b backdrop-blur transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full border-b backdrop-blur transition-all duration-300 ${
       isScrolled 
         ? 'bg-background/80 supports-[backdrop-filter]:bg-background/40' 
         : 'bg-background/95 supports-[backdrop-filter]:bg-background/60'

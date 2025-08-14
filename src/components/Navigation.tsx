@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -9,8 +10,23 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={`sticky top-0 z-50 w-full border-b backdrop-blur transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-background/80 supports-[backdrop-filter]:bg-background/40' 
+        : 'bg-background/95 supports-[backdrop-filter]:bg-background/60'
+    }`}>
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">

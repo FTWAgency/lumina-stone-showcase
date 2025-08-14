@@ -6,6 +6,63 @@
 
 @layer base {
   :root {
+    /* Light theme base */
+    --background: 210 20% 98%;
+    --foreground: 220 15% 15%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    /* Interactive surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - Champagne gold accent */
+    --primary: 45 35% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light stone gray */
+    --secondary: 220 8% 95%;
+    --secondary-foreground: 220 15% 25%;
+
+    /* Muted tones */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 8% 45%;
+
+    /* Accent - Premium silver */
+    --accent: 210 15% 85%;
+    --accent-foreground: 220 15% 15%;
+
+    /* Status colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 12% 88%;
+    --input: 220 12% 96%;
+    --ring: 45 35% 60%;
+
+    --radius: 0.75rem;
+
+    /* Premium gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%), hsl(0 0% 100%));
+    --gradient-accent: linear-gradient(45deg, hsl(45 35% 70%), hsl(210 15% 75%));
+    --gradient-stone: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    
+    /* Premium shadows */
+    --shadow-premium: 0 25px 50px -12px hsl(220 15% 15% / 0.1);
+    --shadow-glow: 0 0 40px hsl(45 35% 70% / 0.15);
+    
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
     /* Dark theme base */
     --background: 220 15% 8%;
     --foreground: 210 20% 95%;
@@ -43,8 +100,6 @@
     --input: 220 12% 15%;
     --ring: 45 35% 70%;
 
-    --radius: 0.75rem;
-
     /* Premium gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 12% 12%));
     --gradient-accent: linear-gradient(45deg, hsl(45 35% 70%), hsl(210 15% 75%));
@@ -53,13 +108,6 @@
     /* Premium shadows */
     --shadow-premium: 0 25px 50px -12px hsl(220 15% 8% / 0.6);
     --shadow-glow: 0 0 40px hsl(45 35% 70% / 0.15);
-    
-    /* Typography */
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Inter', sans-serif;
-    
-    /* Smooth transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 

@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Education from "@/components/Education";
 import DesignShowcase from "@/components/DesignShowcase";
@@ -10,6 +11,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Navigation />
       <Hero />
       <Education />
       <DesignShowcase />

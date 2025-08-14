@@ -15,7 +15,7 @@ const Navigation = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/eb5c4701-7737-4d3a-bd3b-63ee0504195d.png" 
+            src="/lovable-uploads/57391c22-1049-4f7e-a9b5-8dbe023b18c8.png" 
             alt="Lumina Surfaces Logo" 
             className="h-8"
           />

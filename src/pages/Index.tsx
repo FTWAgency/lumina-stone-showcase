@@ -10,16 +10,18 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="overflow-x-hidden">
       <Navigation />
-      <Hero />
-      <Education />
-      <DesignShowcase />
-      <NanoTech />
-      <Comparison />
-      <TechnicalFeatures />
-      <DealerCTA />
-      <Footer />
+        <Hero />
+        <Education />
+        <DesignShowcase />
+        <NanoTech />
+        <Comparison />
+        <TechnicalFeatures />
+        <DealerCTA />
+        <Footer />
+      </div>
     </div>
   );
 };

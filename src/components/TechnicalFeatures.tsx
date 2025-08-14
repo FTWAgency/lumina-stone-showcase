@@ -1,5 +1,3 @@
-import { Droplet } from "lucide-react";
-
 const TechnicalFeatures = () => {
   const features = [
     {
@@ -45,7 +43,7 @@ const TechnicalFeatures = () => {
         </svg>
       ),
       title: "Advanced Print Finish",
-      description: "Nano-scale precision creates flawless surfaces"
+      description: "Nano-ink injected precision creates flawless surfaces with 1mm depth"
     },
     {
       icon: (
@@ -57,7 +55,11 @@ const TechnicalFeatures = () => {
       description: "Industry-leading coverage for complete peace of mind"
     },
     {
-      icon: <Droplet className="w-8 h-8" />,
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12V7a5 5 0 0110 0v5m-5 7a5 5 0 01-5-5v-5h10v5a5 5 0 01-5 5z" />
+        </svg>
+      ),
       title: "Recycled Water",
       description: "We reuse 100% of the water required in the slab manufacturing process"
     },
@@ -116,7 +118,7 @@ const TechnicalFeatures = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-block p-6 rounded-xl border border-border shadow-sm bg-gradient-accent">
+          <div className="inline-block p-6 rounded-xl border border-border shadow-sm" style={{ backgroundColor: '#D6C68A' }}>
             <img 
               src="/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png" 
               alt="EPD Environmental Product Declaration Certificate" 

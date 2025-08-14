@@ -6,7 +6,6 @@ import Comparison from "@/components/Comparison";
 import TechnicalFeatures from "@/components/TechnicalFeatures";
 import DealerCTA from "@/components/DealerCTA";
 import Footer from "@/components/Footer";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
       <TechnicalFeatures />
       <DealerCTA />
       <Footer />
-      <ThemeToggle />
     </div>
   );
 };

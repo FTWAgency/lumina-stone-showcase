@@ -18,9 +18,9 @@ const Index = () => {
         <Hero />
         <Education />
         <SilicaFree />
-        <Sustainability />
         <DesignShowcase />
         <NanoTech />
+        <Sustainability />
         <Comparison />
         <TechnicalFeatures />
         <DealerCTA />

@@ -75,6 +75,12 @@ const DesignShowcase = () => {
                     alt="Calcutta Sienna stone surface" 
                     className="w-full h-full object-cover"
                   />
+                ) : design.name === "Terra Beige" ? (
+                  <img 
+                    src="/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png" 
+                    alt="Terra Beige stone surface" 
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
                        style={{

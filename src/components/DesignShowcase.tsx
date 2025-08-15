@@ -2,12 +2,12 @@ import stonesamples from "@/assets/stone-samples.jpg";
 
 const DesignShowcase = () => {
   const designs = [
-    { name: "Carrara Elegance", pattern: "Classic marble veining" },
-    { name: "Midnight Granite", pattern: "Deep charcoal speckles" },
-    { name: "Golden Quartzite", pattern: "Warm gold threading" },
-    { name: "Arctic White", pattern: "Pure minimalist surface" },
-    { name: "Volcanic Slate", pattern: "Dramatic dark textures" },
-    { name: "Rose Quartz", pattern: "Subtle pink undertones" }
+    { name: "Crystallo", pattern: "Soft silver layering" },
+    { name: "Cashmere Taj", pattern: "Creamy layered veins" },
+    { name: "Lumina", pattern: "Warm golden movement" },
+    { name: "Calcutta Sienna", pattern: "Defined flowing veining" },
+    { name: "Terra Beige", pattern: "Natural earth tones" },
+    { name: "Mont Blanc", pattern: "Cool marble striations" }
   ];
 
   return (

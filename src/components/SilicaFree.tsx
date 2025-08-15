@@ -17,15 +17,15 @@ const SilicaFree = () => {
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Column 1 - Visual Illustration */}
-          <div className="flex flex-col items-center text-center p-8">
-            <div className="relative mb-6 w-80 h-80">
+          <div className="flex flex-col items-center justify-center text-center p-8 bg-background rounded-xl border border-border">
+            <div className="relative mb-4 w-80 h-80 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
                 alt="Lungs affected by crystalline silica particles"
-                className="w-80 h-80 object-contain mb-1"
+                className="w-full h-full object-contain"
               />
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-destructive rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-4 h-4 text-white" />
@@ -40,7 +40,7 @@ const SilicaFree = () => {
           </div>
 
           {/* Column 2 - Fast Facts */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center">
             <div className="bg-background p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
@@ -73,7 +73,7 @@ const SilicaFree = () => {
           </div>
 
           {/* Column 3 - Fabricator Quote */}
-          <div className="bg-primary/5 p-8 rounded-xl border border-primary/20 relative">
+          <div className="bg-primary/5 p-8 rounded-xl border border-primary/20 relative flex flex-col justify-center">
             <Quote className="w-8 h-8 text-primary mb-4" />
             <blockquote className="font-sans text-lg text-foreground leading-relaxed mb-6">
               "Working with Lumina gives us peace of mind — no dust, no danger. It's the future of our trade."

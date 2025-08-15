@@ -63,6 +63,12 @@ const DesignShowcase = () => {
                     alt="Cashmere Taj stone surface" 
                     className="w-full h-full object-cover"
                   />
+                ) : design.name === "Lumina" ? (
+                  <img 
+                    src="/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png" 
+                    alt="Lumina stone surface" 
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
                        style={{

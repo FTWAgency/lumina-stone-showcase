@@ -25,7 +25,7 @@ const SilicaFree = () => {
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
                 alt="Lungs affected by crystalline silica particles"
-                className="w-48 h-48 object-contain mb-4"
+                className="w-64 h-64 object-contain mb-2"
               />
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-destructive rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-4 h-4 text-white" />

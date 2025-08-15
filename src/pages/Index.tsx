@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Education from "@/components/Education";
 import SilicaFree from "@/components/SilicaFree";
+import Sustainability from "@/components/Sustainability";
 import DesignShowcase from "@/components/DesignShowcase";
 import NanoTech from "@/components/NanoTech";
 import Comparison from "@/components/Comparison";
@@ -17,6 +18,7 @@ const Index = () => {
         <Hero />
         <Education />
         <SilicaFree />
+        <Sustainability />
         <DesignShowcase />
         <NanoTech />
         <Comparison />

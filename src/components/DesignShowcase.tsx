@@ -50,7 +50,7 @@ const DesignShowcase = () => {
               key={design.name}
               className="group bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
             >
-              <div className="h-32 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 relative overflow-hidden">
                 {design.name === "Crystallo" ? (
                   <img 
                     src="/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png" 

@@ -74,6 +74,13 @@ const SilicaFree = () => {
 
           {/* Column 3 - Fabricator Quote */}
           <div className="bg-primary/5 p-8 rounded-xl border border-primary/20 relative flex flex-col justify-center">
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/d51d4bbf-97fc-4ca3-b718-cc87dd34de31.png" 
+                alt="Fabricator working with protective equipment on stone surface"
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            </div>
             <Quote className="w-8 h-8 text-primary mb-4" />
             <blockquote className="font-sans text-lg text-foreground leading-relaxed mb-6">
               "Working with Lumina gives us peace of mind — no dust, no danger. It's the future of our trade."

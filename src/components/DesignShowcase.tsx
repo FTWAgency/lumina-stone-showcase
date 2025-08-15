@@ -57,6 +57,12 @@ const DesignShowcase = () => {
                     alt="Crystallo stone surface" 
                     className="w-full h-full object-cover"
                   />
+                ) : design.name === "Cashmere Taj" ? (
+                  <img 
+                    src="/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png" 
+                    alt="Cashmere Taj stone surface" 
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
                        style={{

@@ -13,7 +13,7 @@ const Sustainability = () => {
             </span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mt-6">
-            Engineered with intention — every Lumina surface is created to protect people, resources, and the planet.
+            Engineered with intention — every Lumina surface is created to protect people, resources, and the planet. Our sustainability promise goes beyond the product - it's embedded in every step of how we build, design, and deliver.
           </p>
         </div>
 

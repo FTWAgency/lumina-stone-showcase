@@ -81,6 +81,12 @@ const DesignShowcase = () => {
                     alt="Terra Beige stone surface" 
                     className="w-full h-full object-cover"
                   />
+                ) : design.name === "Mont Blanc" ? (
+                  <img 
+                    src="/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png" 
+                    alt="Mont Blanc stone surface" 
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
                        style={{

@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Education from "@/components/Education";
+import SilicaFree from "@/components/SilicaFree";
 import DesignShowcase from "@/components/DesignShowcase";
 import NanoTech from "@/components/NanoTech";
 import Comparison from "@/components/Comparison";
@@ -15,6 +16,7 @@ const Index = () => {
       <div className="pt-16 overflow-x-hidden">
         <Hero />
         <Education />
+        <SilicaFree />
         <DesignShowcase />
         <NanoTech />
         <Comparison />

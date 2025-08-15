@@ -51,11 +51,19 @@ const DesignShowcase = () => {
               className="group bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
             >
               <div className="h-32 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
-                     style={{
-                       backgroundImage: `radial-gradient(circle at ${(index % 3) * 50}% ${Math.floor(index / 3) * 50}%, hsl(var(--primary)) 0%, transparent 50%)`
-                     }}
-                ></div>
+                {design.name === "Crystallo" ? (
+                  <img 
+                    src="/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png" 
+                    alt="Crystallo stone surface" 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+                       style={{
+                         backgroundImage: `radial-gradient(circle at ${(index % 3) * 50}% ${Math.floor(index / 3) * 50}%, hsl(var(--primary)) 0%, transparent 50%)`
+                       }}
+                  ></div>
+                )}
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{design.name}</h3>
               <p className="font-sans text-sm text-muted-foreground">{design.pattern}</p>

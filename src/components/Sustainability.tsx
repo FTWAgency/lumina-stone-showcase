@@ -75,9 +75,14 @@ const Sustainability = () => {
 
         {/* Closing Statement */}
         <div className="text-center">
-          <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Lumina's sustainability promise goes beyond the product — it's embedded in every step of how we build, design, and deliver.
-          </p>
+          <blockquote className="max-w-4xl mx-auto">
+            <p className="font-sans text-lg text-muted-foreground leading-relaxed italic mb-4">
+              "We're not just creating better surfaces — we're rethinking what responsible manufacturing looks like. The 4R framework reflects our commitment to protecting people, preserving resources, and leading this industry toward a safer, smarter future."
+            </p>
+            <cite className="font-sans text-sm text-muted-foreground font-medium not-italic">
+              — Rick Paiz, Chief Executive Officer
+            </cite>
+          </blockquote>
         </div>
       </div>
     </section>

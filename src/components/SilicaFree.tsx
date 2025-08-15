@@ -21,7 +21,7 @@ const SilicaFree = () => {
           
           {/* Column 1 - Visual Illustration */}
           <div className="flex flex-col items-center text-center p-8">
-            <div className="relative mb-6">
+            <div className="relative mb-6 w-80 h-80">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
                 alt="Lungs affected by crystalline silica particles"

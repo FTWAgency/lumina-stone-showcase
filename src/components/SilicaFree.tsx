@@ -22,9 +22,11 @@ const SilicaFree = () => {
           {/* Column 1 - Visual Illustration */}
           <div className="flex flex-col items-center text-center p-8">
             <div className="relative mb-6">
-              <div className="w-24 h-24 bg-destructive/10 rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-12 h-12 text-destructive" />
-              </div>
+              <img 
+                src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
+                alt="Lungs affected by crystalline silica particles"
+                className="w-24 h-24 object-contain mb-4"
+              />
               <div className="absolute -top-2 -right-2 w-8 h-8 bg-destructive rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-4 h-4 text-white" />
               </div>

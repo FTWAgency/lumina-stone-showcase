@@ -10,6 +10,10 @@
     --background: 0 0% 1%;           /* Black Onyx */
     --foreground: 0 0% 99%;          /* Pure White */
 
+    /* White background for content sections */
+    --background-white: 0 0% 98%;    /* Clean White */
+    --foreground-dark: 197 32% 26%;  /* Midnight Slate for text on white */
+
     /* Card surfaces */
     --card: 197 32% 26%;             /* Midnight Slate */
     --card-foreground: 0 0% 99%;     /* Pure White */

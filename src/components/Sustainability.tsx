@@ -2,17 +2,17 @@ import { Shield, Recycle, RotateCcw, Handshake } from "lucide-react";
 
 const Sustainability = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-background-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4 text-foreground-dark">
             4R Technology
             <span className="block text-primary text-3xl lg:text-4xl font-medium">
               Sustainability Built In
             </span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mt-6">
+          <p className="font-sans text-lg text-foreground-dark/70 max-w-4xl mx-auto leading-relaxed mt-6">
             Engineered with intention — every Lumina surface is created to protect people, resources, and the planet. Our sustainability promise goes beyond the product - it's embedded in every step of how we build, design, and deliver.
           </p>
         </div>

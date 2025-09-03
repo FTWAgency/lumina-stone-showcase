@@ -2,15 +2,15 @@ import { Heart, AlertTriangle, Shield, Quote } from "lucide-react";
 
 const SilicaFree = () => {
   return (
-    <section className="py-24 px-6 bg-card">
+    <section className="py-24 px-6 bg-background-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
             Why Crystalline Silica Is 
             <span className="block text-destructive">Dangerous</span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="font-sans text-lg text-foreground-dark/70 max-w-4xl mx-auto leading-relaxed">
             Traditional engineered stone contains up to 95% crystalline silica — a hidden hazard responsible for 
             long-term health risks. Lumina eliminates this threat with a safer, silica-free alternative.
           </p>

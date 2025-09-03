@@ -25,7 +25,7 @@ const NanoTech = () => {
           <div>
             <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground-dark">
               Surfaces That Always Look
-              <span className="bg-gradient-accent bg-clip-text text-transparent block">
+              <span className="text-primary block">
                 as New
               </span>
             </h2>

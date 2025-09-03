@@ -87,7 +87,7 @@ const TechnicalFeatures = () => {
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
             Technical
-            <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
+            <span className="text-primary"> Excellence</span>
           </h2>
           <p className="font-sans text-lg text-foreground-dark/70 max-w-2xl mx-auto">
             Advanced manufacturing meets natural beauty in every Lumina surface.

@@ -8,7 +8,7 @@ const Education = () => {
           <div>
             <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground-dark">
               Designed for a<br />
-              <span className="bg-gradient-accent bg-clip-text text-transparent">
+              <span className="text-primary">
                 Healthier Future
               </span>
             </h2>

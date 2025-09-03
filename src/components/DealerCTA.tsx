@@ -7,7 +7,7 @@ const DealerCTA = () => {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
           See It. Touch It.
-          <span className="bg-gradient-accent bg-clip-text text-transparent block">
+          <span className="text-primary block">
             Fall In Love With It.
           </span>
         </h2>

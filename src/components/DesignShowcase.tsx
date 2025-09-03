@@ -16,7 +16,7 @@ const DesignShowcase = () => {
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
             Inspired by Nature.<br />
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
+            <span className="text-primary">
               Perfected by Technology.
             </span>
           </h2>

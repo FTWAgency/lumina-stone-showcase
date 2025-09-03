@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-cta text-foreground hover:shadow-glow hover:scale-[1.02] transition-all duration-300",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-glow",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-primary bg-transparent text-primary hover:bg-primary hover:text-foreground hover:shadow-glow",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:shadow-teal-glow",
-        ghost: "hover:bg-accent/20 hover:text-accent",
-        link: "text-primary underline-offset-4 hover:underline hover:text-accent",
-        premium: "bg-gradient-cta text-foreground font-semibold shadow-premium hover:shadow-glow hover:scale-105 transition-all duration-300",
-        hero: "bg-gradient-cta/20 backdrop-blur-sm border border-primary/30 text-primary hover:bg-gradient-cta hover:text-foreground font-medium shadow-lg hover:shadow-glow",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+        premium: "bg-gradient-accent text-primary-foreground font-semibold shadow-premium hover:shadow-glow hover:scale-105 transition-all duration-300",
+        hero: "bg-primary/10 backdrop-blur-sm border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-medium shadow-lg hover:shadow-glow",
       },
       size: {
         default: "h-10 px-4 py-2",

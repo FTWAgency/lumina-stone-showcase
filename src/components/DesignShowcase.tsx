@@ -48,7 +48,7 @@ const DesignShowcase = () => {
           {designs.map((design, index) => (
             <div 
               key={design.name}
-              className="group bg-white p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
+              className="group bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
             >
               <div className="h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 relative overflow-hidden">
                 {design.name === "Crystallo" ? (
@@ -95,8 +95,8 @@ const DesignShowcase = () => {
                   ></div>
                 )}
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">{design.name}</h3>
-              <p className="font-sans text-sm text-foreground-dark/70">{design.pattern}</p>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{design.name}</h3>
+              <p className="font-sans text-sm text-muted-foreground">{design.pattern}</p>
             </div>
           ))}
         </div>

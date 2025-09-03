@@ -98,17 +98,17 @@ const TechnicalFeatures = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group bg-white p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
+              className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
             >
               <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
               
-              <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-4">
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
                 {feature.title}
               </h3>
               
-              <p className="font-sans text-foreground-dark/70 leading-relaxed">
+              <p className="font-sans text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>

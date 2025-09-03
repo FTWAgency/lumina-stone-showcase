@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-background-white border-t border-border py-16 px-6">
+    <footer className="bg-card border-t border-border py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -9,10 +9,10 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                 <span className="font-serif text-lg font-bold text-primary-foreground">L</span>
               </div>
-              <span className="font-serif text-2xl font-bold text-foreground-dark">Lumina</span>
+              <span className="font-serif text-2xl font-bold text-foreground">Lumina</span>
             </div>
             
-            <p className="font-sans text-foreground-dark/70 leading-relaxed mb-6 max-w-md">
+            <p className="font-sans text-muted-foreground leading-relaxed mb-6 max-w-md">
               The next evolution in 3D-printed stone. Safer by design, stunning by nature. 
               Redefining surface materials for a healthier, more beautiful future.
             </p>
@@ -38,8 +38,8 @@ const Footer = () => {
           
           {/* Product Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-foreground-dark mb-6">Products</h3>
-            <ul className="space-y-3 font-sans text-foreground-dark/70">
+            <h3 className="font-serif text-lg font-semibold text-foreground mb-6">Products</h3>
+            <ul className="space-y-3 font-sans text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Design Collection</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Technical Specs</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Installation Guide</a></li>
@@ -50,8 +50,8 @@ const Footer = () => {
           
           {/* Company Links */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-foreground-dark mb-6">Company</h3>
-            <ul className="space-y-3 font-sans text-foreground-dark/70">
+            <h3 className="font-serif text-lg font-semibold text-foreground mb-6">Company</h3>
+            <ul className="space-y-3 font-sans text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors duration-300">About Lumina</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Find Dealers</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Become a Partner</a></li>
@@ -63,11 +63,11 @@ const Footer = () => {
         
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-sans text-sm text-foreground-dark/70">
+          <div className="font-sans text-sm text-muted-foreground">
             © 2025 Lumina. All Rights Reserved.
           </div>
           
-          <div className="flex gap-6 font-sans text-sm text-foreground-dark/70">
+          <div className="flex gap-6 font-sans text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors duration-300">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors duration-300">Terms of Service</a>
             <a href="#" className="hover:text-primary transition-colors duration-300">Contact Us</a>

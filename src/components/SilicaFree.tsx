@@ -41,7 +41,7 @@ const SilicaFree = () => {
 
           {/* Column 2 - Fast Facts */}
           <div className="space-y-6 flex flex-col justify-center">
-            <div className="bg-white p-6 rounded-xl border border-border">
+            <div className="bg-card p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">#1</span>

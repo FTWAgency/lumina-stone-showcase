@@ -23,19 +23,19 @@ const Comparison = () => {
           </p>
         </div>
 
-        <div className="bg-card rounded-2xl border border-border shadow-premium overflow-hidden">
+        <div className="bg-white rounded-2xl border border-border shadow-premium overflow-hidden">
           {/* Header */}
-          <div className="grid grid-cols-3 border-b border-border bg-muted/50">
+          <div className="grid grid-cols-3 border-b border-border bg-muted/10">
             <div className="p-6">
-              <h3 className="font-serif text-xl font-semibold text-foreground">Features</h3>
+              <h3 className="font-serif text-xl font-semibold text-foreground-dark">Features</h3>
             </div>
             <div className="p-6 text-center border-l border-border bg-primary/5">
               <h3 className="font-serif text-xl font-semibold text-primary">Lumina</h3>
-              <p className="text-sm text-muted-foreground mt-1">Next Generation</p>
+              <p className="text-sm text-foreground-dark/70 mt-1">Next Generation</p>
             </div>
             <div className="p-6 text-center border-l border-border">
-              <h3 className="font-serif text-xl font-semibold text-muted-foreground">Traditional Quartz</h3>
-              <p className="text-sm text-muted-foreground mt-1">Legacy Material</p>
+              <h3 className="font-serif text-xl font-semibold text-foreground-dark/70">Traditional Quartz</h3>
+              <p className="text-sm text-foreground-dark/70 mt-1">Legacy Material</p>
             </div>
           </div>
 
@@ -45,11 +45,11 @@ const Comparison = () => {
               <div 
                 key={feature.name}
                 className={`grid grid-cols-3 hover:bg-muted/20 transition-colors duration-200 ${
-                  index % 2 === 0 ? 'bg-background' : 'bg-muted/10'
+                  index % 2 === 0 ? 'bg-white' : 'bg-muted/5'
                 }`}
               >
                 <div className="p-6">
-                  <span className="font-sans text-foreground font-medium">{feature.name}</span>
+                  <span className="font-sans text-foreground-dark font-medium">{feature.name}</span>
                 </div>
                 <div className="p-6 text-center border-l border-border">
                   {feature.lumina ? (
@@ -74,8 +74,8 @@ const Comparison = () => {
                       </svg>
                     </div>
                   ) : (
-                    <div className="inline-flex items-center justify-center w-8 h-8 bg-muted rounded-full">
-                      <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="inline-flex items-center justify-center w-8 h-8 bg-muted/50 rounded-full">
+                      <svg className="w-5 h-5 text-foreground-dark/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </div>

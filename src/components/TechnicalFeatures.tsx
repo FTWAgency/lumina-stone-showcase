@@ -82,14 +82,14 @@ const TechnicalFeatures = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-muted/20">
+    <section className="py-24 px-6 bg-background-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
             Technical
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sans text-lg text-foreground-dark/70 max-w-2xl mx-auto">
             Advanced manufacturing meets natural beauty in every Lumina surface.
           </p>
         </div>
@@ -98,17 +98,17 @@ const TechnicalFeatures = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
+              className="group bg-white p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
             >
               <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
               
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
+              <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-4">
                 {feature.title}
               </h3>
               
-              <p className="font-sans text-muted-foreground leading-relaxed">
+              <p className="font-sans text-foreground-dark/70 leading-relaxed">
                 {feature.description}
               </p>
             </div>

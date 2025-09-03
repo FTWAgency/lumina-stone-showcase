@@ -20,7 +20,7 @@ const SilicaFree = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Column 1 - Visual Illustration */}
-          <div className="flex flex-col items-center justify-center text-center p-8 bg-background rounded-xl border border-border">
+          <div className="flex flex-col items-center justify-center text-center p-8 bg-white rounded-xl border border-border">
             <div className="relative mb-4 w-80 h-80 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
@@ -31,42 +31,42 @@ const SilicaFree = () => {
                 <AlertTriangle className="w-4 h-4 text-white" />
               </div>
             </div>
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
+            <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">
               Health Hazard Alert
             </h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground-dark/70">
               Crystalline silica dust poses serious respiratory risks to workers
             </p>
           </div>
 
           {/* Column 2 - Fast Facts */}
           <div className="space-y-6 flex flex-col justify-center">
-            <div className="bg-background p-6 rounded-xl border border-border">
+            <div className="bg-white p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">#1</span>
                 </div>
-                <h4 className="font-semibold text-foreground">Workplace Health Risk</h4>
+                <h4 className="font-semibold text-foreground-dark">Workplace Health Risk</h4>
               </div>
-              <p className="text-sm text-muted-foreground">In Stone Fabrication</p>
+              <p className="text-sm text-foreground-dark/70">In Stone Fabrication</p>
             </div>
 
-            <div className="bg-background p-6 rounded-xl border border-border">
+            <div className="bg-white rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">95%</span>
                 </div>
-                <h4 className="font-semibold text-foreground">Quartz Surfaces Contain</h4>
+                <h4 className="font-semibold text-foreground-dark">Quartz Surfaces Contain</h4>
               </div>
-              <p className="text-sm text-muted-foreground">Crystalline Silica</p>
+              <p className="text-sm text-foreground-dark/70">Crystalline Silica</p>
             </div>
 
-            <div className="bg-background p-6 rounded-xl border border-border">
+            <div className="bg-white rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <Shield className="w-8 h-8 text-destructive" />
-                <h4 className="font-semibold text-foreground">Linked to Health Issues</h4>
+                <h4 className="font-semibold text-foreground-dark">Linked to Health Issues</h4>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground-dark/70">
                 Silicosis, Lung Cancer & Chronic Respiratory Illness
               </p>
             </div>
@@ -82,7 +82,7 @@ const SilicaFree = () => {
               />
             </div>
             <Quote className="w-8 h-8 text-primary mb-4" />
-            <blockquote className="font-sans text-lg text-foreground leading-relaxed mb-6">
+            <blockquote className="font-sans text-lg text-foreground-dark leading-relaxed mb-6">
               "Working with Lumina gives us peace of mind — no dust, no danger. It's the future of our trade."
             </blockquote>
             <div className="flex items-center gap-3">
@@ -90,8 +90,8 @@ const SilicaFree = () => {
                 <span className="text-primary font-bold text-lg">JM</span>
               </div>
               <div>
-                <div className="font-semibold text-foreground">Javier M.</div>
-                <div className="text-sm text-muted-foreground">Fabricator, San Diego</div>
+                <div className="font-semibold text-foreground-dark">Javier M.</div>
+                <div className="text-sm text-foreground-dark/70">Fabricator, San Diego</div>
               </div>
             </div>
           </div>

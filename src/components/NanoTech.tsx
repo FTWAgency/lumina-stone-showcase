@@ -2,7 +2,7 @@ const nanoTechImage = "/lovable-uploads/095c3664-5f34-4792-b481-458b17ff08f7.png
 
 const NanoTech = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6 bg-background-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left visual */}
@@ -23,14 +23,14 @@ const NanoTech = () => {
           
           {/* Right content */}
           <div>
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8">
+            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground-dark">
               Surfaces That Always Look
               <span className="bg-gradient-accent bg-clip-text text-transparent block">
                 as New
               </span>
             </h2>
             
-            <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="font-sans text-lg text-foreground-dark/70 leading-relaxed mb-8">
               Our proprietary Nano-Ink tech provides fade-resistant, stain-resistant, 
               deeply rich patterns that endure daily use without compromise.
             </p>
@@ -43,8 +43,8 @@ const NanoTech = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Nano-Scale Precision</h3>
-                  <p className="font-sans text-muted-foreground">Molecular-level printing creates patterns that penetrate deep into the surface structure.</p>
+                  <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">Nano-Scale Precision</h3>
+                  <p className="font-sans text-foreground-dark/70">Molecular-level printing creates patterns that penetrate deep into the surface structure.</p>
                 </div>
               </div>
               
@@ -55,8 +55,8 @@ const NanoTech = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Permanent Beauty</h3>
-                  <p className="font-sans text-muted-foreground">Colors and patterns remain vibrant for decades, resisting UV damage and daily wear.</p>
+                  <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">Permanent Beauty</h3>
+                  <p className="font-sans text-foreground-dark/70">Colors and patterns remain vibrant for decades, resisting UV damage and daily wear.</p>
                 </div>
               </div>
               
@@ -67,8 +67,8 @@ const NanoTech = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Eco-Conscious Process</h3>
-                  <p className="font-sans text-muted-foreground">Zero volatile organic compounds and minimal waste in our closed-loop manufacturing.</p>
+                  <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">Eco-Conscious Process</h3>
+                  <p className="font-sans text-foreground-dark/70">Zero volatile organic compounds and minimal waste in our closed-loop manufacturing.</p>
                 </div>
               </div>
             </div>

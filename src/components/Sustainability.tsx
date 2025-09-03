@@ -76,10 +76,10 @@ const Sustainability = () => {
         {/* Closing Statement */}
         <div className="text-center">
           <blockquote className="max-w-4xl mx-auto">
-            <p className="font-sans text-lg text-foreground-dark/70 leading-relaxed italic mb-4">
+            <p className="font-sans text-lg text-muted-foreground leading-relaxed italic mb-4">
               "We're not just creating better surfaces — we're rethinking what responsible manufacturing looks like. The 4R framework reflects our commitment to protecting people, preserving resources, and leading this industry toward a safer, smarter future."
             </p>
-            <cite className="font-sans text-sm text-foreground-dark/70 font-medium not-italic">
+            <cite className="font-sans text-sm text-muted-foreground font-medium not-italic">
               — Rick Paiz, Chief Executive Officer
             </cite>
           </blockquote>

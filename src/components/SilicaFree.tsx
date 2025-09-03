@@ -2,15 +2,15 @@ import { Heart, AlertTriangle, Shield, Quote } from "lucide-react";
 
 const SilicaFree = () => {
   return (
-    <section className="py-24 px-6 bg-background-white">
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Why Crystalline Silica Is 
             <span className="block text-destructive">Dangerous</span>
           </h2>
-          <p className="font-sans text-lg text-foreground-dark/70 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Traditional engineered stone contains up to 95% crystalline silica — a hidden hazard responsible for 
             long-term health risks. Lumina eliminates this threat with a safer, silica-free alternative.
           </p>
@@ -20,7 +20,7 @@ const SilicaFree = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Column 1 - Visual Illustration */}
-          <div className="flex flex-col items-center justify-center text-center p-8 bg-white rounded-xl border border-border">
+          <div className="flex flex-col items-center justify-center text-center p-8 bg-card rounded-xl border border-border">
             <div className="relative mb-4 w-80 h-80 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
@@ -31,10 +31,10 @@ const SilicaFree = () => {
                 <AlertTriangle className="w-4 h-4 text-white" />
               </div>
             </div>
-            <h3 className="font-serif text-xl font-semibold text-foreground-dark mb-2">
+            <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
               Health Hazard Alert
             </h3>
-            <p className="text-sm text-foreground-dark/70">
+            <p className="text-sm text-muted-foreground">
               Crystalline silica dust poses serious respiratory risks to workers
             </p>
           </div>
@@ -46,27 +46,27 @@ const SilicaFree = () => {
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">#1</span>
                 </div>
-                <h4 className="font-semibold text-foreground-dark">Workplace Health Risk</h4>
+                <h4 className="font-semibold text-foreground">Workplace Health Risk</h4>
               </div>
-              <p className="text-sm text-foreground-dark/70">In Stone Fabrication</p>
+              <p className="text-sm text-muted-foreground">In Stone Fabrication</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-border">
+            <div className="bg-card rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">95%</span>
                 </div>
-                <h4 className="font-semibold text-foreground-dark">Quartz Surfaces Contain</h4>
+                <h4 className="font-semibold text-foreground">Quartz Surfaces Contain</h4>
               </div>
-              <p className="text-sm text-foreground-dark/70">Crystalline Silica</p>
+              <p className="text-sm text-muted-foreground">Crystalline Silica</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-border">
+            <div className="bg-card rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <Shield className="w-8 h-8 text-destructive" />
-                <h4 className="font-semibold text-foreground-dark">Linked to Health Issues</h4>
+                <h4 className="font-semibold text-foreground">Linked to Health Issues</h4>
               </div>
-              <p className="text-sm text-foreground-dark/70">
+              <p className="text-sm text-muted-foreground">
                 Silicosis, Lung Cancer & Chronic Respiratory Illness
               </p>
             </div>
@@ -82,7 +82,7 @@ const SilicaFree = () => {
               />
             </div>
             <Quote className="w-8 h-8 text-primary mb-4" />
-            <blockquote className="font-sans text-lg text-foreground-dark leading-relaxed mb-6">
+            <blockquote className="font-sans text-lg text-foreground leading-relaxed mb-6">
               "Working with Lumina gives us peace of mind — no dust, no danger. It's the future of our trade."
             </blockquote>
             <div className="flex items-center gap-3">
@@ -90,8 +90,8 @@ const SilicaFree = () => {
                 <span className="text-primary font-bold text-lg">JM</span>
               </div>
               <div>
-                <div className="font-semibold text-foreground-dark">Javier M.</div>
-                <div className="text-sm text-foreground-dark/70">Fabricator, San Diego</div>
+                <div className="font-semibold text-foreground">Javier M.</div>
+                <div className="text-sm text-muted-foreground">Fabricator, San Diego</div>
               </div>
             </div>
           </div>

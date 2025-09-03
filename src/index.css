@@ -6,53 +6,55 @@
 
 @layer base {
   :root {
-    /* Dark theme base */
-    --background: 220 15% 8%;
-    --foreground: 210 20% 95%;
+    /* Premium Brand Colors */
+    --background: 0 0% 1%;           /* Black Onyx */
+    --foreground: 0 0% 99%;          /* Pure White */
 
     /* Card surfaces */
-    --card: 220 12% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 197 32% 26%;             /* Midnight Slate */
+    --card-foreground: 0 0% 99%;     /* Pure White */
 
     /* Interactive surfaces */
-    --popover: 220 12% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 197 32% 26%;          /* Midnight Slate */
+    --popover-foreground: 0 0% 99%;  /* Pure White */
 
-    /* Primary - Champagne gold accent */
-    --primary: 45 35% 70%;
-    --primary-foreground: 220 15% 8%;
+    /* Primary - Champagne Gold */
+    --primary: 46 48% 69%;           /* Champagne Gold */
+    --primary-foreground: 0 0% 99%;  /* Pure White */
 
-    /* Secondary - Subtle stone gray */
-    --secondary: 220 8% 18%;
-    --secondary-foreground: 210 15% 85%;
+    /* Secondary - Midnight Slate */
+    --secondary: 197 32% 26%;        /* Midnight Slate */
+    --secondary-foreground: 0 0% 99%; /* Pure White */
 
     /* Muted tones */
-    --muted: 220 10% 15%;
-    --muted-foreground: 220 8% 65%;
+    --muted: 197 32% 20%;            /* Darker Midnight Slate */
+    --muted-foreground: 197 20% 70%; /* Lighter Slate for text */
 
-    /* Accent - Premium silver */
-    --accent: 210 15% 75%;
-    --accent-foreground: 220 15% 8%;
+    /* Accent - Champagne Gold */
+    --accent: 46 48% 69%;            /* Champagne Gold */
+    --accent-foreground: 0 0% 1%;    /* Black Onyx */
 
     /* Status colors */
     --destructive: 0 65% 55%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive-foreground: 0 0% 99%;
 
     /* Borders and inputs */
-    --border: 220 12% 20%;
-    --input: 220 12% 15%;
-    --ring: 45 35% 70%;
+    --border: 197 32% 35%;           /* Lighter Midnight Slate */
+    --input: 197 32% 20%;            /* Darker Midnight Slate */
+    --ring: 46 48% 69%;              /* Champagne Gold */
 
     --radius: 0.75rem;
 
     /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 12% 12%));
-    --gradient-accent: linear-gradient(45deg, hsl(45 35% 70%), hsl(210 15% 75%));
-    --gradient-stone: linear-gradient(180deg, hsl(220 12% 12%), hsl(220 15% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 1%), hsl(197 32% 26%));
+    --gradient-cta: linear-gradient(135deg, hsl(46 48% 69%), hsl(197 32% 26%));
+    --gradient-accent: linear-gradient(45deg, hsl(46 48% 69%), hsl(197 32% 26%));
+    --gradient-stone: linear-gradient(180deg, hsl(197 32% 26%), hsl(0 0% 1%));
     
     /* Premium shadows */
-    --shadow-premium: 0 25px 50px -12px hsl(220 15% 8% / 0.6);
-    --shadow-glow: 0 0 40px hsl(45 35% 70% / 0.15);
+    --shadow-premium: 0 25px 50px -12px hsl(0 0% 1% / 0.8);
+    --shadow-glow: 0 0 40px hsl(46 48% 69% / 0.3);
+    --shadow-teal-glow: 0 0 30px hsl(197 32% 26% / 0.4);
     
     /* Typography */
     --font-serif: 'Playfair Display', serif;

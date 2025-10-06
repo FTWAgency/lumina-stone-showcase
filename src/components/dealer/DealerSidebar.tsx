@@ -48,8 +48,8 @@ export function DealerSidebar() {
   const isActive = (path: string) => location.pathname === path;
   const getNavCls = (isActive: boolean) =>
     isActive
-      ? "bg-[#D6C68A]/20 text-[#D6C68A] font-medium"
-      : "hover:bg-[#D6C68A]/10 text-[#030303]/70 hover:text-[#030303]";
+      ? "bg-primary/20 text-primary font-medium"
+      : "hover:bg-muted text-muted-foreground hover:text-foreground";
 
   const mainMenuItems = [
     { title: "Dashboard", url: "/dealer/dashboard", icon: LayoutDashboard },
@@ -63,9 +63,9 @@ export function DealerSidebar() {
 
   return (
     <Sidebar className={isCollapsed ? "w-16" : "w-64"} collapsible="icon">
-      <SidebarContent className="bg-white border-r border-[#D6C68A]/20">
+      <SidebarContent className="bg-card border-r border-border">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[#030303] px-4 py-3 text-xs font-semibold uppercase tracking-wider">
+          <SidebarGroupLabel className="text-card-foreground px-4 py-3 text-xs font-semibold uppercase tracking-wider">
             {isCollapsed ? "" : "Navigation"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -94,10 +94,10 @@ export function DealerSidebar() {
 
         {/* Role Badge */}
         {!isCollapsed && userRole && (
-          <div className="mt-auto p-4 border-t border-[#D6C68A]/20">
-            <div className="bg-[#D6C68A]/10 rounded-lg p-3">
-              <p className="text-xs text-[#030303]/70 mb-1">Your Role</p>
-              <p className="text-sm font-semibold text-[#030303] capitalize">
+          <div className="mt-auto p-4 border-t border-border">
+            <div className="bg-muted rounded-lg p-3">
+              <p className="text-xs text-muted-foreground mb-1">Your Role</p>
+              <p className="text-sm font-semibold text-foreground capitalize">
                 {userRole.replace(/_/g, " ")}
               </p>
             </div>

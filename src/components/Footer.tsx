@@ -56,7 +56,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Find Dealers</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Become a Partner</a></li>
               <li><a href="#" className="hover:text-primary transition-colors duration-300">Press & Media</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors duration-300">Dealer Login</a></li>
+              <li><a href="/dealer/login" className="hover:text-primary transition-colors duration-300">Dealer Login</a></li>
             </ul>
           </div>
         </div>

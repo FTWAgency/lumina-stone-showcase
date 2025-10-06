@@ -11,6 +11,9 @@ import DealersList from "./pages/DealersList";
 import Inventory from "./pages/Inventory";
 import Consignments from "./pages/Consignments";
 import DealerSales from "./pages/DealerSales";
+import Invoices from "./pages/Invoices";
+import InvoiceDetail from "./pages/InvoiceDetail";
+import CreateInvoice from "./pages/CreateInvoice";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/dealer/inventory" element={<Inventory />} />
           <Route path="/dealer/consignments" element={<Consignments />} />
           <Route path="/dealer/sales" element={<DealerSales />} />
+          <Route path="/dealer/invoices" element={<Invoices />} />
+          <Route path="/dealer/invoices/create" element={<CreateInvoice />} />
+          <Route path="/dealer/invoices/:id" element={<InvoiceDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

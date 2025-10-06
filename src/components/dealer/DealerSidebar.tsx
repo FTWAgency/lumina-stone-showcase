@@ -8,6 +8,7 @@ import {
   FileText,
   ShoppingCart,
   ChevronRight,
+  Receipt,
 } from "lucide-react";
 import {
   Sidebar,
@@ -59,6 +60,7 @@ export function DealerSidebar() {
     ...(userRole === "client_sales_rep" || userRole === "client_admin" || isSuperAdmin
       ? [{ title: "Sales", url: "/dealer/sales", icon: ShoppingCart }]
       : []),
+    ...(isSuperAdmin ? [{ title: "Invoices", url: "/dealer/invoices", icon: Receipt }] : []),
   ];
 
   return (

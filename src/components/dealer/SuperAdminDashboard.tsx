@@ -10,6 +10,7 @@ const SuperAdminDashboard = () => {
     totalValue: 0,
     totalSales: 0,
     piecesAssigned: 0,
+    totalInvoiced: 0,
   });
   const [topDealers, setTopDealers] = useState<any[]>([]);
   const navigate = useNavigate();
@@ -49,10 +50,18 @@ const SuperAdminDashboard = () => {
 
       const totalSales = sales?.reduce((sum, sale) => sum + sale.quantity, 0) || 0;
 
+      // Fetch invoices data
+      const { data: invoices } = await supabase
+        .from("invoices")
+        .select("total");
+
+      const totalInvoiced = invoices?.reduce((sum, inv) => sum + parseFloat(String(inv.total)), 0) || 0;
+
       setStats({
         totalValue,
         totalSales,
         piecesAssigned,
+        totalInvoiced,
       });
 
       // Fetch top dealers (placeholder - would need more complex query)
@@ -121,6 +130,20 @@ const SuperAdminDashboard = () => {
         <Card className="bg-white border-[#D6C68A]/20">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-[#030303]">
+              Total Invoiced
+            </CardTitle>
+            <DollarSign className="h-4 w-4 text-[#D6C68A]" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-[#030303]">
+              ${stats.totalInvoiced.toLocaleString()}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white border-[#D6C68A]/20">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium text-[#030303]">
               Active Dealers
             </CardTitle>
             <Users className="h-4 w-4 text-[#D6C68A]" />
@@ -172,6 +195,12 @@ const SuperAdminDashboard = () => {
               onClick={() => navigate("/dealer/consignments")}
             >
               Manage Consignments
+            </Button>
+            <Button
+              className="w-full bg-[#D6C68A] hover:bg-[#D6C68A]/90 text-[#030303]"
+              onClick={() => navigate("/dealer/invoices")}
+            >
+              Manage Invoices
             </Button>
           </CardContent>
         </Card>

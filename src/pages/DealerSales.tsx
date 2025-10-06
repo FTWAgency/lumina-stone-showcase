@@ -48,7 +48,15 @@ const DealerSales = () => {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <p className="text-muted-foreground">Sales recording coming soon...</p>
+        <div className="text-center py-12">
+          <p className="text-muted-foreground mb-4">
+            Sales recording workflow will automatically mark sales as "pending_invoice"
+            and notify the invoicing team.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Full implementation with form and email automation coming soon.
+          </p>
+        </div>
       </main>
     </div>
   );

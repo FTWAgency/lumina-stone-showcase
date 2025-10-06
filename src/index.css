@@ -2,11 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumina Design System - Professional light mode with modern luxury aesthetic */
+/* Lumina Design System - Dual theme: Dark luxury for homepage, Light professional for dealer dashboard */
 
 @layer base {
   :root {
-    /* Lumina Core Colors - Light Mode */
+    /* Original Homepage Theme - Dark Luxury */
+    --background: 222 12% 8%;
+    --foreground: 60 5% 96%;
+    --card: 222 12% 10%;
+    --card-foreground: 60 5% 96%;
+    --popover: 222 12% 10%;
+    --popover-foreground: 60 5% 96%;
+    --primary: 42 47% 65%;
+    --primary-foreground: 222 12% 8%;
+    --secondary: 200 25% 28%;
+    --secondary-foreground: 60 5% 96%;
+    --muted: 222 12% 15%;
+    --muted-foreground: 60 5% 70%;
+    --accent: 200 35% 58%;
+    --accent-foreground: 222 12% 8%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 60 5% 96%;
+    --border: 222 12% 20%;
+    --input: 222 12% 20%;
+    --ring: 42 47% 65%;
+    --radius: 0.75rem;
+
+    /* Lumina Brand Colors for Dealer Dashboard (Light Mode) */
     --lumina-white: 0 0% 98%;        /* #FAFAFA - Soft background */
     --lumina-surface: 0 0% 100%;     /* #FFFFFF - Card base */
     --lumina-black: 0 0% 10%;        /* #1A1A1A - Text + accents */
@@ -18,57 +40,18 @@
     --lumina-cyan: 199 89% 64%;      /* #4FC3F7 - Hover, highlight */
     --lumina-red: 0 49% 55%;         /* #C94F4F - Damage/alerts */
 
-    /* Theme Mappings - Light Mode */
-    --background: var(--lumina-white);
-    --foreground: var(--lumina-black);
-
-    /* Card surfaces with soft shadows */
-    --card: var(--lumina-surface);
-    --card-foreground: var(--lumina-black);
-
-    /* Interactive surfaces */
-    --popover: var(--lumina-surface);
-    --popover-foreground: var(--lumina-black);
-
-    /* Primary - Gold accent */
-    --primary: var(--lumina-gold);
-    --primary-foreground: 0 0% 100%;
-
-    /* Secondary - Teal */
-    --secondary: var(--lumina-teal);
-    --secondary-foreground: 0 0% 100%;
-
-    /* Muted tones */
-    --muted: 0 0% 97%;
-    --muted-foreground: var(--lumina-gray);
-
-    /* Accent - Blue */
-    --accent: var(--lumina-blue);
-    --accent-foreground: 0 0% 100%;
-
-    /* Status colors */
-    --destructive: var(--lumina-red);
-    --destructive-foreground: 0 0% 100%;
-
-    /* Borders and inputs */
-    --border: var(--lumina-divider);
-    --input: var(--lumina-surface);
-    --ring: var(--lumina-blue);
-
-    --radius: 0.75rem;
-
-    /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--lumina-white)), hsl(var(--lumina-surface)));
-    --gradient-accent: linear-gradient(45deg, hsl(var(--lumina-gold)), hsl(var(--lumina-blue)));
-    --gradient-stone: linear-gradient(180deg, hsl(var(--lumina-surface)), hsl(var(--lumina-white)));
-    --gradient-blue-gold: linear-gradient(135deg, hsl(var(--lumina-blue)), hsl(var(--lumina-gold)));
-    --gradient-teal-blue: linear-gradient(90deg, hsl(var(--lumina-teal)), hsl(var(--lumina-blue)));
+    /* Homepage Gradients - Dark Mode */
+    --gradient-hero: linear-gradient(135deg, hsl(222 12% 8% / 0.95), hsl(200 25% 28% / 0.85));
+    --gradient-accent: linear-gradient(135deg, hsl(42 47% 65%), hsl(200 35% 58%));
+    --gradient-stone: linear-gradient(180deg, hsl(200 20% 88% / 0.1), hsl(200 20% 88% / 0.05));
+    --gradient-blue-gold: linear-gradient(135deg, hsl(207 79% 51%), hsl(42 47% 65%));
+    --gradient-teal-blue: linear-gradient(135deg, hsl(200 35% 38%), hsl(207 79% 51%));
     
-    /* Refined shadows for light mode */
-    --shadow-premium: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --shadow-glow: 0 6px 20px rgba(207, 165, 93, 0.15);
-    --shadow-blue-glow: 0 4px 16px rgba(30, 136, 229, 0.12);
-    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+    /* Homepage Shadows - Dark Mode */
+    --shadow-premium: 0 10px 40px -10px rgba(42, 47, 65, 0.4);
+    --shadow-glow: 0 0 40px rgba(214, 198, 138, 0.3);
+    --shadow-blue-glow: 0 0 30px rgba(30, 136, 229, 0.4);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
     
     /* Typography */
     --font-serif: 'Playfair Display', serif;
@@ -86,10 +69,6 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(circle at 30% 30%, hsl(var(--lumina-blue) / 0.03), transparent 70%),
-                radial-gradient(circle at 70% 70%, hsl(var(--lumina-gold) / 0.03), transparent 70%),
-                hsl(var(--lumina-white));
-    animation: subtle-move 12s ease-in-out infinite alternate;
   }
 }
 

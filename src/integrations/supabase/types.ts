@@ -431,7 +431,13 @@ export type Database = {
       consignment_status: "active" | "completed" | "cancelled"
       invoice_status: "draft" | "pending" | "sent" | "paid" | "cancelled"
       org_type: "manufacturer" | "dealer"
-      sale_status: "pending" | "completed" | "cancelled" | "pending_invoice"
+      sale_status:
+        | "pending"
+        | "completed"
+        | "cancelled"
+        | "pending_invoice"
+        | "damaged"
+        | "returned"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -568,7 +574,14 @@ export const Constants = {
       consignment_status: ["active", "completed", "cancelled"],
       invoice_status: ["draft", "pending", "sent", "paid", "cancelled"],
       org_type: ["manufacturer", "dealer"],
-      sale_status: ["pending", "completed", "cancelled", "pending_invoice"],
+      sale_status: [
+        "pending",
+        "completed",
+        "cancelled",
+        "pending_invoice",
+        "damaged",
+        "returned",
+      ],
     },
   },
 } as const

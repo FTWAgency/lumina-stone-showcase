@@ -34,25 +34,29 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
 
   return (
     <SidebarProvider defaultOpen={true}>
-      <div className="min-h-screen flex w-full bg-[#FCFCFC]">
+      <div className="min-h-screen flex w-full bg-lumina-white">
         <DealerSidebar />
         
         <div className="flex-1 flex flex-col w-full">
-          <header className="bg-[#030303] border-b border-[#D6C68A]/20 sticky top-0 z-40">
+          <header className="bg-lumina-surface border-b border-transparent sticky top-0 z-40 shadow-sm" style={{ 
+            borderImage: 'linear-gradient(90deg, hsl(var(--lumina-gold)), hsl(var(--lumina-teal))) 1'
+          }}>
             <div className="container mx-auto px-6 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <SidebarTrigger className="text-[#FCFCFC] hover:text-[#D6C68A]">
+                  <SidebarTrigger className="text-lumina-teal hover:text-lumina-gold transition-colors">
                     <Menu className="h-5 w-5" />
                   </SidebarTrigger>
-                  <h1 className="text-2xl font-bold text-[#D6C68A]">Lumina Dealer Portal</h1>
+                  <h1 className="text-2xl font-serif font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent">
+                    Lumina Dealer Portal
+                  </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => navigate("/")}
-                    className="text-[#FCFCFC] hover:text-[#D6C68A] hover:bg-[#D6C68A]/10"
+                    className="text-lumina-teal hover:text-lumina-gold hover:bg-lumina-gold/5"
                   >
                     <Home className="mr-2 h-4 w-4" />
                     Main Site
@@ -61,7 +65,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                     variant="ghost"
                     size="sm"
                     onClick={handleLogout}
-                    className="text-[#FCFCFC] hover:text-[#D6C68A] hover:bg-[#D6C68A]/10"
+                    className="text-lumina-teal hover:text-lumina-gold hover:bg-lumina-gold/5"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
                     Logout

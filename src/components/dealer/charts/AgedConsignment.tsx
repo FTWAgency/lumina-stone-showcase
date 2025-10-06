@@ -9,23 +9,23 @@ interface AgedConsignmentProps {
 }
 
 const COLORS = {
-  "0-30 days": "hsl(45 35% 70%)",      // Gold
-  "31-60 days": "hsl(210 50% 65%)",    // Light blue
+  "0-30 days": "hsl(42 50% 75%)",      // Light gold
+  "31-60 days": "hsl(210 60% 70%)",    // Soft blue
   "61-90 days": "hsl(199 89% 64%)",    // Cyan
-  "90+ days": "hsl(200 35% 27%)",      // Teal
+  "90+ days": "hsl(42 35% 59%)",       // Gold
 };
 
 const AgedConsignment = ({ data }: AgedConsignmentProps) => {
   return (
-    <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+    <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
       <CardHeader>
-        <CardTitle className="text-gradient-blue-gold font-serif text-2xl">
+        <CardTitle className="bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent font-serif text-2xl">
           Aged Consignment Inventory
         </CardTitle>
       </CardHeader>
       <CardContent>
         {data.length === 0 ? (
-          <p className="text-muted-foreground text-center py-8">No data available</p>
+          <p className="text-lumina-gray text-center py-8">No data available</p>
         ) : (
           <ResponsiveContainer width="100%" height={400}>
             <PieChart>
@@ -33,8 +33,8 @@ const AgedConsignment = ({ data }: AgedConsignmentProps) => {
                 data={data}
                 cx="50%"
                 cy="50%"
-                innerRadius={80}
-                outerRadius={130}
+                innerRadius={90}
+                outerRadius={140}
                 labelLine={false}
                 label={({ ageGroup, percent }) => 
                   `${ageGroup}: ${(percent * 100).toFixed(0)}%`
@@ -42,25 +42,29 @@ const AgedConsignment = ({ data }: AgedConsignmentProps) => {
                 fill="#8884d8"
                 dataKey="pieces"
                 animationDuration={1000}
+                stroke="hsl(var(--lumina-surface))"
+                strokeWidth={3}
               >
                 {data.map((entry, index) => (
                   <Cell 
                     key={`cell-${index}`} 
-                    fill={COLORS[entry.ageGroup as keyof typeof COLORS] || "hsl(45 35% 70%)"} 
+                    fill={COLORS[entry.ageGroup as keyof typeof COLORS] || "hsl(42 35% 59%)"} 
                   />
                 ))}
               </Pie>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "hsl(var(--lumina-card))",
-                  border: "1px solid hsl(var(--lumina-blue))",
-                  borderRadius: "8px",
-                  color: "hsl(var(--lumina-white))",
+                  backgroundColor: "hsl(var(--lumina-surface))",
+                  border: "1px solid hsl(var(--lumina-divider))",
+                  borderRadius: "12px",
+                  color: "hsl(var(--lumina-black))",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
                 }}
               />
               <Legend 
                 wrapperStyle={{ 
-                  color: "hsl(var(--lumina-white))"
+                  color: "hsl(var(--lumina-black))",
+                  fontWeight: 500
                 }}
               />
             </PieChart>

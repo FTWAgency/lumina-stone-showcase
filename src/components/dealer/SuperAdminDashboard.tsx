@@ -302,36 +302,45 @@ const SuperAdminDashboard = () => {
   };
 
   return (
-    <div className="space-y-8">
-      <div className="flex justify-between items-start border-b border-gradient-teal-blue pb-4">
+    <div className="space-y-8 animate-fade-in-up">
+      {/* Header */}
+      <div className="flex justify-between items-start">
         <div>
-          <h2 className="text-4xl font-bold font-serif text-gradient-blue-gold animate-fade-in-up">
+          <h2 className="text-4xl font-serif font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent">
             Super Admin Dashboard
           </h2>
-          <p className="text-lumina-gray mt-2 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            Overview of all dealer activities
+          <p className="text-lumina-gray mt-2">
+            Complete system analytics and dealer performance metrics
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center space-x-2">
-            <Switch 
-              id="demo-mode" 
-              checked={demoMode} 
-              onCheckedChange={handleToggleDemoData}
-              className={demoMode ? 'animate-pulse-glow' : ''}
-            />
-            <Label htmlFor="demo-mode" className="flex items-center gap-2 text-lumina-white">
-              <Database className="h-4 w-4 text-lumina-blue" />
-              Demo Data
-            </Label>
-          </div>
-        </div>
+        <Button 
+          variant="lumina" 
+          size="lg"
+          onClick={() => navigate("/dealer/invoices")}
+          className="shadow-premium"
+        >
+          View Invoices
+        </Button>
       </div>
 
       {/* Filters */}
-      <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+      <Card className="bg-lumina-surface border-lumina-divider shadow-card">
         <CardHeader>
-          <CardTitle className="text-lumina-white font-serif text-xl">Filters & Exports</CardTitle>
+          <CardTitle className="text-lumina-black font-serif text-xl flex items-center justify-between">
+            <span>Filters & Exports</span>
+            <div className="flex items-center space-x-2">
+              <Switch 
+                id="demo-mode" 
+                checked={demoMode} 
+                onCheckedChange={handleToggleDemoData}
+                className={demoMode ? 'animate-pulse-glow' : ''}
+              />
+              <Label htmlFor="demo-mode" className="flex items-center gap-2 text-lumina-gray text-sm">
+                <Database className="h-4 w-4 text-lumina-blue" />
+                Demo Data
+              </Label>
+            </div>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -342,7 +351,7 @@ const SuperAdminDashboard = () => {
             <div>
               <Label className="text-sm text-lumina-gray mb-2 block uppercase tracking-wide">Dealer Filter</Label>
               <Select value={selectedDealer} onValueChange={setSelectedDealer}>
-                <SelectTrigger>
+                <SelectTrigger className="bg-lumina-surface border-lumina-divider text-lumina-black">
                   <SelectValue placeholder="All Dealers" />
                 </SelectTrigger>
                 <SelectContent>
@@ -392,23 +401,23 @@ const SuperAdminDashboard = () => {
       </Card>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="bg-lumina-card border-lumina-gold/30 shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wide">
+            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
               Total Consignment Value
             </CardTitle>
             <DollarSign className="h-5 w-5 text-lumina-gold" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-gold animate-count-up">
+            <div className="text-3xl font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent animate-count-up">
               ${stats.totalValue.toLocaleString()}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-card border-lumina-blue/30 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '350ms' }}>
+        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '50ms' }}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wide">
+            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
               Total Sales
             </CardTitle>
             <TrendingUp className="h-5 w-5 text-lumina-blue" />
@@ -420,43 +429,43 @@ const SuperAdminDashboard = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-card border-lumina-cyan/30 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wide">
+            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
               Pieces Assigned
             </CardTitle>
-            <Package className="h-5 w-5 text-lumina-cyan" />
+            <Package className="h-5 w-5 text-lumina-teal" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-cyan animate-count-up">
+            <div className="text-3xl font-bold text-lumina-black animate-count-up">
               {stats.piecesAssigned}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-card border-lumina-gold/30 shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '450ms' }}>
+        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wide">
+            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
               Total Invoiced
             </CardTitle>
             <DollarSign className="h-5 w-5 text-lumina-gold" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-gold animate-count-up">
+            <div className="text-3xl font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent animate-count-up">
               ${stats.totalInvoiced.toLocaleString()}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-card border-lumina-teal/30 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
+        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wide">
+            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
               Active Dealers
             </CardTitle>
             <Users className="h-5 w-5 text-lumina-teal" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-teal animate-count-up">
+            <div className="text-3xl font-bold text-lumina-black animate-count-up">
               {topDealers.length}
             </div>
           </CardContent>

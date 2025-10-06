@@ -2,72 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumina Design System - Premium stone surface aesthetics with intelligent blue accents */
+/* Lumina Design System - Professional light mode with modern luxury aesthetic */
 
 @layer base {
   :root {
-    /* Lumina Core Colors */
-    --lumina-black: 0 0% 5%;        /* #0C0C0C */
-    --lumina-card: 0 0% 8%;         /* #141414 */
-    --lumina-gold: 45 35% 70%;      /* #D6C68A */
-    --lumina-teal: 200 35% 27%;     /* #2E4A5A */
-    --lumina-blue: 207 77% 51%;     /* #1E88E5 */
-    --lumina-cyan: 199 89% 64%;     /* #4FC3F7 */
-    --lumina-red: 0 49% 55%;        /* #C94F4F */
-    --lumina-white: 0 0% 99%;       /* #FCFCFC */
-    --lumina-gray: 0 0% 60%;        /* #999999 */
+    /* Lumina Core Colors - Light Mode */
+    --lumina-white: 0 0% 98%;        /* #FAFAFA - Soft background */
+    --lumina-surface: 0 0% 100%;     /* #FFFFFF - Card base */
+    --lumina-black: 0 0% 10%;        /* #1A1A1A - Text + accents */
+    --lumina-gray: 0 0% 35%;         /* #5A5A5A - Secondary text */
+    --lumina-divider: 0 0% 91%;      /* #E8E8E8 - Subtle borders */
+    --lumina-gold: 42 35% 59%;       /* #CFA55D - Primary accent */
+    --lumina-teal: 200 35% 27%;      /* #2E4A5A - Secondary brand */
+    --lumina-blue: 207 77% 51%;      /* #1E88E5 - Chart & data */
+    --lumina-cyan: 199 89% 64%;      /* #4FC3F7 - Hover, highlight */
+    --lumina-red: 0 49% 55%;         /* #C94F4F - Damage/alerts */
 
-    /* Theme Mappings */
-    --background: var(--lumina-black);
-    --foreground: var(--lumina-white);
+    /* Theme Mappings - Light Mode */
+    --background: var(--lumina-white);
+    --foreground: var(--lumina-black);
 
-    /* Card surfaces with subtle blue glow */
-    --card: var(--lumina-card);
-    --card-foreground: var(--lumina-white);
+    /* Card surfaces with soft shadows */
+    --card: var(--lumina-surface);
+    --card-foreground: var(--lumina-black);
 
     /* Interactive surfaces */
-    --popover: var(--lumina-card);
-    --popover-foreground: var(--lumina-white);
+    --popover: var(--lumina-surface);
+    --popover-foreground: var(--lumina-black);
 
     /* Primary - Gold accent */
     --primary: var(--lumina-gold);
-    --primary-foreground: var(--lumina-black);
+    --primary-foreground: 0 0% 100%;
 
     /* Secondary - Teal */
     --secondary: var(--lumina-teal);
-    --secondary-foreground: var(--lumina-white);
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted tones */
-    --muted: 0 0% 15%;
+    --muted: 0 0% 97%;
     --muted-foreground: var(--lumina-gray);
 
     /* Accent - Blue */
     --accent: var(--lumina-blue);
-    --accent-foreground: var(--lumina-white);
+    --accent-foreground: 0 0% 100%;
 
     /* Status colors */
     --destructive: var(--lumina-red);
-    --destructive-foreground: var(--lumina-white);
+    --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs with blue accent */
-    --border: 207 77% 51% / 0.2;
-    --input: var(--lumina-card);
+    /* Borders and inputs */
+    --border: var(--lumina-divider);
+    --input: var(--lumina-surface);
     --ring: var(--lumina-blue);
 
     --radius: 0.75rem;
 
-    /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--lumina-black)), hsl(var(--lumina-card)));
+    /* Professional gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--lumina-white)), hsl(var(--lumina-surface)));
     --gradient-accent: linear-gradient(45deg, hsl(var(--lumina-gold)), hsl(var(--lumina-blue)));
-    --gradient-stone: linear-gradient(180deg, hsl(var(--lumina-card)), hsl(var(--lumina-black)));
+    --gradient-stone: linear-gradient(180deg, hsl(var(--lumina-surface)), hsl(var(--lumina-white)));
     --gradient-blue-gold: linear-gradient(135deg, hsl(var(--lumina-blue)), hsl(var(--lumina-gold)));
     --gradient-teal-blue: linear-gradient(90deg, hsl(var(--lumina-teal)), hsl(var(--lumina-blue)));
     
-    /* Premium shadows with blue glow */
-    --shadow-premium: 0 10px 30px -10px hsl(var(--lumina-blue) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--lumina-gold) / 0.15);
-    --shadow-blue-glow: 0 0 15px hsl(var(--lumina-blue) / 0.3);
-    --shadow-card: 0 0 10px hsl(var(--lumina-blue) / 0.15);
+    /* Refined shadows for light mode */
+    --shadow-premium: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 6px 20px rgba(207, 165, 93, 0.15);
+    --shadow-blue-glow: 0 4px 16px rgba(30, 136, 229, 0.12);
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
     
     /* Typography */
     --font-serif: 'Playfair Display', serif;
@@ -85,9 +86,9 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(circle at 30% 30%, hsl(var(--lumina-blue) / 0.05), transparent 70%),
-                radial-gradient(circle at 70% 70%, hsl(var(--lumina-gold) / 0.05), transparent 70%),
-                hsl(var(--lumina-black));
+    background: radial-gradient(circle at 30% 30%, hsl(var(--lumina-blue) / 0.03), transparent 70%),
+                radial-gradient(circle at 70% 70%, hsl(var(--lumina-gold) / 0.03), transparent 70%),
+                hsl(var(--lumina-white));
     animation: subtle-move 12s ease-in-out infinite alternate;
   }
 }

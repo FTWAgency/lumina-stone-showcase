@@ -57,15 +57,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				lumina: {
+					white: 'hsl(var(--lumina-white))',
+					surface: 'hsl(var(--lumina-surface))',
 					black: 'hsl(var(--lumina-black))',
-					card: 'hsl(var(--lumina-card))',
+					gray: 'hsl(var(--lumina-gray))',
+					divider: 'hsl(var(--lumina-divider))',
 					gold: 'hsl(var(--lumina-gold))',
 					teal: 'hsl(var(--lumina-teal))',
 					blue: 'hsl(var(--lumina-blue))',
 					cyan: 'hsl(var(--lumina-cyan))',
-					red: 'hsl(var(--lumina-red))',
-					white: 'hsl(var(--lumina-white))',
-					gray: 'hsl(var(--lumina-gray))'
+					red: 'hsl(var(--lumina-red))'
 				}
 			},
 			backgroundImage: {

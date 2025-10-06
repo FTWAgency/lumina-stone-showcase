@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-glow",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-glow hover:scale-[1.02] transition-all",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-md",
+        outline: "border border-lumina-divider bg-background hover:bg-lumina-white/50 hover:border-lumina-gold transition-all",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-md",
+        ghost: "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        premium: "bg-gradient-accent text-primary-foreground font-semibold shadow-premium hover:shadow-glow hover:scale-105 transition-all duration-300",
-        hero: "bg-primary/10 backdrop-blur-sm border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-medium shadow-lg hover:shadow-glow",
-        lumina: "bg-lumina-gold text-lumina-black hover:bg-gradient-blue-gold hover:text-lumina-white font-medium shadow-premium hover:shadow-blue-glow transition-all duration-300",
-        "lumina-secondary": "bg-lumina-teal/20 text-lumina-white border border-lumina-blue/30 hover:bg-lumina-blue/20 hover:shadow-blue-glow transition-all duration-300",
+        premium: "bg-gradient-accent text-white font-semibold shadow-premium hover:shadow-glow hover:scale-[1.03] transition-all duration-300 rounded-full",
+        hero: "bg-primary text-white hover:bg-primary/90 font-medium shadow-md hover:shadow-glow hover:scale-[1.02] transition-all rounded-full",
+        lumina: "bg-lumina-gold text-white hover:bg-[#B7924E] font-medium shadow-md hover:shadow-glow hover:scale-[1.03] transition-all duration-300 rounded-full",
+        "lumina-secondary": "bg-transparent border-2 border-lumina-teal text-lumina-teal hover:bg-lumina-white/50 shadow-sm hover:shadow-md transition-all duration-300 rounded-full",
       },
       size: {
         default: "h-10 px-4 py-2",

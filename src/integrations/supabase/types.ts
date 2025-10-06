@@ -143,6 +143,153 @@ export type Database = {
           },
         ]
       }
+      dealer_details: {
+        Row: {
+          active_since: string | null
+          agreement_url: string | null
+          city: string | null
+          contact_email: string | null
+          contact_person_name: string | null
+          contact_phone: string | null
+          created_at: string
+          dealer_type: string
+          id: string
+          logo_url: string | null
+          notes: string | null
+          organization_id: string
+          state: string | null
+          street_address: string | null
+          updated_at: string
+          zip_code: string | null
+        }
+        Insert: {
+          active_since?: string | null
+          agreement_url?: string | null
+          city?: string | null
+          contact_email?: string | null
+          contact_person_name?: string | null
+          contact_phone?: string | null
+          created_at?: string
+          dealer_type?: string
+          id?: string
+          logo_url?: string | null
+          notes?: string | null
+          organization_id: string
+          state?: string | null
+          street_address?: string | null
+          updated_at?: string
+          zip_code?: string | null
+        }
+        Update: {
+          active_since?: string | null
+          agreement_url?: string | null
+          city?: string | null
+          contact_email?: string | null
+          contact_person_name?: string | null
+          contact_phone?: string | null
+          created_at?: string
+          dealer_type?: string
+          id?: string
+          logo_url?: string | null
+          notes?: string | null
+          organization_id?: string
+          state?: string | null
+          street_address?: string | null
+          updated_at?: string
+          zip_code?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "dealer_details_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: true
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      dealer_documents: {
+        Row: {
+          document_name: string
+          document_type: string
+          file_size: number | null
+          file_url: string
+          id: string
+          notes: string | null
+          organization_id: string
+          uploaded_at: string
+          uploaded_by: string | null
+        }
+        Insert: {
+          document_name: string
+          document_type: string
+          file_size?: number | null
+          file_url: string
+          id?: string
+          notes?: string | null
+          organization_id: string
+          uploaded_at?: string
+          uploaded_by?: string | null
+        }
+        Update: {
+          document_name?: string
+          document_type?: string
+          file_size?: number | null
+          file_url?: string
+          id?: string
+          notes?: string | null
+          organization_id?: string
+          uploaded_at?: string
+          uploaded_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "dealer_documents_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      dealer_notes: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          id: string
+          is_pinned: boolean | null
+          note_content: string
+          organization_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_pinned?: boolean | null
+          note_content: string
+          organization_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_pinned?: boolean | null
+          note_content?: string
+          organization_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "dealer_notes_organization_id_fkey"
+            columns: ["organization_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       dealer_sales: {
         Row: {
           consignment_line_id: string

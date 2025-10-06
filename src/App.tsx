@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import DealerLogin from "./pages/DealerLogin";
 import DealerDashboard from "./pages/DealerDashboard";
 import DealersList from "./pages/DealersList";
+import DealerProfile from "./pages/DealerProfile";
 import Inventory from "./pages/Inventory";
 import Consignments from "./pages/Consignments";
 import DealerSales from "./pages/DealerSales";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/dealer/login" element={<DealerLogin />} />
           <Route path="/dealer/dashboard" element={<DealerDashboard />} />
           <Route path="/dealer/dealers" element={<DealersList />} />
+          <Route path="/dealer/dealers/:id" element={<DealerProfile />} />
           <Route path="/dealer/inventory" element={<Inventory />} />
           <Route path="/dealer/consignments" element={<Consignments />} />
           <Route path="/dealer/sales" element={<DealerSales />} />

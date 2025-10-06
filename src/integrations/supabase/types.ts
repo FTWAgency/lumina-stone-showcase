@@ -217,6 +217,114 @@ export type Database = {
         }
         Relationships: []
       }
+      invoice_lines: {
+        Row: {
+          created_at: string
+          dealer_sale_id: string
+          id: string
+          invoice_id: string
+          item_id: string
+          line_total: number
+          quantity: number
+          unit_price: number
+        }
+        Insert: {
+          created_at?: string
+          dealer_sale_id: string
+          id?: string
+          invoice_id: string
+          item_id: string
+          line_total: number
+          quantity: number
+          unit_price: number
+        }
+        Update: {
+          created_at?: string
+          dealer_sale_id?: string
+          id?: string
+          invoice_id?: string
+          item_id?: string
+          line_total?: number
+          quantity?: number
+          unit_price?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invoice_lines_dealer_sale_id_fkey"
+            columns: ["dealer_sale_id"]
+            isOneToOne: false
+            referencedRelation: "dealer_sales"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "invoice_lines_invoice_id_fkey"
+            columns: ["invoice_id"]
+            isOneToOne: false
+            referencedRelation: "invoices"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "invoice_lines_item_id_fkey"
+            columns: ["item_id"]
+            isOneToOne: false
+            referencedRelation: "catalog_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      invoices: {
+        Row: {
+          created_at: string
+          dealer_org_id: string
+          due_date: string | null
+          id: string
+          invoice_date: string
+          invoice_number: string
+          notes: string | null
+          status: Database["public"]["Enums"]["invoice_status"]
+          subtotal: number
+          tax: number
+          total: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          dealer_org_id: string
+          due_date?: string | null
+          id?: string
+          invoice_date?: string
+          invoice_number: string
+          notes?: string | null
+          status?: Database["public"]["Enums"]["invoice_status"]
+          subtotal: number
+          tax?: number
+          total: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          dealer_org_id?: string
+          due_date?: string | null
+          id?: string
+          invoice_date?: string
+          invoice_number?: string
+          notes?: string | null
+          status?: Database["public"]["Enums"]["invoice_status"]
+          subtotal?: number
+          tax?: number
+          total?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invoices_dealer_org_id_fkey"
+            columns: ["dealer_org_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       organizations: {
         Row: {
           created_at: string
@@ -321,8 +429,9 @@ export type Database = {
         | "client_admin"
         | "client_sales_rep"
       consignment_status: "active" | "completed" | "cancelled"
+      invoice_status: "draft" | "pending" | "sent" | "paid" | "cancelled"
       org_type: "manufacturer" | "dealer"
-      sale_status: "pending" | "completed" | "cancelled"
+      sale_status: "pending" | "completed" | "cancelled" | "pending_invoice"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -457,8 +566,9 @@ export const Constants = {
         "client_sales_rep",
       ],
       consignment_status: ["active", "completed", "cancelled"],
+      invoice_status: ["draft", "pending", "sent", "paid", "cancelled"],
       org_type: ["manufacturer", "dealer"],
-      sale_status: ["pending", "completed", "cancelled"],
+      sale_status: ["pending", "completed", "cancelled", "pending_invoice"],
     },
   },
 } as const

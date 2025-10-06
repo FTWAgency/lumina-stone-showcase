@@ -9,17 +9,19 @@ interface AgedConsignmentProps {
 }
 
 const COLORS = {
-  "0-30 days": "#D6C68A",
-  "31-60 days": "#C5B579",
-  "61-90 days": "#B4A468",
-  "90+ days": "#A39357",
+  "0-30 days": "hsl(45 35% 70%)",      // Gold
+  "31-60 days": "hsl(210 50% 65%)",    // Light blue
+  "61-90 days": "hsl(199 89% 64%)",    // Cyan
+  "90+ days": "hsl(200 35% 27%)",      // Teal
 };
 
 const AgedConsignment = ({ data }: AgedConsignmentProps) => {
   return (
-    <Card className="bg-white border-[#D6C68A]/20">
+    <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
       <CardHeader>
-        <CardTitle className="text-[#030303]">Aged Consignment Inventory</CardTitle>
+        <CardTitle className="text-gradient-blue-gold font-serif text-2xl">
+          Aged Consignment Inventory
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {data.length === 0 ? (
@@ -31,29 +33,36 @@ const AgedConsignment = ({ data }: AgedConsignmentProps) => {
                 data={data}
                 cx="50%"
                 cy="50%"
+                innerRadius={80}
+                outerRadius={130}
                 labelLine={false}
                 label={({ ageGroup, percent }) => 
                   `${ageGroup}: ${(percent * 100).toFixed(0)}%`
                 }
-                outerRadius={120}
                 fill="#8884d8"
                 dataKey="pieces"
+                animationDuration={1000}
               >
                 {data.map((entry, index) => (
                   <Cell 
                     key={`cell-${index}`} 
-                    fill={COLORS[entry.ageGroup as keyof typeof COLORS] || "#D6C68A"} 
+                    fill={COLORS[entry.ageGroup as keyof typeof COLORS] || "hsl(45 35% 70%)"} 
                   />
                 ))}
               </Pie>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "#FCFCFC",
-                  border: "1px solid #D6C68A",
+                  backgroundColor: "hsl(var(--lumina-card))",
+                  border: "1px solid hsl(var(--lumina-blue))",
                   borderRadius: "8px",
+                  color: "hsl(var(--lumina-white))",
                 }}
               />
-              <Legend />
+              <Legend 
+                wrapperStyle={{ 
+                  color: "hsl(var(--lumina-white))"
+                }}
+              />
             </PieChart>
           </ResponsiveContainer>
         )}

@@ -2,57 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumina Design System - Premium stone surface aesthetics */
+/* Lumina Design System - Premium stone surface aesthetics with intelligent blue accents */
 
 @layer base {
   :root {
-    /* Dark theme base */
-    --background: 220 15% 8%;
-    --foreground: 210 20% 95%;
+    /* Lumina Core Colors */
+    --lumina-black: 0 0% 5%;        /* #0C0C0C */
+    --lumina-card: 0 0% 8%;         /* #141414 */
+    --lumina-gold: 45 35% 70%;      /* #D6C68A */
+    --lumina-teal: 200 35% 27%;     /* #2E4A5A */
+    --lumina-blue: 207 77% 51%;     /* #1E88E5 */
+    --lumina-cyan: 199 89% 64%;     /* #4FC3F7 */
+    --lumina-red: 0 49% 55%;        /* #C94F4F */
+    --lumina-white: 0 0% 99%;       /* #FCFCFC */
+    --lumina-gray: 0 0% 60%;        /* #999999 */
 
-    /* Card surfaces */
-    --card: 220 12% 12%;
-    --card-foreground: 210 20% 95%;
+    /* Theme Mappings */
+    --background: var(--lumina-black);
+    --foreground: var(--lumina-white);
+
+    /* Card surfaces with subtle blue glow */
+    --card: var(--lumina-card);
+    --card-foreground: var(--lumina-white);
 
     /* Interactive surfaces */
-    --popover: 220 12% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: var(--lumina-card);
+    --popover-foreground: var(--lumina-white);
 
-    /* Primary - Champagne gold accent */
-    --primary: 45 35% 70%;
-    --primary-foreground: 220 15% 8%;
+    /* Primary - Gold accent */
+    --primary: var(--lumina-gold);
+    --primary-foreground: var(--lumina-black);
 
-    /* Secondary - Subtle stone gray */
-    --secondary: 220 8% 18%;
-    --secondary-foreground: 210 15% 85%;
+    /* Secondary - Teal */
+    --secondary: var(--lumina-teal);
+    --secondary-foreground: var(--lumina-white);
 
     /* Muted tones */
-    --muted: 220 10% 15%;
-    --muted-foreground: 220 8% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: var(--lumina-gray);
 
-    /* Accent - Premium silver */
-    --accent: 210 15% 75%;
-    --accent-foreground: 220 15% 8%;
+    /* Accent - Blue */
+    --accent: var(--lumina-blue);
+    --accent-foreground: var(--lumina-white);
 
     /* Status colors */
-    --destructive: 0 65% 55%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive: var(--lumina-red);
+    --destructive-foreground: var(--lumina-white);
 
-    /* Borders and inputs */
-    --border: 220 12% 20%;
-    --input: 220 12% 15%;
-    --ring: 45 35% 70%;
+    /* Borders and inputs with blue accent */
+    --border: 207 77% 51% / 0.2;
+    --input: var(--lumina-card);
+    --ring: var(--lumina-blue);
 
     --radius: 0.75rem;
 
     /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 12% 12%));
-    --gradient-accent: linear-gradient(45deg, hsl(45 35% 70%), hsl(210 15% 75%));
-    --gradient-stone: linear-gradient(180deg, hsl(220 12% 12%), hsl(220 15% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--lumina-black)), hsl(var(--lumina-card)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--lumina-gold)), hsl(var(--lumina-blue)));
+    --gradient-stone: linear-gradient(180deg, hsl(var(--lumina-card)), hsl(var(--lumina-black)));
+    --gradient-blue-gold: linear-gradient(135deg, hsl(var(--lumina-blue)), hsl(var(--lumina-gold)));
+    --gradient-teal-blue: linear-gradient(90deg, hsl(var(--lumina-teal)), hsl(var(--lumina-blue)));
     
-    /* Premium shadows */
-    --shadow-premium: 0 25px 50px -12px hsl(220 15% 8% / 0.6);
-    --shadow-glow: 0 0 40px hsl(45 35% 70% / 0.15);
+    /* Premium shadows with blue glow */
+    --shadow-premium: 0 10px 30px -10px hsl(var(--lumina-blue) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--lumina-gold) / 0.15);
+    --shadow-blue-glow: 0 0 15px hsl(var(--lumina-blue) / 0.3);
+    --shadow-card: 0 0 10px hsl(var(--lumina-blue) / 0.15);
     
     /* Typography */
     --font-serif: 'Playfair Display', serif;
@@ -60,6 +75,102 @@
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: radial-gradient(circle at 30% 30%, hsl(var(--lumina-blue) / 0.05), transparent 70%),
+                radial-gradient(circle at 70% 70%, hsl(var(--lumina-gold) / 0.05), transparent 70%),
+                hsl(var(--lumina-black));
+    animation: subtle-move 12s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  /* Shimmer animation for borders */
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Subtle background movement */
+  @keyframes subtle-move {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  /* Fade in with stagger */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--lumina-blue) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--lumina-blue) / 0.6); }
+  }
+
+  /* Slide from left */
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Count up effect */
+  @keyframes count-up {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .animate-count-up {
+    animation: count-up 0.4s ease-out forwards;
+  }
+
+  .shimmer-border {
+    background: linear-gradient(90deg, hsl(var(--lumina-blue)), hsl(var(--lumina-gold)), hsl(var(--lumina-blue)));
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Gradient text utilities */
+  .text-gradient-blue-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--lumina-blue))] to-[hsl(var(--lumina-gold))] text-transparent bg-clip-text;
+  }
+
+  .text-gradient-gold-blue {
+    @apply bg-gradient-to-r from-[hsl(var(--lumina-gold))] to-[hsl(var(--lumina-blue))] text-transparent bg-clip-text;
   }
 }
 

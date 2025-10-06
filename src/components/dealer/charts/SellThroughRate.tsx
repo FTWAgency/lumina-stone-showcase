@@ -11,38 +11,43 @@ interface SellThroughRateProps {
 const SellThroughRate = ({ data }: SellThroughRateProps) => {
   const sortedData = [...data].sort((a, b) => b.rate - a.rate);
 
+  const getColor = (rate: number) => {
+    if (rate >= 80) return "hsl(207 77% 51%)"; // Blue
+    if (rate >= 50) return "hsl(200 35% 27%)"; // Teal
+    return "hsl(0 0% 27%)"; // Gray
+  };
+
   return (
-    <Card className="bg-white border-[#D6C68A]/20">
+    <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
       <CardHeader>
-        <CardTitle className="text-[#030303]">Sell-Through Rate by Dealer</CardTitle>
+        <CardTitle className="text-gradient-blue-gold font-serif text-2xl">
+          Sell-Through Rate by Dealer
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {sortedData.length === 0 ? (
           <p className="text-muted-foreground text-center py-8">No data available</p>
         ) : (
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={sortedData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#D6C68A20" />
-              <XAxis dataKey="dealer" stroke="#030303" angle={-45} textAnchor="end" height={100} />
-              <YAxis stroke="#030303" label={{ value: 'Rate (%)', angle: -90, position: 'insideLeft' }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#FCFCFC",
-                  border: "1px solid #D6C68A",
-                  borderRadius: "8px",
-                }}
-                formatter={(value: any) => [`${value.toFixed(1)}%`, "Sell-Through Rate"]}
-              />
-              <Bar dataKey="rate" radius={[8, 8, 0, 0]}>
-                {sortedData.map((entry, index) => (
-                  <Cell 
-                    key={`cell-${index}`} 
-                    fill={entry.rate >= 75 ? "#D6C68A" : entry.rate >= 50 ? "#C5B579" : "#A39357"} 
+          <div className="space-y-4">
+            {sortedData.map((dealer, index) => (
+              <div key={dealer.dealer} className="animate-slide-in-left" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-medium text-lumina-white">{dealer.dealer}</span>
+                  <span className="text-sm font-bold text-lumina-gold">{dealer.rate.toFixed(1)}%</span>
+                </div>
+                <div className="relative h-3 bg-lumina-black/50 rounded-full overflow-hidden">
+                  <div
+                    className="absolute top-0 left-0 h-full rounded-full transition-all duration-1000 ease-out"
+                    style={{
+                      width: `${dealer.rate}%`,
+                      backgroundColor: getColor(dealer.rate),
+                      boxShadow: dealer.rate >= 80 ? '0 0 10px hsl(207 77% 51% / 0.5)' : 'none',
+                    }}
                   />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </CardContent>
     </Card>

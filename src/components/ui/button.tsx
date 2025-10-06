@@ -17,6 +17,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         premium: "bg-gradient-accent text-primary-foreground font-semibold shadow-premium hover:shadow-glow hover:scale-105 transition-all duration-300",
         hero: "bg-primary/10 backdrop-blur-sm border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-medium shadow-lg hover:shadow-glow",
+        lumina: "bg-lumina-gold text-lumina-black hover:bg-gradient-blue-gold hover:text-lumina-white font-medium shadow-premium hover:shadow-blue-glow transition-all duration-300",
+        "lumina-secondary": "bg-lumina-teal/20 text-lumina-white border border-lumina-blue/30 hover:bg-lumina-blue/20 hover:shadow-blue-glow transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

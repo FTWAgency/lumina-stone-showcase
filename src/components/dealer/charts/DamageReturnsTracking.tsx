@@ -15,9 +15,11 @@ interface DamageReturnsTrackingProps {
 
 const DamageReturnsTracking = ({ data }: DamageReturnsTrackingProps) => {
   return (
-    <Card className="bg-white border-[#D6C68A]/20">
+    <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
       <CardHeader>
-        <CardTitle className="text-[#030303]">Damage & Returns Tracking</CardTitle>
+        <CardTitle className="text-gradient-blue-gold font-serif text-2xl">
+          Damage & Returns Tracking
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {data.length === 0 ? (
@@ -26,32 +28,36 @@ const DamageReturnsTracking = ({ data }: DamageReturnsTrackingProps) => {
           <div className="overflow-x-auto">
             <Table>
               <TableHeader>
-                <TableRow>
-                  <TableHead>Item</TableHead>
-                  <TableHead>Dealer</TableHead>
-                  <TableHead>Quantity</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Date</TableHead>
+                <TableRow className="border-lumina-blue/20 hover:bg-lumina-blue/5">
+                  <TableHead className="text-lumina-white font-semibold">Item</TableHead>
+                  <TableHead className="text-lumina-white font-semibold">Dealer</TableHead>
+                  <TableHead className="text-lumina-white font-semibold">Quantity</TableHead>
+                  <TableHead className="text-lumina-white font-semibold">Status</TableHead>
+                  <TableHead className="text-lumina-white font-semibold">Date</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {data.map((item) => (
-                  <TableRow key={item.id}>
-                    <TableCell className="font-medium">{item.item}</TableCell>
-                    <TableCell>{item.dealer}</TableCell>
-                    <TableCell>{item.quantity}</TableCell>
+                {data.map((item, index) => (
+                  <TableRow 
+                    key={item.id}
+                    className="border-lumina-blue/10 hover:bg-lumina-blue/5 transition-colors animate-fade-in-up"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <TableCell className="font-medium text-lumina-white">{item.item}</TableCell>
+                    <TableCell className="text-lumina-gray">{item.dealer}</TableCell>
+                    <TableCell className="text-lumina-white">{item.quantity}</TableCell>
                     <TableCell>
                       <Badge 
                         className={
                           item.status === "damaged" 
-                            ? "bg-red-100 text-red-800" 
-                            : "bg-blue-100 text-blue-800"
+                            ? "bg-lumina-red/20 text-lumina-red border-lumina-red/30" 
+                            : "bg-lumina-blue/20 text-lumina-cyan border-lumina-blue/30"
                         }
                       >
                         {item.status}
                       </Badge>
                     </TableCell>
-                    <TableCell>{new Date(item.date).toLocaleDateString()}</TableCell>
+                    <TableCell className="text-lumina-gray">{new Date(item.date).toLocaleDateString()}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

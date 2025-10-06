@@ -55,16 +55,31 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				lumina: {
+					black: 'hsl(var(--lumina-black))',
+					card: 'hsl(var(--lumina-card))',
+					gold: 'hsl(var(--lumina-gold))',
+					teal: 'hsl(var(--lumina-teal))',
+					blue: 'hsl(var(--lumina-blue))',
+					cyan: 'hsl(var(--lumina-cyan))',
+					red: 'hsl(var(--lumina-red))',
+					white: 'hsl(var(--lumina-white))',
+					gray: 'hsl(var(--lumina-gray))'
 				}
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-stone': 'var(--gradient-stone)'
+				'gradient-stone': 'var(--gradient-stone)',
+				'gradient-blue-gold': 'var(--gradient-blue-gold)',
+				'gradient-teal-blue': 'var(--gradient-teal-blue)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'blue-glow': 'var(--shadow-blue-glow)',
+				'card': 'var(--shadow-card)'
 			},
 			transitionProperty: {
 				'smooth': 'var(--transition-smooth)'

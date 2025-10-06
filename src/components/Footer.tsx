@@ -6,7 +6,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-accent rounded-xl flex items-center justify-center">
                 <span className="font-serif text-lg font-bold text-primary-foreground">L</span>
               </div>
               <span className="font-serif text-2xl font-bold text-foreground">Lumina</span>

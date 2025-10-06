@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-primary leading-tight">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent leading-tight">
           Safer by Design.<br />
           Stunning by Nature.
         </h1>

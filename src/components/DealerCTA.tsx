@@ -3,11 +3,11 @@ import { Input } from "@/components/ui/input";
 
 const DealerCTA = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+        <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
           See It. Touch It.
-          <span className="text-primary block">
+          <span className="bg-gradient-accent bg-clip-text text-transparent block">
             Fall In Love With It.
           </span>
         </h2>

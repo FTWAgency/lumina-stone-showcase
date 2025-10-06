@@ -2,7 +2,7 @@ import { Heart, AlertTriangle, Shield, Quote } from "lucide-react";
 
 const SilicaFree = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-card">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -20,7 +20,7 @@ const SilicaFree = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Column 1 - Visual Illustration */}
-          <div className="flex flex-col items-center justify-center text-center p-8 bg-card rounded-xl border border-border">
+          <div className="flex flex-col items-center justify-center text-center p-8 bg-background rounded-xl border border-border">
             <div className="relative mb-4 w-80 h-80 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
@@ -41,7 +41,7 @@ const SilicaFree = () => {
 
           {/* Column 2 - Fast Facts */}
           <div className="space-y-6 flex flex-col justify-center">
-            <div className="bg-card p-6 rounded-xl border border-border">
+            <div className="bg-background p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">#1</span>
@@ -51,7 +51,7 @@ const SilicaFree = () => {
               <p className="text-sm text-muted-foreground">In Stone Fabrication</p>
             </div>
 
-            <div className="bg-card rounded-xl p-6 border border-border">
+            <div className="bg-background p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center">
                   <span className="text-destructive font-bold text-sm">95%</span>
@@ -61,7 +61,7 @@ const SilicaFree = () => {
               <p className="text-sm text-muted-foreground">Crystalline Silica</p>
             </div>
 
-            <div className="bg-card rounded-xl p-6 border border-border">
+            <div className="bg-background p-6 rounded-xl border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <Shield className="w-8 h-8 text-destructive" />
                 <h4 className="font-semibold text-foreground">Linked to Health Issues</h4>

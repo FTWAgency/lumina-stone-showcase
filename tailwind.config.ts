@@ -26,14 +26,8 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: {
-					DEFAULT: 'hsl(var(--background))',
-					white: 'hsl(var(--background-white))'
-				},
-				foreground: {
-					DEFAULT: 'hsl(var(--foreground))',
-					dark: 'hsl(var(--foreground-dark))'
-				},
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -65,14 +59,12 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-cta': 'var(--gradient-cta)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-stone': 'var(--gradient-stone)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
-				'glow': 'var(--shadow-glow)',
-				'teal-glow': 'var(--shadow-teal-glow)'
+				'glow': 'var(--shadow-glow)'
 			},
 			transitionProperty: {
 				'smooth': 'var(--transition-smooth)'

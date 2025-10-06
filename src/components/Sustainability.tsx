@@ -2,17 +2,17 @@ import { Shield, Recycle, RotateCcw, Handshake } from "lucide-react";
 
 const Sustainability = () => {
   return (
-    <section className="py-24 px-6 bg-background-white">
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4 text-foreground-dark">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             4R Technology
             <span className="block text-primary text-3xl lg:text-4xl font-medium">
               Sustainability Built In
             </span>
           </h2>
-          <p className="font-sans text-lg text-foreground-dark/70 max-w-4xl mx-auto leading-relaxed mt-6">
+          <p className="font-sans text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mt-6">
             Engineered with intention — every Lumina surface is created to protect people, resources, and the planet. Our sustainability promise goes beyond the product - it's embedded in every step of how we build, design, and deliver.
           </p>
         </div>
@@ -22,7 +22,7 @@ const Sustainability = () => {
           
           {/* Reduce */}
           <div className="bg-card p-8 rounded-xl border border-border text-center group hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
               <Shield className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
@@ -35,8 +35,8 @@ const Sustainability = () => {
 
           {/* Recycle */}
           <div className="bg-card p-8 rounded-xl border border-border text-center group hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Recycle className="w-8 h-8 text-accent" />
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Recycle className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
               Recycle
@@ -48,7 +48,7 @@ const Sustainability = () => {
 
           {/* Reuse */}
           <div className="bg-card p-8 rounded-xl border border-border text-center group hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
               <RotateCcw className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
@@ -61,8 +61,8 @@ const Sustainability = () => {
 
           {/* Respect */}
           <div className="bg-card p-8 rounded-xl border border-border text-center group hover:shadow-lg transition-all duration-300">
-            <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Handshake className="w-8 h-8 text-accent" />
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Handshake className="w-8 h-8 text-primary" />
             </div>
             <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
               Respect

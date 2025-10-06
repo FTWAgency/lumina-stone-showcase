@@ -2,7 +2,7 @@ const nanoTechImage = "/lovable-uploads/095c3664-5f34-4792-b481-458b17ff08f7.png
 
 const NanoTech = () => {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left visual */}
@@ -23,9 +23,9 @@ const NanoTech = () => {
           
           {/* Right content */}
           <div>
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8">
               Surfaces That Always Look
-              <span className="text-primary block">
+              <span className="bg-gradient-accent bg-clip-text text-transparent block">
                 as New
               </span>
             </h2>

@@ -11,12 +11,12 @@ const Comparison = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-gradient-stone">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
             Lumina vs. 
-            <span className="text-foreground/70"> Traditional Quartz</span>
+            <span className="text-muted-foreground"> Traditional Quartz</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             See why forward-thinking architects and designers are choosing Lumina for their most important projects.
@@ -25,7 +25,7 @@ const Comparison = () => {
 
         <div className="bg-card rounded-2xl border border-border shadow-premium overflow-hidden">
           {/* Header */}
-          <div className="grid grid-cols-3 border-b border-border bg-muted/10">
+          <div className="grid grid-cols-3 border-b border-border bg-muted/50">
             <div className="p-6">
               <h3 className="font-serif text-xl font-semibold text-foreground">Features</h3>
             </div>

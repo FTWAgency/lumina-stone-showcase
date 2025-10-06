@@ -82,14 +82,14 @@ const TechnicalFeatures = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background-white">
+    <section className="py-24 px-6 bg-muted/20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
             Technical
-            <span className="text-primary"> Excellence</span>
+            <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
           </h2>
-          <p className="font-sans text-lg text-foreground-dark/70 max-w-2xl mx-auto">
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Advanced manufacturing meets natural beauty in every Lumina surface.
           </p>
         </div>

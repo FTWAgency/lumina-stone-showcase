@@ -11,17 +11,17 @@ const DesignShowcase = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background-white">
+    <section className="py-24 px-6 bg-gradient-stone">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6 text-foreground-dark">
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
             Inspired by Nature.<br />
-            <span className="text-primary">
+            <span className="bg-gradient-accent bg-clip-text text-transparent">
               Perfected by Technology.
             </span>
           </h2>
           
-          <p className="font-sans text-lg text-foreground-dark/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We replicate the elegance of natural stone using precision print tech. 
             Each slab is unique, durable, and stunning.
           </p>
@@ -36,10 +36,10 @@ const DesignShowcase = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
           <div className="absolute bottom-6 left-6 right-6">
-            <h3 className="font-serif text-2xl font-semibold text-white mb-2">
+            <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
               Premium Collection
             </h3>
-            <p className="text-white/80">Six signature patterns crafted for discerning architects</p>
+            <p className="text-muted-foreground">Six signature patterns crafted for discerning architects</p>
           </div>
         </div>
 

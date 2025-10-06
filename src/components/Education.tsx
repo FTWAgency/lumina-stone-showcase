@@ -1,19 +1,19 @@
 
 const Education = () => {
   return (
-    <section className="py-24 px-6 bg-background-white">
+    <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground-dark">
+            <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-8 text-foreground">
               Designed for a<br />
-              <span className="text-primary">
+              <span className="bg-gradient-accent bg-clip-text text-transparent">
                 Healthier Future
               </span>
             </h2>
             
-            <p className="font-sans text-lg text-foreground-dark/70 leading-relaxed mb-8">
+            <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8">
               Over 95% of engineered stone contains harmful Silica. Lumina changes the standard with a 
               <span className="text-primary font-semibold"> 0% Silica solution</span>, reducing risk for 
               fabricators while delivering natural beauty.

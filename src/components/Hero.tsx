@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-stone-surface.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -33,6 +36,14 @@ const Hero = () => {
           </Button>
           <Button variant="hero" size="hero" className="font-sans">
             Explore the Collection
+          </Button>
+          <Button 
+            variant="hero" 
+            size="hero" 
+            className="font-sans"
+            onClick={() => navigate("/dealer/auth")}
+          >
+            Dealer Login
           </Button>
         </div>
       </div>

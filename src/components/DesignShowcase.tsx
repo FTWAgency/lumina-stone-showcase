@@ -301,6 +301,7 @@ const DesignShowcase = () => {
                       onClick={() => {
                         setSelectedDesign(null);
                         navigate('/find-a-dealer');
+                        window.scrollTo(0, 0);
                       }}
                     >
                       <MapPin className="w-4 h-4" />

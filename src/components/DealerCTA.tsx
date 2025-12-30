@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const DealerCTA = () => {
   return (
@@ -20,16 +20,9 @@ const DealerCTA = () => {
         <div className="bg-secondary p-10 rounded-2xl border border-border shadow-premium max-w-lg mx-auto">
           <h3 className="font-display text-xl font-medium text-foreground mb-8">Find Your Nearest Showroom</h3>
           
-          <div className="space-y-5">
-            <Input 
-              type="text" 
-              placeholder="Enter your zip code" 
-              className="text-center font-body text-lg h-14 rounded-xl"
-            />
-            <Button variant="premium" size="lg" className="w-full font-display h-14 text-base">
-              Find Dealers Near Me
-            </Button>
-          </div>
+          <Button variant="premium" size="lg" className="w-full font-display h-14 text-base" asChild>
+            <Link to="/find-a-dealer">Find Dealers Near Me</Link>
+          </Button>
           
           <div className="mt-10 pt-8 border-t border-border">
             <p className="font-body text-sm text-muted-foreground mb-5">Featured Showroom Partners:</p>

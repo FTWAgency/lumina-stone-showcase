@@ -250,8 +250,8 @@ const FindDealer = () => {
                   {radius} miles
                   <ChevronDown className={`w-4 h-4 transition-transform ${showRadiusDropdown ? "rotate-180" : ""}`} />
                 </Button>
-                {showRadiusDropdown && (
-                  <div className="absolute top-full mt-2 right-0 bg-secondary border border-border/30 rounded-xl overflow-hidden z-50 shadow-xl">
+              {showRadiusDropdown && (
+                  <div className="absolute top-full mt-2 right-0 bg-secondary border border-border/30 rounded-xl overflow-hidden z-[100] shadow-xl">
                     {radiusOptions.map((option) => (
                       <button
                         key={option.value}

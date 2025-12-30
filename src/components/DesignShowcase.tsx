@@ -11,46 +11,46 @@ const DesignShowcase = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-stone">
+    <section className="py-32 px-6 bg-gradient-stone">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
             Inspired by Nature.<br />
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Perfected by Technology.
             </span>
           </h2>
           
-          <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We replicate the elegance of natural stone using precision print tech. 
-            Each slab is unique, durable, and stunning.
+          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We replicate the elegance of natural stone using precision print technology. 
+            Each slab is unique, durable, and stunning — crafted for discerning spaces.
           </p>
         </div>
 
         {/* Featured showcase image */}
-        <div className="mb-16 relative rounded-2xl overflow-hidden shadow-premium">
+        <div className="mb-20 relative rounded-2xl overflow-hidden shadow-premium">
           <img 
             src={stonesamples} 
             alt="Stone sample collection" 
-            className="w-full h-96 object-cover"
+            className="w-full h-[28rem] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-          <div className="absolute bottom-6 left-6 right-6">
-            <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+          <div className="absolute bottom-8 left-8 right-8">
+            <h3 className="font-display text-3xl font-medium text-foreground mb-3">
               Premium Collection
             </h3>
-            <p className="text-muted-foreground">Six signature patterns crafted for discerning architects</p>
+            <p className="font-body text-lg text-muted-foreground">Six signature patterns crafted for discerning architects</p>
           </div>
         </div>
 
         {/* Design grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {designs.map((design, index) => (
             <div 
               key={design.name}
-              className="group bg-card p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
+              className="group bg-secondary p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer"
             >
-              <div className="h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 relative overflow-hidden">
+              <div className="h-52 bg-gradient-to-br from-muted to-muted/50 rounded-xl mb-6 relative overflow-hidden">
                 {design.name === "Crystallo" ? (
                   <img 
                     src="/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png" 
@@ -95,16 +95,16 @@ const DesignShowcase = () => {
                   ></div>
                 )}
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{design.name}</h3>
-              <p className="font-sans text-sm text-muted-foreground">{design.pattern}</p>
+              <h3 className="font-display text-xl font-medium text-foreground mb-2">{design.name}</h3>
+              <p className="font-body text-base text-muted-foreground">{design.pattern}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
-          <button className="inline-flex items-center gap-2 font-sans text-primary hover:text-accent transition-colors duration-300">
+          <button className="inline-flex items-center gap-3 font-display text-primary hover:text-accent transition-colors duration-300 text-lg">
             Explore All Designs
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>

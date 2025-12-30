@@ -11,27 +11,27 @@ const Hero = () => {
           alt="Lumina stone surface" 
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-6 py-24">
         
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent leading-tight">
-          Safer by Design.<br />
-          Stunning by Nature.
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium mb-8 bg-gradient-accent bg-clip-text text-transparent leading-tight tracking-tight">
+          Crafted from the<br />
+          Quiet Strength of the Mountain.
         </h1>
         
-        <p className="font-sans text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="font-body text-xl md:text-2xl text-foreground/90 mb-16 max-w-3xl mx-auto leading-relaxed">
           Introducing Lumina Surfaces — the next evolution in 3D-printed stone.
-          Silica-free, health-forward, and artfully crafted.
+          Silica-free, health-forward, and artfully crafted for a more beautiful world.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button variant="premium" size="hero" className="font-sans">
+          <Button variant="premium" size="hero" className="font-display">
             Find a Dealer
           </Button>
-          <Button variant="hero" size="hero" className="font-sans">
+          <Button variant="hero" size="hero" className="font-display">
             Explore the Collection
           </Button>
         </div>

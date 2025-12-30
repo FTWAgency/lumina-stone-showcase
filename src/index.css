@@ -2,60 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumina Design System - Dual theme: Dark luxury for homepage, Light professional for dealer dashboard */
+/* Lumina 10.0 Design System - Refined Alpine Luxury */
 
 @layer base {
   :root {
-    /* Original Homepage Theme - Dark Luxury */
-    --background: 222 12% 8%;
-    --foreground: 60 5% 96%;
-    --card: 222 12% 10%;
-    --card-foreground: 60 5% 96%;
-    --popover: 222 12% 10%;
-    --popover-foreground: 60 5% 96%;
-    --primary: 42 47% 65%;
-    --primary-foreground: 222 12% 8%;
-    --secondary: 200 25% 28%;
-    --secondary-foreground: 60 5% 96%;
-    --muted: 222 12% 15%;
-    --muted-foreground: 60 5% 70%;
-    --accent: 200 35% 58%;
-    --accent-foreground: 222 12% 8%;
+    /* Lumina 10.0 Primary Colors */
+    --background: 198 79% 9%;           /* #041E2B - Deep Alpine Blue */
+    --foreground: 42 31% 83%;           /* #DFD8C6 - Stone Taupe */
+    --card: 201 50% 22%;                /* #1C4355 - Slate Blue */
+    --card-foreground: 42 31% 83%;      /* #DFD8C6 - Stone Taupe */
+    --popover: 201 50% 22%;             /* #1C4355 - Slate Blue */
+    --popover-foreground: 42 31% 83%;   /* #DFD8C6 - Stone Taupe */
+    --primary: 39 84% 57%;              /* #EDAB36 - Sunlit Amber */
+    --primary-foreground: 198 79% 9%;   /* #041E2B - Deep Alpine Blue */
+    --secondary: 201 50% 22%;           /* #1C4355 - Slate Blue */
+    --secondary-foreground: 42 31% 83%; /* #DFD8C6 - Stone Taupe */
+    --muted: 201 40% 18%;               /* Darker Slate Blue */
+    --muted-foreground: 42 20% 65%;     /* Muted Stone Taupe */
+    --accent: 37 34% 44%;               /* #977949 - Warm Gold */
+    --accent-foreground: 42 31% 83%;    /* #DFD8C6 - Stone Taupe */
     --destructive: 0 50% 50%;
-    --destructive-foreground: 60 5% 96%;
-    --border: 222 12% 20%;
-    --input: 222 12% 20%;
-    --ring: 42 47% 65%;
+    --destructive-foreground: 42 31% 83%;
+    --border: 201 40% 25%;              /* Subtle Slate border */
+    --input: 201 40% 25%;
+    --ring: 39 84% 57%;                 /* Sunlit Amber ring */
     --radius: 0.75rem;
 
     /* Lumina Brand Colors for Dealer Dashboard (Light Mode) */
-    --lumina-white: 0 0% 98%;        /* #FAFAFA - Soft background */
-    --lumina-surface: 0 0% 100%;     /* #FFFFFF - Card base */
-    --lumina-black: 0 0% 10%;        /* #1A1A1A - Text + accents */
-    --lumina-gray: 0 0% 35%;         /* #5A5A5A - Secondary text */
-    --lumina-divider: 0 0% 91%;      /* #E8E8E8 - Subtle borders */
-    --lumina-gold: 42 35% 59%;       /* #CFA55D - Primary accent */
-    --lumina-teal: 200 35% 27%;      /* #2E4A5A - Secondary brand */
-    --lumina-blue: 207 77% 51%;      /* #1E88E5 - Chart & data */
-    --lumina-cyan: 199 89% 64%;      /* #4FC3F7 - Hover, highlight */
-    --lumina-red: 0 49% 55%;         /* #C94F4F - Damage/alerts */
+    --lumina-white: 42 31% 83%;         /* Stone Taupe - Light backgrounds */
+    --lumina-surface: 0 0% 100%;        /* Pure white - Card base */
+    --lumina-black: 198 79% 9%;         /* Deep Alpine Blue - Text */
+    --lumina-gray: 201 30% 35%;         /* Muted Slate - Secondary text */
+    --lumina-divider: 201 25% 30%;      /* Subtle borders */
+    --lumina-gold: 37 34% 44%;          /* #977949 - Warm Gold */
+    --lumina-amber: 39 84% 57%;         /* #EDAB36 - Sunlit Amber */
+    --lumina-alpine: 198 79% 9%;        /* #041E2B - Deep Alpine Blue */
+    --lumina-slate: 201 50% 22%;        /* #1C4355 - Slate Blue */
+    --lumina-taupe: 42 31% 83%;         /* #DFD8C6 - Stone Taupe */
+    --lumina-teal: 200 35% 27%;
+    --lumina-blue: 207 77% 51%;
+    --lumina-cyan: 199 89% 64%;
+    --lumina-red: 0 49% 55%;
 
-    /* Homepage Gradients - Dark Mode */
-    --gradient-hero: linear-gradient(135deg, hsl(222 12% 8% / 0.95), hsl(200 25% 28% / 0.85));
-    --gradient-accent: linear-gradient(135deg, hsl(42 47% 65%), hsl(200 35% 58%));
-    --gradient-stone: linear-gradient(180deg, hsl(200 20% 88% / 0.1), hsl(200 20% 88% / 0.05));
-    --gradient-blue-gold: linear-gradient(135deg, hsl(207 79% 51%), hsl(42 47% 65%));
-    --gradient-teal-blue: linear-gradient(135deg, hsl(200 35% 38%), hsl(207 79% 51%));
+    /* Lumina 10.0 Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(198 79% 9% / 0.98), hsl(201 50% 22% / 0.9));
+    --gradient-accent: linear-gradient(135deg, hsl(39 84% 57%), hsl(37 34% 44%));
+    --gradient-stone: linear-gradient(180deg, hsl(42 31% 83% / 0.08), hsl(42 31% 83% / 0.03));
+    --gradient-alpine: linear-gradient(135deg, hsl(198 79% 9%), hsl(201 50% 22%));
+    --gradient-amber-gold: linear-gradient(135deg, hsl(39 84% 57%), hsl(37 34% 44%));
     
-    /* Homepage Shadows - Dark Mode */
-    --shadow-premium: 0 10px 40px -10px rgba(42, 47, 65, 0.4);
-    --shadow-glow: 0 0 40px rgba(214, 198, 138, 0.3);
-    --shadow-blue-glow: 0 0 30px rgba(30, 136, 229, 0.4);
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Lumina 10.0 Shadows */
+    --shadow-premium: 0 10px 40px -10px rgba(237, 171, 54, 0.25);
+    --shadow-glow: 0 0 40px rgba(237, 171, 54, 0.35);
+    --shadow-amber-glow: 0 0 30px rgba(237, 171, 54, 0.4);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
     
     /* Typography */
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Inter', sans-serif;
+    --font-display: 'Gotti VF', 'Satoshi', 'Geomanist', sans-serif;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-sans: 'Satoshi', 'Inter', sans-serif;
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -100,8 +105,8 @@
 
   /* Pulse glow */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--lumina-blue) / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(var(--lumina-blue) / 0.6); }
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   }
 
   /* Slide from left */
@@ -139,27 +144,26 @@
   }
 
   .shimmer-border {
-    background: linear-gradient(90deg, hsl(var(--lumina-blue)), hsl(var(--lumina-gold)), hsl(var(--lumina-blue)));
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
     background-size: 200% 100%;
     animation: shimmer 3s linear infinite;
   }
 
   /* Gradient text utilities */
+  .text-gradient-amber-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-transparent bg-clip-text;
+  }
+
+  .text-gradient-gold-amber {
+    @apply bg-gradient-to-r from-[hsl(var(--accent))] to-[hsl(var(--primary))] text-transparent bg-clip-text;
+  }
+
+  /* Legacy gradient classes for compatibility */
   .text-gradient-blue-gold {
-    @apply bg-gradient-to-r from-[hsl(var(--lumina-blue))] to-[hsl(var(--lumina-gold))] text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] text-transparent bg-clip-text;
   }
 
   .text-gradient-gold-blue {
-    @apply bg-gradient-to-r from-[hsl(var(--lumina-gold))] to-[hsl(var(--lumina-blue))] text-transparent bg-clip-text;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-r from-[hsl(var(--accent))] to-[hsl(var(--primary))] text-transparent bg-clip-text;
   }
 }

@@ -22,64 +22,59 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full border-b backdrop-blur transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-border/50 backdrop-blur transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/80 supports-[backdrop-filter]:bg-background/40' 
-        : 'bg-background/95 supports-[backdrop-filter]:bg-background/60'
+        ? 'bg-background/90 supports-[backdrop-filter]:bg-background/60' 
+        : 'bg-background/80 supports-[backdrop-filter]:bg-background/40'
     }`}>
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-3">
           <img 
             src="/lovable-uploads/b75b6f32-1d96-4d5a-a927-e74ec66d4c40.png" 
             alt="Lumina Surfaces Logo" 
-            className="h-8"
+            className="h-10"
           />
         </div>
 
         {/* Navigation Menu */}
         <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
+          <NavigationMenuList className="gap-1">
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                 Products
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                 Technology
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                 Why Silica-Free?
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                 Find a Dealer
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                 About
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/20 hover:text-accent-foreground focus:bg-accent/20 focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                Contact
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* CTA Button */}
-        <Button variant="premium" size="default" className="hidden md:inline-flex">
+        <Button variant="premium" size="default" className="hidden md:inline-flex font-display">
           Explore Collection
         </Button>
 
         {/* Mobile Menu Trigger */}
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button variant="ghost" size="icon" className="md:hidden text-foreground">
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>

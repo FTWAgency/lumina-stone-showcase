@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
 import stonesamples from "@/assets/stone-samples.jpg";
 import { Button } from "@/components/ui/button";
+import ImageCarousel from "@/components/ImageCarousel";
 import {
   Dialog,
   DialogContent,
@@ -15,6 +16,7 @@ interface Design {
   name: string;
   pattern: string;
   image: string;
+  images: string[];
   colorFamily: string;
   style: string;
   details: string;
@@ -35,6 +37,11 @@ const designs: Design[] = [
     name: "Crystallo", 
     pattern: "Soft silver layering",
     image: "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
+    images: [
+      "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
+      "/lovable-uploads/4344fe9a-3d52-4f67-b5e4-193deaa82902.png",
+      "/lovable-uploads/57391c22-1049-4f7e-a9b5-8dbe023b18c8.png",
+    ],
     colorFamily: "White",
     style: "Minimal",
     details: "Crystallo captures the ethereal beauty of crystalline formations, with soft silver tones dancing across the surface. Its delicate layering creates depth and dimension, perfect for spaces that demand quiet sophistication.",
@@ -50,6 +57,11 @@ const designs: Design[] = [
     name: "Cashmere Taj", 
     pattern: "Creamy layered veins",
     image: "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
+    images: [
+      "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
+      "/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png",
+      "/lovable-uploads/4ad1487a-76f8-4980-943a-748decc450bd.png",
+    ],
     colorFamily: "White",
     style: "Veined",
     details: "Inspired by the opulent marble of the Taj Mahal, Cashmere Taj features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur.",
@@ -65,6 +77,11 @@ const designs: Design[] = [
     name: "Lumina", 
     pattern: "Warm golden movement",
     image: "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
+    images: [
+      "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
+      "/lovable-uploads/eb5c4701-7737-4d3a-bd3b-63ee0504195d.png",
+      "/lovable-uploads/b75b6f32-1d96-4d5a-a927-e74ec66d4c40.png",
+    ],
     colorFamily: "Earth Tones",
     style: "Veined",
     details: "Lumina embodies our brand essence — where light transforms stillness into form. Warm golden undertones flow through this signature design, creating movement and life in every application.",
@@ -80,6 +97,11 @@ const designs: Design[] = [
     name: "Calcutta Sienna", 
     pattern: "Defined flowing veining",
     image: "/lovable-uploads/1c983e16-ba6b-40ac-9021-c9951c32d332.png",
+    images: [
+      "/lovable-uploads/1c983e16-ba6b-40ac-9021-c9951c32d332.png",
+      "/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png",
+      "/lovable-uploads/15a58520-bd5d-4630-8a78-c33ff14e8248.png",
+    ],
     colorFamily: "Earth Tones",
     style: "Bold",
     details: "Calcutta Sienna makes a bold statement with its dramatic veining patterns. The defined, flowing lines create visual intrigue, making it the centerpiece of any design scheme.",
@@ -95,6 +117,11 @@ const designs: Design[] = [
     name: "Terra Beige", 
     pattern: "Natural earth tones",
     image: "/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png",
+    images: [
+      "/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png",
+      "/lovable-uploads/095c3664-5f34-4792-b481-458b17ff08f7.png",
+      "/lovable-uploads/d51d4bbf-97fc-4ca3-b718-cc87dd34de31.png",
+    ],
     colorFamily: "Earth Tones",
     style: "Minimal",
     details: "Terra Beige draws from the warm palette of sun-baked earth, offering neutral tones that complement any design aesthetic. Its organic warmth creates inviting, grounded spaces.",
@@ -110,6 +137,11 @@ const designs: Design[] = [
     name: "Mont Blanc", 
     pattern: "Cool marble striations",
     image: "/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png",
+    images: [
+      "/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png",
+      "/lovable-uploads/4e5fd5b8-af7d-47e5-9f93-360d3e4d50aa.png",
+      "/lovable-uploads/287c93a8-a3a8-4fdd-9836-c34efa2a13c5.png",
+    ],
     colorFamily: "Gray",
     style: "Veined",
     details: "Named after Europe's highest peak, Mont Blanc features crisp white surfaces with elegant grey striations. The cool tones evoke alpine majesty and pristine natural beauty.",
@@ -197,14 +229,14 @@ const DesignShowcase = () => {
         <DialogContent className="max-w-5xl bg-[hsl(var(--deep-alpine))] border-border/30 p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
           {selectedDesign && (
             <div className="grid lg:grid-cols-2">
-              {/* Image side */}
+              {/* Image side with carousel */}
               <div className="aspect-square lg:aspect-auto lg:min-h-[600px] relative">
-                <img
-                  src={selectedDesign.image}
+                <ImageCarousel
+                  images={selectedDesign.images}
                   alt={selectedDesign.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[hsl(var(--deep-alpine))]/30 lg:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[hsl(var(--deep-alpine))]/30 lg:block hidden pointer-events-none" />
               </div>
               
               {/* Content side */}

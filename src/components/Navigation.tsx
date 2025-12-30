@@ -106,7 +106,7 @@ const Navigation = () => {
 
         {/* CTA Button */}
         <Button variant="premium" size="default" className="hidden md:inline-flex font-display" asChild>
-          <Link to="/collection">Explore Collection</Link>
+          <Link to="/collection" onClick={() => window.scrollTo(0, 0)}>Explore Collection</Link>
         </Button>
 
         {/* Mobile Menu Trigger */}

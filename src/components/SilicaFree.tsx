@@ -2,8 +2,8 @@ import { Heart, AlertTriangle, Shield, Quote } from "lucide-react";
 
 const SilicaFree = () => {
   return (
-    <section className="py-32 px-6 bg-secondary">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-32 px-6 bg-secondary texture-mist relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 text-foreground leading-tight">
@@ -20,14 +20,14 @@ const SilicaFree = () => {
         <div className="grid lg:grid-cols-3 gap-10 items-stretch">
           
           {/* Column 1 - Visual Illustration */}
-          <div className="flex flex-col items-center justify-center text-center p-10 bg-background rounded-2xl border border-border">
+          <div className="flex flex-col items-center justify-center text-center p-10 bg-background rounded-2xl border border-border hover-card-lift">
             <div className="relative mb-6 w-80 h-80 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png" 
                 alt="Lungs affected by crystalline silica particles"
                 className="w-full h-full object-contain"
               />
-              <div className="absolute -top-2 -right-2 w-10 h-10 bg-destructive rounded-full flex items-center justify-center">
+              <div className="absolute -top-2 -right-2 w-10 h-10 bg-destructive rounded-full flex items-center justify-center animate-pulse">
                 <AlertTriangle className="w-5 h-5 text-foreground" />
               </div>
             </div>
@@ -41,9 +41,9 @@ const SilicaFree = () => {
 
           {/* Column 2 - Fast Facts */}
           <div className="space-y-6 flex flex-col justify-center">
-            <div className="bg-background p-8 rounded-2xl border border-border">
+            <div className="bg-background p-8 rounded-2xl border border-border hover-card-lift group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 bg-destructive/10 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-destructive/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-destructive font-display font-medium text-sm">#1</span>
                 </div>
                 <h4 className="font-display font-medium text-foreground">Workplace Health Risk</h4>
@@ -51,9 +51,9 @@ const SilicaFree = () => {
               <p className="font-body text-base text-muted-foreground">In Stone Fabrication</p>
             </div>
 
-            <div className="bg-background p-8 rounded-2xl border border-border">
+            <div className="bg-background p-8 rounded-2xl border border-border hover-card-lift group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 bg-destructive/10 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-destructive/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-destructive font-display font-medium text-sm">95%</span>
                 </div>
                 <h4 className="font-display font-medium text-foreground">Quartz Surfaces Contain</h4>
@@ -61,9 +61,9 @@ const SilicaFree = () => {
               <p className="font-body text-base text-muted-foreground">Crystalline Silica</p>
             </div>
 
-            <div className="bg-background p-8 rounded-2xl border border-border">
+            <div className="bg-background p-8 rounded-2xl border border-border hover-card-lift group">
               <div className="flex items-center gap-4 mb-4">
-                <Shield className="w-10 h-10 text-destructive" />
+                <Shield className="w-10 h-10 text-destructive group-hover:drop-shadow-[0_0_8px_hsl(var(--destructive)/0.5)] transition-all duration-300" />
                 <h4 className="font-display font-medium text-foreground">Linked to Health Issues</h4>
               </div>
               <p className="font-body text-base text-muted-foreground">
@@ -73,12 +73,12 @@ const SilicaFree = () => {
           </div>
 
           {/* Column 3 - Fabricator Quote */}
-          <div className="bg-primary/10 p-10 rounded-2xl border border-primary/20 relative flex flex-col justify-center">
-            <div className="mb-8">
+          <div className="bg-primary/10 p-10 rounded-2xl border border-primary/20 relative flex flex-col justify-center hover-card-lift">
+            <div className="mb-8 overflow-hidden rounded-xl">
               <img 
                 src="/lovable-uploads/d51d4bbf-97fc-4ca3-b718-cc87dd34de31.png" 
                 alt="Fabricator working with protective equipment on stone surface"
-                className="w-full h-52 object-cover rounded-xl"
+                className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <Quote className="w-10 h-10 text-accent mb-6" />
@@ -99,8 +99,8 @@ const SilicaFree = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <div className="inline-flex items-center gap-3 bg-primary/10 px-8 py-4 rounded-full border border-primary/30">
-            <Shield className="w-6 h-6 text-primary" />
+          <div className="inline-flex items-center gap-3 bg-primary/10 px-8 py-4 rounded-full border border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 cursor-pointer group">
+            <Shield className="w-6 h-6 text-primary group-hover:drop-shadow-[0_0_8px_hsl(var(--primary)/0.6)] transition-all duration-300" />
             <span className="text-primary font-display font-medium text-lg">100% Silica-Free Guarantee</span>
           </div>
         </div>

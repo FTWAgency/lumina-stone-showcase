@@ -137,7 +137,6 @@ export const slabs: Slab[] = [
 
 const colorFamilies = ["All", "White", "Gray", "Earth Tones"];
 const styles = ["All", "Veined", "Minimal", "Bold"];
-const applicationTypes = ["All", "Kitchen", "Bath", "Commercial"];
 
 // Filter Sidebar Component
 const FilterSidebar = ({
@@ -145,8 +144,6 @@ const FilterSidebar = ({
   setSelectedColorFamily,
   selectedStyle,
   setSelectedStyle,
-  selectedApplication,
-  setSelectedApplication,
   searchQuery,
   setSearchQuery,
   filteredCount,
@@ -156,19 +153,16 @@ const FilterSidebar = ({
   setSelectedColorFamily: (value: string) => void;
   selectedStyle: string;
   setSelectedStyle: (value: string) => void;
-  selectedApplication: string;
-  setSelectedApplication: (value: string) => void;
   searchQuery: string;
   setSearchQuery: (value: string) => void;
   filteredCount: number;
   totalCount: number;
 }) => {
-  const hasActiveFilters = selectedColorFamily !== "All" || selectedStyle !== "All" || selectedApplication !== "All" || searchQuery !== "";
+  const hasActiveFilters = selectedColorFamily !== "All" || selectedStyle !== "All" || searchQuery !== "";
   
   const clearAllFilters = () => {
     setSelectedColorFamily("All");
     setSelectedStyle("All");
-    setSelectedApplication("All");
     setSearchQuery("");
   };
 
@@ -280,46 +274,6 @@ const FilterSidebar = ({
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-accent/20" />
-
-      {/* Application */}
-      <div>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-display text-xs uppercase tracking-widest text-accent/70">
-            Application
-          </h3>
-          {selectedApplication !== "All" && (
-            <button
-              onClick={() => setSelectedApplication("All")}
-              className="font-body text-xs text-foreground/50 hover:text-foreground transition-colors"
-            >
-              Clear
-            </button>
-          )}
-        </div>
-        <div className="space-y-2">
-          {applicationTypes.map((app) => {
-            const IconComponent = app !== "All" ? applicationIcons[app.toLowerCase()] : null;
-            return (
-              <button
-                key={app}
-                onClick={() => setSelectedApplication(app)}
-                className={`
-                  w-full flex items-center gap-3 px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
-                  ${selectedApplication === app 
-                    ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
-                    : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
-                  }
-                `}
-              >
-                {IconComponent && <IconComponent className="w-4 h-4" />}
-                <span>{app}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
     </div>
   );
 };
@@ -327,7 +281,6 @@ const FilterSidebar = ({
 const Collection = () => {
   const [selectedColorFamily, setSelectedColorFamily] = useState("All");
   const [selectedStyle, setSelectedStyle] = useState("All");
-  const [selectedApplication, setSelectedApplication] = useState("All");
   const [selectedSlab, setSelectedSlab] = useState<Slab | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
@@ -335,12 +288,10 @@ const Collection = () => {
   const filteredSlabs = slabs.filter(slab => {
     const matchesColor = selectedColorFamily === "All" || slab.colorFamily === selectedColorFamily;
     const matchesStyle = selectedStyle === "All" || slab.style === selectedStyle;
-    const matchesApp = selectedApplication === "All" || 
-      slab.applications.some(app => app.icon === selectedApplication.toLowerCase());
     const matchesSearch = searchQuery === "" || 
       slab.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       slab.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesColor && matchesStyle && matchesApp && matchesSearch;
+    return matchesColor && matchesStyle && matchesSearch;
   });
 
   return (
@@ -425,8 +376,6 @@ const Collection = () => {
                   setSelectedColorFamily={setSelectedColorFamily}
                   selectedStyle={selectedStyle}
                   setSelectedStyle={setSelectedStyle}
-                  selectedApplication={selectedApplication}
-                  setSelectedApplication={setSelectedApplication}
                   searchQuery={searchQuery}
                   setSearchQuery={setSearchQuery}
                   filteredCount={filteredSlabs.length}
@@ -509,8 +458,6 @@ const Collection = () => {
               setSelectedColorFamily={setSelectedColorFamily}
               selectedStyle={selectedStyle}
               setSelectedStyle={setSelectedStyle}
-              selectedApplication={selectedApplication}
-              setSelectedApplication={setSelectedApplication}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
               filteredCount={filteredSlabs.length}

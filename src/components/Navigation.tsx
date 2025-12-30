@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import luminaLogo from "@/assets/lumina-logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,13 +31,13 @@ const Navigation = () => {
     }`}>
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/b75b6f32-1d96-4d5a-a927-e74ec66d4c40.png" 
-            alt="Lumina Surfaces Logo" 
-            className="h-10"
+            src={luminaLogo} 
+            alt="Lumina Surfaces" 
+            className="h-8 w-auto"
           />
-        </div>
+        </Link>
 
         {/* Navigation Menu */}
         <NavigationMenu className="hidden md:flex">

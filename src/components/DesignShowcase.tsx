@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
 import stonesamples from "@/assets/stone-samples.jpg";
 import { Button } from "@/components/ui/button";
@@ -156,6 +156,7 @@ const designs: Design[] = [
 
 const DesignShowcase = () => {
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
+  const navigate = useNavigate();
 
   return (
     <section className="py-32 px-6 bg-gradient-stone">
@@ -299,7 +300,7 @@ const DesignShowcase = () => {
                       className="flex-1 gap-2"
                       onClick={() => {
                         setSelectedDesign(null);
-                        window.location.href = '/#dealer';
+                        navigate('/find-a-dealer');
                       }}
                     >
                       <MapPin className="w-4 h-4" />

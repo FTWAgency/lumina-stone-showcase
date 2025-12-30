@@ -12,18 +12,28 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground scroll-smooth">
       <Navigation />
       <div className="pt-16 overflow-x-hidden">
         <Hero />
         <Education />
-        <SilicaFree />
-        <DesignShowcase />
-        <NanoTech />
-        <Sustainability />
+        <div id="silica-free">
+          <SilicaFree />
+        </div>
+        <div id="design-showcase">
+          <DesignShowcase />
+        </div>
+        <div id="technology">
+          <NanoTech />
+        </div>
+        <div id="sustainability">
+          <Sustainability />
+        </div>
         <Comparison />
         <TechnicalFeatures />
-        <DealerCTA />
+        <div id="dealer-cta">
+          <DealerCTA />
+        </div>
         <Footer />
       </div>
     </div>

@@ -41,27 +41,42 @@ const Navigation = () => {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="gap-1">
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink 
+                href="#design-showcase"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+              >
                 Products
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink 
+                href="#technology"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+              >
                 Technology
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink 
+                href="#silica-free"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+              >
                 Why Silica-Free?
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink 
+                href="#dealer-cta"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+              >
                 Find a Dealer
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+              <NavigationMenuLink 
+                href="#sustainability"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+              >
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>

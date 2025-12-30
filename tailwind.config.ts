@@ -19,8 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				serif: 'var(--font-serif)',
-				sans: 'var(--font-sans)'
+				display: ['Gotti VF', 'Satoshi', 'Geomanist', 'sans-serif'],
+				body: ['Cormorant Garamond', 'serif'],
+				sans: ['Satoshi', 'Inter', 'sans-serif'],
+				serif: ['Cormorant Garamond', 'serif']
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -63,6 +65,10 @@ export default {
 					gray: 'hsl(var(--lumina-gray))',
 					divider: 'hsl(var(--lumina-divider))',
 					gold: 'hsl(var(--lumina-gold))',
+					amber: 'hsl(var(--lumina-amber))',
+					alpine: 'hsl(var(--lumina-alpine))',
+					slate: 'hsl(var(--lumina-slate))',
+					taupe: 'hsl(var(--lumina-taupe))',
 					teal: 'hsl(var(--lumina-teal))',
 					blue: 'hsl(var(--lumina-blue))',
 					cyan: 'hsl(var(--lumina-cyan))',
@@ -73,13 +79,13 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-stone': 'var(--gradient-stone)',
-				'gradient-blue-gold': 'var(--gradient-blue-gold)',
-				'gradient-teal-blue': 'var(--gradient-teal-blue)'
+				'gradient-alpine': 'var(--gradient-alpine)',
+				'gradient-amber-gold': 'var(--gradient-amber-gold)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
 				'glow': 'var(--shadow-glow)',
-				'blue-glow': 'var(--shadow-blue-glow)',
+				'amber-glow': 'var(--shadow-amber-glow)',
 				'card': 'var(--shadow-card)'
 			},
 			transitionProperty: {

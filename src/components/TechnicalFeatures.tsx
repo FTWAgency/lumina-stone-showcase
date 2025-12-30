@@ -82,45 +82,45 @@ const TechnicalFeatures = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-muted/20">
+    <section className="py-32 px-6 bg-muted/20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
             Technical
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Advanced manufacturing meets natural beauty in every Lumina surface.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
+              className="group bg-secondary p-10 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
             >
-              <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
               
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
+              <h3 className="font-display text-xl font-medium text-foreground mb-4">
                 {feature.title}
               </h3>
               
-              <p className="font-sans text-muted-foreground leading-relaxed">
+              <p className="font-body text-base text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-block p-6 rounded-xl border border-border shadow-sm" style={{ backgroundColor: '#D6C68A' }}>
+        <div className="text-center mt-16">
+          <div className="inline-block p-8 rounded-2xl border border-border shadow-sm bg-accent/10">
             <img 
               src="/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png" 
               alt="EPD Environmental Product Declaration Certificate" 
-              className="h-16 mx-auto"
+              className="h-20 mx-auto"
             />
           </div>
         </div>

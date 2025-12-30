@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Search, LocateFixed, ChevronDown, X, Calendar, Package } from "lucide-react";
+import { MapPin, Search, LocateFixed, ChevronDown, Calendar, Package, Navigation as NavigationIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -21,13 +21,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 
-// Demo dealer data - no phone/email, added taglines
+// Demo dealer data - full address, no phone/email
 const dealers = [
   {
     id: 1,
     name: "Seattle Design Center",
+    address: "1420 5th Avenue, Suite 200",
     city: "Seattle",
     state: "WA",
+    zip: "98101",
     tagline: "Serving the Pacific Northwest",
     distance: 2.4,
     lat: 47.6097,
@@ -36,8 +38,10 @@ const dealers = [
   {
     id: 2,
     name: "Portland Kitchen Studio",
+    address: "815 SW Park Avenue",
     city: "Portland",
     state: "OR",
+    zip: "97205",
     tagline: "Oregon's Premier Surface Showroom",
     distance: 5.8,
     lat: 45.5152,
@@ -46,8 +50,10 @@ const dealers = [
   {
     id: 3,
     name: "San Francisco Stone Gallery",
+    address: "580 California Street",
     city: "San Francisco",
     state: "CA",
+    zip: "94104",
     tagline: "Serving the Bay Area",
     distance: 12.3,
     lat: 37.7749,
@@ -56,8 +62,10 @@ const dealers = [
   {
     id: 4,
     name: "Los Angeles Surfaces",
+    address: "453 S Spring Street",
     city: "Los Angeles",
     state: "CA",
+    zip: "90013",
     tagline: "Southern California's Design Destination",
     distance: 18.7,
     lat: 34.0522,
@@ -66,8 +74,10 @@ const dealers = [
   {
     id: 5,
     name: "Denver Mountain Stone",
+    address: "1600 California Street",
     city: "Denver",
     state: "CO",
+    zip: "80202",
     tagline: "Bringing Lumina to the Rockies",
     distance: 24.1,
     lat: 39.7392,
@@ -355,11 +365,12 @@ const FindDealer = () => {
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <h3 className="font-display text-xl text-foreground mb-1">{dealer.name}</h3>
-                        <p className="font-body text-foreground/70">
-                          {dealer.city}, {dealer.state}
+                        <p className="font-body text-foreground/60">
+                          {dealer.address}<br />
+                          {dealer.city}, {dealer.state} {dealer.zip}
                         </p>
                       </div>
-                      <span className="font-body text-sm text-accent bg-accent/10 px-3 py-1 rounded-full">
+                      <span className="font-body text-sm text-accent bg-accent/10 px-3 py-1 rounded-full shrink-0 ml-3">
                         {dealer.distance} mi
                       </span>
                     </div>
@@ -369,6 +380,19 @@ const FindDealer = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-3">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const address = encodeURIComponent(`${dealer.address}, ${dealer.city}, ${dealer.state} ${dealer.zip}`);
+                          window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`, "_blank");
+                        }}
+                        className="gap-2 font-display border-border/30 hover:bg-accent/10 hover:border-accent/50 rounded-xl"
+                      >
+                        <NavigationIcon className="w-4 h-4" />
+                        Get Directions
+                      </Button>
                       <Button
                         variant="premium"
                         size="sm"

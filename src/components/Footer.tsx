@@ -1,4 +1,5 @@
 import { Mountain } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -66,7 +67,7 @@ const Footer = () => {
             <ul className="space-y-4 font-body text-muted-foreground">
               <li><a href="#" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">About the Brand</a></li>
               <li><a href="#" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">About Lumina</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">Find Dealers</a></li>
+              <li><Link to="/find-a-dealer" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">Find Dealers</Link></li>
               <li><a href="#" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">Become a Partner</a></li>
               <li><a href="#" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">Press & Media</a></li>
               <li><a href="/dealer/login" className="hover:text-accent transition-colors duration-300 inline-block hover:translate-x-1 transform transition-transform">Dealer Login</a></li>

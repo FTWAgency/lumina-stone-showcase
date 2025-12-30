@@ -18,8 +18,8 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				display: ['Gotti VF', 'Satoshi', 'Geomanist', 'sans-serif'],
+		fontFamily: {
+				display: ['Gotti', 'Satoshi', 'Geomanist', 'sans-serif'],
 				body: ['Cormorant Garamond', 'serif'],
 				sans: ['Satoshi', 'Inter', 'sans-serif'],
 				serif: ['Cormorant Garamond', 'serif']

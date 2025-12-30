@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gotti VF Font Family */
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotti';
+  src: url('/fonts/Gotti-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Lumina 10.0 Design System - Refined Alpine Luxury */
 
 @layer base {
@@ -61,7 +126,7 @@
     --deep-alpine: 198 79% 9%;
     
     /* Typography */
-    --font-display: 'Gotti VF', 'Satoshi', 'Geomanist', sans-serif;
+    --font-display: 'Gotti', 'Satoshi', 'Geomanist', sans-serif;
     --font-body: 'Cormorant Garamond', serif;
     --font-sans: 'Satoshi', 'Inter', sans-serif;
     

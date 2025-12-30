@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, MapPin, FileText, Download, ChefHat, Bath, Flame, Building2, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, FileText, Download, ChefHat, Bath, Flame, Building2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { slabs } from "./Collection";
 
@@ -13,7 +13,12 @@ const applicationIcons: Record<string, React.ComponentType<{ className?: string 
 
 const SlabDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const slab = slabs.find(s => s.id === slug);
+  const currentIndex = slabs.findIndex(s => s.id === slug);
+  const slab = currentIndex !== -1 ? slabs[currentIndex] : null;
+  
+  // Get previous and next slabs (wrap around)
+  const prevSlab = currentIndex > 0 ? slabs[currentIndex - 1] : slabs[slabs.length - 1];
+  const nextSlab = currentIndex < slabs.length - 1 ? slabs[currentIndex + 1] : slabs[0];
 
   if (!slab) {
     return (
@@ -180,6 +185,58 @@ const SlabDetail = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Previous / Next Navigation */}
+      <section className="py-12 px-6 border-t border-border/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between">
+            {/* Previous */}
+            <Link 
+              to={`/collection/${prevSlab.id}`}
+              className="group flex items-center gap-4 p-4 rounded-2xl hover:bg-secondary/20 transition-all duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-secondary/30 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <ArrowLeft className="w-5 h-5 text-foreground/60 group-hover:text-accent transition-colors" />
+              </div>
+              <div className="hidden sm:block">
+                <p className="font-body text-xs uppercase tracking-wider text-foreground/50 mb-1">Previous</p>
+                <p className="font-display text-lg text-foreground group-hover:text-accent transition-colors">
+                  {prevSlab.name}
+                </p>
+              </div>
+            </Link>
+
+            {/* Divider / Grid link */}
+            <Link 
+              to="/collection"
+              className="hidden md:flex flex-col items-center gap-2 px-6 py-3 rounded-xl hover:bg-secondary/20 transition-colors"
+            >
+              <div className="grid grid-cols-3 gap-1">
+                {[...Array(9)].map((_, i) => (
+                  <div key={i} className="w-2 h-2 rounded-sm bg-foreground/30" />
+                ))}
+              </div>
+              <p className="font-body text-xs text-foreground/50">View All</p>
+            </Link>
+
+            {/* Next */}
+            <Link 
+              to={`/collection/${nextSlab.id}`}
+              className="group flex items-center gap-4 p-4 rounded-2xl hover:bg-secondary/20 transition-all duration-300"
+            >
+              <div className="hidden sm:block text-right">
+                <p className="font-body text-xs uppercase tracking-wider text-foreground/50 mb-1">Next</p>
+                <p className="font-display text-lg text-foreground group-hover:text-accent transition-colors">
+                  {nextSlab.name}
+                </p>
+              </div>
+              <div className="w-12 h-12 rounded-xl bg-secondary/30 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <ArrowRight className="w-5 h-5 text-foreground/60 group-hover:text-accent transition-colors" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>

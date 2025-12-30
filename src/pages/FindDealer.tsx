@@ -214,7 +214,7 @@ const FindDealer = () => {
       </section>
 
       {/* Search Section */}
-      <section className="pb-8 px-6">
+      <section className="pb-8 px-6 relative z-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-secondary/30 backdrop-blur-sm rounded-2xl p-6 border border-border/20">
             <div className="flex flex-col md:flex-row gap-4">

@@ -1,7 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-stone-surface.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleFindDealer = () => {
+    navigate('/find-a-dealer');
+    window.scrollTo(0, 0);
+  };
+
+  const handleExploreCollection = () => {
+    navigate('/collection');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -28,10 +41,10 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button variant="premium" size="hero" className="font-display">
+          <Button variant="premium" size="hero" className="font-display" onClick={handleFindDealer}>
             Find a Dealer
           </Button>
-          <Button variant="hero" size="hero" className="font-display">
+          <Button variant="hero" size="hero" className="font-display" onClick={handleExploreCollection}>
             Explore the Collection
           </Button>
         </div>

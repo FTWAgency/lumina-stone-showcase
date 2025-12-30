@@ -57,6 +57,9 @@
     --shadow-amber-glow: 0 0 30px rgba(237, 171, 54, 0.4);
     --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
     
+    /* Deep Alpine Blue for full-page backgrounds */
+    --deep-alpine: 198 79% 9%;
+    
     /* Typography */
     --font-display: 'Gotti VF', 'Satoshi', 'Geomanist', sans-serif;
     --font-body: 'Cormorant Garamond', serif;

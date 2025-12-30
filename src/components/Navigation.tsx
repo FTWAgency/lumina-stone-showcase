@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -84,8 +85,8 @@ const Navigation = () => {
         </NavigationMenu>
 
         {/* CTA Button */}
-        <Button variant="premium" size="default" className="hidden md:inline-flex font-display">
-          Explore Collection
+        <Button variant="premium" size="default" className="hidden md:inline-flex font-display" asChild>
+          <Link to="/collection">Explore Collection</Link>
         </Button>
 
         {/* Mobile Menu Trigger */}

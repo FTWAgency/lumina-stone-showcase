@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import stonesamples from "@/assets/stone-samples.jpg";
 
 const DesignShowcase = () => {
@@ -102,12 +103,15 @@ const DesignShowcase = () => {
         </div>
 
         <div className="text-center">
-          <button className="inline-flex items-center gap-3 font-display text-primary hover:text-accent transition-colors duration-300 text-lg">
+          <Link 
+            to="/collection"
+            className="inline-flex items-center gap-3 font-display text-primary hover:text-accent transition-colors duration-300 text-lg"
+          >
             Explore All Designs
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

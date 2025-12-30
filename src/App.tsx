@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Collection from "./pages/Collection";
 import DealerLogin from "./pages/DealerLogin";
 import DealerDashboard from "./pages/DealerDashboard";
 import DealersList from "./pages/DealersList";
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/collection" element={<Collection />} />
           <Route path="/dealer/login" element={<DealerLogin />} />
           <Route path="/dealer/dashboard" element={<DealerDashboard />} />
           <Route path="/dealer/dealers" element={<DealersList />} />

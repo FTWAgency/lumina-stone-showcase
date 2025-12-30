@@ -17,6 +17,7 @@ import DealerSales from "./pages/DealerSales";
 import Invoices from "./pages/Invoices";
 import InvoiceDetail from "./pages/InvoiceDetail";
 import CreateInvoice from "./pages/CreateInvoice";
+import FindDealer from "./pages/FindDealer";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/collection/:slug" element={<SlabDetail />} />
+          <Route path="/find-a-dealer" element={<FindDealer />} />
           <Route path="/dealer/login" element={<DealerLogin />} />
           <Route path="/dealer/dashboard" element={<DealerDashboard />} />
           <Route path="/dealer/dealers" element={<DealersList />} />

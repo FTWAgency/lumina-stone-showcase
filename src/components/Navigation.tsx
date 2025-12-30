@@ -66,12 +66,12 @@ const Navigation = () => {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink 
-                href="#dealer-cta"
+              <Link 
+                to="/find-a-dealer"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-lg px-5 py-2 font-display text-sm font-medium text-foreground/80 transition-colors hover:bg-accent/10 hover:text-foreground focus:bg-accent/10 focus:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
               >
                 Find a Dealer
-              </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink 

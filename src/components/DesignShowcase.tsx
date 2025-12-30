@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText } from "lucide-react";
+import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
 import stonesamples from "@/assets/stone-samples.jpg";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,6 +15,8 @@ interface Design {
   name: string;
   pattern: string;
   image: string;
+  colorFamily: string;
+  style: string;
   details: string;
   applications: { name: string; icon: string }[];
 }
@@ -33,6 +35,8 @@ const designs: Design[] = [
     name: "Crystallo", 
     pattern: "Soft silver layering",
     image: "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
+    colorFamily: "White",
+    style: "Minimal",
     details: "Crystallo captures the ethereal beauty of crystalline formations, with soft silver tones dancing across the surface. Its delicate layering creates depth and dimension, perfect for spaces that demand quiet sophistication.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
@@ -46,6 +50,8 @@ const designs: Design[] = [
     name: "Cashmere Taj", 
     pattern: "Creamy layered veins",
     image: "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
+    colorFamily: "White",
+    style: "Veined",
     details: "Inspired by the opulent marble of the Taj Mahal, Cashmere Taj features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur.",
     applications: [
       { name: "Kitchen Islands", icon: "kitchen" },
@@ -59,6 +65,8 @@ const designs: Design[] = [
     name: "Lumina", 
     pattern: "Warm golden movement",
     image: "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
+    colorFamily: "Earth Tones",
+    style: "Veined",
     details: "Lumina embodies our brand essence — where light transforms stillness into form. Warm golden undertones flow through this signature design, creating movement and life in every application.",
     applications: [
       { name: "Statement Countertops", icon: "kitchen" },
@@ -72,6 +80,8 @@ const designs: Design[] = [
     name: "Calcutta Sienna", 
     pattern: "Defined flowing veining",
     image: "/lovable-uploads/1c983e16-ba6b-40ac-9021-c9951c32d332.png",
+    colorFamily: "Earth Tones",
+    style: "Bold",
     details: "Calcutta Sienna makes a bold statement with its dramatic veining patterns. The defined, flowing lines create visual intrigue, making it the centerpiece of any design scheme.",
     applications: [
       { name: "Accent Walls", icon: "accent" },
@@ -85,6 +95,8 @@ const designs: Design[] = [
     name: "Terra Beige", 
     pattern: "Natural earth tones",
     image: "/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png",
+    colorFamily: "Earth Tones",
+    style: "Minimal",
     details: "Terra Beige draws from the warm palette of sun-baked earth, offering neutral tones that complement any design aesthetic. Its organic warmth creates inviting, grounded spaces.",
     applications: [
       { name: "Open Kitchens", icon: "kitchen" },
@@ -98,6 +110,8 @@ const designs: Design[] = [
     name: "Mont Blanc", 
     pattern: "Cool marble striations",
     image: "/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png",
+    colorFamily: "Gray",
+    style: "Veined",
     details: "Named after Europe's highest peak, Mont Blanc features crisp white surfaces with elegant grey striations. The cool tones evoke alpine majesty and pristine natural beauty.",
     applications: [
       { name: "Modern Kitchens", icon: "kitchen" },
@@ -178,71 +192,110 @@ const DesignShowcase = () => {
         </div>
       </div>
 
-      {/* Slab Detail Modal */}
+      {/* Slab Detail Modal - matches Collection page */}
       <Dialog open={!!selectedDesign} onOpenChange={(open) => !open && setSelectedDesign(null)}>
-        <DialogContent className="max-w-4xl bg-[hsl(var(--deep-alpine))] border-border/30 p-0 overflow-hidden">
-          <DialogHeader className="sr-only">
-            <DialogTitle>{selectedDesign?.name}</DialogTitle>
-          </DialogHeader>
-          
+        <DialogContent className="max-w-5xl bg-[hsl(var(--deep-alpine))] border-border/30 p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
           {selectedDesign && (
-            <div className="grid md:grid-cols-2 gap-0">
-              {/* Image Side */}
-              <div className="relative aspect-square md:aspect-auto">
+            <div className="grid lg:grid-cols-2">
+              {/* Image side */}
+              <div className="aspect-square lg:aspect-auto lg:min-h-[600px] relative">
                 <img
                   src={selectedDesign.image}
                   alt={selectedDesign.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--deep-alpine))] via-transparent to-transparent md:bg-gradient-to-r" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[hsl(var(--deep-alpine))]/30 lg:block hidden" />
               </div>
+              
+              {/* Content side */}
+              <div className="p-8 lg:p-10 flex flex-col">
+                <DialogHeader className="mb-6">
+                  <div className="flex gap-2 mb-3">
+                    <span className="text-xs font-body text-accent/80 uppercase tracking-wider px-3 py-1 bg-accent/10 rounded-full border border-accent/30">
+                      {selectedDesign.colorFamily}
+                    </span>
+                    <span className="text-xs font-body text-foreground/60 uppercase tracking-wider px-3 py-1 bg-secondary/30 rounded-full">
+                      {selectedDesign.style}
+                    </span>
+                  </div>
+                  <DialogTitle className="font-display text-4xl font-medium text-foreground">
+                    {selectedDesign.name}
+                  </DialogTitle>
+                  <p className="font-body text-lg text-accent italic mt-1">
+                    {selectedDesign.pattern}
+                  </p>
+                </DialogHeader>
 
-              {/* Content Side */}
-              <div className="p-8 flex flex-col justify-center">
-                <h2 className="font-display text-3xl lg:text-4xl font-medium text-foreground mb-2">
-                  {selectedDesign.name}
-                </h2>
-                <p className="font-body text-lg text-accent italic mb-6">
-                  {selectedDesign.pattern}
-                </p>
-                
-                <p className="font-body text-foreground/70 leading-relaxed mb-8">
-                  {selectedDesign.details}
-                </p>
+                <div className="flex-1 space-y-8">
+                  <div>
+                    <h4 className="font-display text-sm uppercase tracking-wider text-foreground/60 mb-3">
+                      About This Design
+                    </h4>
+                    <p className="font-body text-foreground/80 leading-relaxed">
+                      {selectedDesign.details}
+                    </p>
+                  </div>
 
-                {/* Applications */}
-                <div className="mb-8">
-                  <h4 className="font-display text-xs uppercase tracking-widest text-accent/70 mb-4">
-                    Ideal Applications
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {selectedDesign.applications.map((app) => {
-                      const IconComponent = applicationIcons[app.icon];
-                      return (
-                        <div
-                          key={app.name}
-                          className="flex items-center gap-2 px-3 py-2 rounded-lg bg-secondary/50 border border-border/30 text-foreground/80"
-                        >
-                          {IconComponent && <IconComponent className="w-4 h-4 text-accent" />}
-                          <span className="font-body text-sm">{app.name}</span>
-                        </div>
-                      );
-                    })}
+                  <div>
+                    <h4 className="font-display text-sm uppercase tracking-wider text-foreground/60 mb-4">
+                      Ideal Applications
+                    </h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      {selectedDesign.applications.map((app) => {
+                        const IconComponent = applicationIcons[app.icon] || Sparkles;
+                        return (
+                          <div
+                            key={app.name}
+                            className="flex items-center gap-3 px-4 py-3 bg-secondary/20 rounded-xl border border-border/20 hover:border-accent/30 transition-colors"
+                          >
+                            <IconComponent className="w-5 h-5 text-accent" />
+                            <span className="font-body text-sm text-foreground/80">
+                              {app.name}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild className="flex-1 bg-accent hover:bg-accent/90 text-background font-display">
-                    <Link to="/find-dealer">
-                      <MapPin className="w-4 h-4 mr-2" />
+                <div className="mt-8 space-y-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button 
+                      variant="premium" 
+                      size="lg" 
+                      className="flex-1 gap-2"
+                      onClick={() => {
+                        setSelectedDesign(null);
+                        window.location.href = '/#dealer';
+                      }}
+                    >
+                      <MapPin className="w-4 h-4" />
                       Find a Dealer
-                    </Link>
-                  </Button>
-                  <Button variant="outline" className="flex-1 border-accent/30 text-foreground hover:bg-accent/10 font-display">
-                    <FileText className="w-4 h-4 mr-2" />
-                    Request Sample
-                  </Button>
+                    </Button>
+                    <Button 
+                      variant="lumina-secondary" 
+                      size="lg" 
+                      className="flex-1 gap-2"
+                    >
+                      <FileText className="w-4 h-4" />
+                      Request a Sample
+                    </Button>
+                  </div>
+                  <Link 
+                    to={`/collection/${selectedDesign.id}`}
+                    className="block"
+                    onClick={() => setSelectedDesign(null)}
+                  >
+                    <Button 
+                      variant="ghost" 
+                      size="lg" 
+                      className="w-full gap-2 text-foreground/60 hover:text-foreground"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Full Details
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

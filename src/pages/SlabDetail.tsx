@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, MapPin, FileText, Download, ChefHat, Bath, Flame, Building2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageCarousel from "@/components/ImageCarousel";
 import { slabs } from "./Collection";
 
 const applicationIcons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -52,15 +53,15 @@ const SlabDetail = () => {
         </div>
       </header>
 
-      {/* Hero Image */}
+      {/* Hero Image Carousel */}
       <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        <img
-          src={slab.image}
+        <ImageCarousel
+          images={slab.images}
           alt={slab.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--deep-alpine))] via-[hsl(var(--deep-alpine))]/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--deep-alpine))]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--deep-alpine))] via-[hsl(var(--deep-alpine))]/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--deep-alpine))]/50 to-transparent pointer-events-none" />
         
         <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
           <div className="max-w-4xl">

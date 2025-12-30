@@ -1,9 +1,9 @@
-import { Shield, Recycle, RotateCcw, Handshake } from "lucide-react";
+import { Shield, Recycle, RotateCcw, Handshake, Quote } from "lucide-react";
 
 const Sustainability = () => {
   return (
-    <section className="py-32 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-32 px-6 bg-background texture-marble relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="font-display text-4xl lg:text-5xl font-medium mb-6 text-foreground leading-tight">
@@ -21,9 +21,9 @@ const Sustainability = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
           
           {/* Reduce */}
-          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover:shadow-premium transition-all duration-300">
-            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-              <Shield className="w-10 h-10 text-accent" />
+          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover-card-lift">
+            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 hover-icon-glow">
+              <Shield className="w-10 h-10 text-accent transition-all duration-300 group-hover:drop-shadow-[0_0_12px_hsl(var(--accent)/0.7)]" />
             </div>
             <h3 className="font-display text-xl font-medium text-foreground mb-4">
               Reduce
@@ -34,9 +34,9 @@ const Sustainability = () => {
           </div>
 
           {/* Recycle */}
-          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover:shadow-premium transition-all duration-300">
-            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-              <Recycle className="w-10 h-10 text-accent" />
+          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover-card-lift">
+            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 hover-icon-glow">
+              <Recycle className="w-10 h-10 text-accent transition-all duration-300 group-hover:drop-shadow-[0_0_12px_hsl(var(--accent)/0.7)]" />
             </div>
             <h3 className="font-display text-xl font-medium text-foreground mb-4">
               Recycle
@@ -47,9 +47,9 @@ const Sustainability = () => {
           </div>
 
           {/* Reuse */}
-          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover:shadow-premium transition-all duration-300">
-            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-              <RotateCcw className="w-10 h-10 text-accent" />
+          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover-card-lift">
+            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 hover-icon-glow">
+              <RotateCcw className="w-10 h-10 text-accent transition-all duration-300 group-hover:drop-shadow-[0_0_12px_hsl(var(--accent)/0.7)]" />
             </div>
             <h3 className="font-display text-xl font-medium text-foreground mb-4">
               Reuse
@@ -60,9 +60,9 @@ const Sustainability = () => {
           </div>
 
           {/* Respect */}
-          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover:shadow-premium transition-all duration-300">
-            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-              <Handshake className="w-10 h-10 text-accent" />
+          <div className="bg-secondary p-10 rounded-2xl border border-border text-center group hover-card-lift">
+            <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 hover-icon-glow">
+              <Handshake className="w-10 h-10 text-accent transition-all duration-300 group-hover:drop-shadow-[0_0_12px_hsl(var(--accent)/0.7)]" />
             </div>
             <h3 className="font-display text-xl font-medium text-foreground mb-4">
               Respect
@@ -73,16 +73,21 @@ const Sustainability = () => {
           </div>
         </div>
 
-        {/* Closing Statement */}
+        {/* CEO Quote */}
         <div className="text-center">
-          <blockquote className="max-w-4xl mx-auto">
-            <p className="font-body text-xl text-muted-foreground leading-relaxed italic mb-6">
-              "We're not just creating better surfaces — we're rethinking what responsible manufacturing looks like. The 4R framework reflects our commitment to protecting people, preserving resources, and leading this industry toward a safer, smarter future."
-            </p>
-            <cite className="font-display text-base text-accent font-medium not-italic">
-              — Rick Paiz, Chief Executive Officer
-            </cite>
-          </blockquote>
+          <div className="max-w-4xl mx-auto bg-secondary/50 p-12 rounded-3xl border border-accent/20 relative">
+            <Quote className="w-12 h-12 text-accent/40 absolute top-8 left-8" />
+            <blockquote className="relative z-10">
+              <p className="font-body text-2xl text-foreground leading-relaxed italic mb-8">
+                "Sustainability isn't a feature — it's a responsibility. Every slab we make reflects our commitment to healthier homes and a healthier planet."
+              </p>
+              <cite className="font-display text-lg text-accent font-medium not-italic flex items-center justify-center gap-3">
+                <span className="w-12 h-px bg-accent/40"></span>
+                Rick Piaz, Chief Executive Officer
+                <span className="w-12 h-px bg-accent/40"></span>
+              </cite>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>

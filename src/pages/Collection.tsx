@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, MapPin, FileText, ExternalLink, ChefHat, Bath, Flame, Building2, Sparkles } from "lucide-react";
+import { ArrowLeft, MapPin, FileText, ExternalLink, ChefHat, Bath, Flame, Building2, Sparkles, X, Filter, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -8,6 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface Slab {
   id: string;
@@ -26,6 +33,13 @@ const applicationIcons: Record<string, React.ComponentType<{ className?: string 
   fireplace: Flame,
   commercial: Building2,
   accent: Sparkles,
+};
+
+// Color swatches for visual filter preview
+const colorSwatches: Record<string, string> = {
+  White: "bg-gradient-to-br from-gray-100 to-gray-200",
+  Gray: "bg-gradient-to-br from-gray-400 to-gray-500",
+  "Earth Tones": "bg-gradient-to-br from-amber-200 to-amber-400",
 };
 
 export const slabs: Slab[] = [
@@ -125,43 +139,209 @@ const colorFamilies = ["All", "White", "Gray", "Earth Tones"];
 const styles = ["All", "Veined", "Minimal", "Bold"];
 const applicationTypes = ["All", "Kitchen", "Bath", "Commercial"];
 
+// Filter Sidebar Component
+const FilterSidebar = ({
+  selectedColorFamily,
+  setSelectedColorFamily,
+  selectedStyle,
+  setSelectedStyle,
+  selectedApplication,
+  setSelectedApplication,
+  searchQuery,
+  setSearchQuery,
+  filteredCount,
+  totalCount,
+}: {
+  selectedColorFamily: string;
+  setSelectedColorFamily: (value: string) => void;
+  selectedStyle: string;
+  setSelectedStyle: (value: string) => void;
+  selectedApplication: string;
+  setSelectedApplication: (value: string) => void;
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+  filteredCount: number;
+  totalCount: number;
+}) => {
+  const hasActiveFilters = selectedColorFamily !== "All" || selectedStyle !== "All" || selectedApplication !== "All" || searchQuery !== "";
+  
+  const clearAllFilters = () => {
+    setSelectedColorFamily("All");
+    setSelectedStyle("All");
+    setSelectedApplication("All");
+    setSearchQuery("");
+  };
+
+  return (
+    <div className="space-y-8">
+      {/* Search */}
+      <div>
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-foreground/40" />
+          <input
+            type="text"
+            placeholder="Search slabs..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-11 pr-4 py-3 bg-secondary/20 border border-border/30 rounded-xl font-body text-sm text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-accent/50 focus:bg-secondary/30 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Results count */}
+      <div className="flex items-center justify-between">
+        <p className="font-body text-sm text-foreground/60">
+          Showing <span className="text-accent font-medium">{filteredCount}</span> of {totalCount} slabs
+        </p>
+        {hasActiveFilters && (
+          <button
+            onClick={clearAllFilters}
+            className="font-body text-xs text-accent hover:text-accent/80 transition-colors underline underline-offset-2"
+          >
+            Clear all
+          </button>
+        )}
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-accent/20" />
+
+      {/* Color Family */}
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-display text-xs uppercase tracking-widest text-accent/70">
+            Color Family
+          </h3>
+          {selectedColorFamily !== "All" && (
+            <button
+              onClick={() => setSelectedColorFamily("All")}
+              className="font-body text-xs text-foreground/50 hover:text-foreground transition-colors"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="space-y-2">
+          {colorFamilies.map((color) => (
+            <button
+              key={color}
+              onClick={() => setSelectedColorFamily(color)}
+              className={`
+                w-full flex items-center gap-3 px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
+                ${selectedColorFamily === color 
+                  ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
+                  : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
+                }
+              `}
+            >
+              {color !== "All" && (
+                <span className={`w-4 h-4 rounded-full ${colorSwatches[color]} shadow-inner`} />
+              )}
+              <span>{color}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-accent/20" />
+
+      {/* Style */}
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-display text-xs uppercase tracking-widest text-accent/70">
+            Style
+          </h3>
+          {selectedStyle !== "All" && (
+            <button
+              onClick={() => setSelectedStyle("All")}
+              className="font-body text-xs text-foreground/50 hover:text-foreground transition-colors"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="space-y-2">
+          {styles.map((style) => (
+            <button
+              key={style}
+              onClick={() => setSelectedStyle(style)}
+              className={`
+                w-full text-left px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
+                ${selectedStyle === style 
+                  ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
+                  : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
+                }
+              `}
+            >
+              {style}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-accent/20" />
+
+      {/* Application */}
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="font-display text-xs uppercase tracking-widest text-accent/70">
+            Application
+          </h3>
+          {selectedApplication !== "All" && (
+            <button
+              onClick={() => setSelectedApplication("All")}
+              className="font-body text-xs text-foreground/50 hover:text-foreground transition-colors"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="space-y-2">
+          {applicationTypes.map((app) => {
+            const IconComponent = app !== "All" ? applicationIcons[app.toLowerCase()] : null;
+            return (
+              <button
+                key={app}
+                onClick={() => setSelectedApplication(app)}
+                className={`
+                  w-full flex items-center gap-3 px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
+                  ${selectedApplication === app 
+                    ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
+                    : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
+                  }
+                `}
+              >
+                {IconComponent && <IconComponent className="w-4 h-4" />}
+                <span>{app}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Collection = () => {
   const [selectedColorFamily, setSelectedColorFamily] = useState("All");
   const [selectedStyle, setSelectedStyle] = useState("All");
   const [selectedApplication, setSelectedApplication] = useState("All");
   const [selectedSlab, setSelectedSlab] = useState<Slab | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   const filteredSlabs = slabs.filter(slab => {
     const matchesColor = selectedColorFamily === "All" || slab.colorFamily === selectedColorFamily;
     const matchesStyle = selectedStyle === "All" || slab.style === selectedStyle;
     const matchesApp = selectedApplication === "All" || 
       slab.applications.some(app => app.icon === selectedApplication.toLowerCase());
-    return matchesColor && matchesStyle && matchesApp;
+    const matchesSearch = searchQuery === "" || 
+      slab.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      slab.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesColor && matchesStyle && matchesApp && matchesSearch;
   });
-
-  const FilterPill = ({ 
-    label, 
-    active, 
-    onClick 
-  }: { 
-    label: string; 
-    active: boolean; 
-    onClick: () => void;
-  }) => (
-    <button
-      onClick={onClick}
-      className={`
-        px-5 py-2.5 rounded-full font-body text-sm transition-all duration-300
-        border-2 hover:border-accent
-        ${active 
-          ? "bg-accent/20 text-accent border-accent shadow-[0_0_20px_hsl(var(--accent)/0.3)]" 
-          : "bg-transparent text-foreground/70 border-accent/40 hover:text-foreground hover:bg-accent/10"
-        }
-      `}
-    >
-      {label}
-    </button>
-  );
 
   return (
     <div className="min-h-screen bg-[hsl(var(--deep-alpine))]">
@@ -182,7 +362,7 @@ const Collection = () => {
       </header>
 
       {/* Hero Section with Layered Slab Background */}
-      <section className="relative py-32 px-6 text-center overflow-hidden">
+      <section className="relative py-24 lg:py-32 px-6 text-center overflow-hidden">
         {/* Layered slab background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--deep-alpine))] via-transparent to-[hsl(var(--deep-alpine))] z-10" />
@@ -233,118 +413,121 @@ const Collection = () => {
         </div>
       </section>
 
-      {/* Filter Bar */}
-      <section className="px-6 pb-16 pt-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-secondary/10 rounded-3xl border border-border/20 p-8 backdrop-blur-sm">
-            {/* Color Family */}
-            <div className="mb-8">
-              <h3 className="font-display text-sm uppercase tracking-widest text-foreground/50 mb-4">
-                Color Family
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {colorFamilies.map((color) => (
-                  <FilterPill
-                    key={color}
-                    label={color}
-                    active={selectedColorFamily === color}
-                    onClick={() => setSelectedColorFamily(color)}
-                  />
-                ))}
+      {/* Main Content: Sidebar + Grid */}
+      <section className="px-6 pb-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex gap-8">
+            {/* Desktop Sidebar */}
+            <aside className="hidden lg:block w-72 flex-shrink-0">
+              <div className="sticky top-24 bg-[hsl(var(--deep-alpine))]/80 backdrop-blur-lg border border-border/20 rounded-2xl p-6 border-r-accent/20 max-h-[calc(100vh-120px)] overflow-y-auto">
+                <FilterSidebar
+                  selectedColorFamily={selectedColorFamily}
+                  setSelectedColorFamily={setSelectedColorFamily}
+                  selectedStyle={selectedStyle}
+                  setSelectedStyle={setSelectedStyle}
+                  selectedApplication={selectedApplication}
+                  setSelectedApplication={setSelectedApplication}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                  filteredCount={filteredSlabs.length}
+                  totalCount={slabs.length}
+                />
               </div>
-            </div>
+            </aside>
 
-            {/* Style */}
-            <div className="mb-8">
-              <h3 className="font-display text-sm uppercase tracking-widest text-foreground/50 mb-4">
-                Style
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {styles.map((style) => (
-                  <FilterPill
-                    key={style}
-                    label={style}
-                    active={selectedStyle === style}
-                    onClick={() => setSelectedStyle(style)}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Application Type */}
-            <div>
-              <h3 className="font-display text-sm uppercase tracking-widest text-foreground/50 mb-4">
-                Application
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {applicationTypes.map((app) => (
-                  <FilterPill
-                    key={app}
-                    label={app}
-                    active={selectedApplication === app}
-                    onClick={() => setSelectedApplication(app)}
-                  />
-                ))}
-              </div>
+            {/* Grid */}
+            <div className="flex-1">
+              {filteredSlabs.length === 0 ? (
+                <div className="text-center py-20">
+                  <p className="font-body text-xl text-foreground/50">
+                    No slabs match your selected filters. Try adjusting your criteria.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {filteredSlabs.map((slab, index) => (
+                    <div
+                      key={slab.id}
+                      className="group cursor-pointer animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                      onClick={() => setSelectedSlab(slab)}
+                    >
+                      <div className="relative overflow-hidden rounded-2xl bg-secondary/20 border border-border/20 hover:border-accent/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_hsl(var(--accent)/0.3)]">
+                        {/* Image */}
+                        <div className="aspect-[4/3] overflow-hidden">
+                          <img
+                            src={slab.image}
+                            alt={slab.name}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                        </div>
+                        
+                        {/* Overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--deep-alpine))] via-[hsl(var(--deep-alpine))]/50 to-transparent" />
+                        
+                        {/* Content */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6">
+                          <h3 className="font-display text-2xl font-medium text-foreground mb-1">
+                            {slab.name}
+                          </h3>
+                          <p className="font-body text-base text-accent italic mb-4">
+                            {slab.description}
+                          </p>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="border-accent/50 text-accent hover:bg-accent/20 hover:border-accent group-hover:translate-y-0 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                          >
+                            View Details
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Slab Grid */}
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto">
-          {filteredSlabs.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="font-body text-xl text-foreground/50">
-                No slabs match your selected filters. Try adjusting your criteria.
-              </p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredSlabs.map((slab, index) => (
-                <div
-                  key={slab.id}
-                  className="group cursor-pointer animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                  onClick={() => setSelectedSlab(slab)}
-                >
-                  <div className="relative overflow-hidden rounded-2xl bg-secondary/20 border border-border/20 hover:border-accent/40 transition-all duration-500 hover:shadow-[0_20px_60px_-20px_hsl(var(--accent)/0.3)]">
-                    {/* Image */}
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
-                        src={slab.image}
-                        alt={slab.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                    </div>
-                    
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--deep-alpine))] via-[hsl(var(--deep-alpine))]/50 to-transparent" />
-                    
-                    {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="font-display text-2xl font-medium text-foreground mb-1">
-                        {slab.name}
-                      </h3>
-                      <p className="font-body text-base text-accent italic mb-4">
-                        {slab.description}
-                      </p>
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        className="border-accent/50 text-accent hover:bg-accent/20 hover:border-accent group-hover:translate-y-0 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                      >
-                        View Details
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+      {/* Mobile Filter Button */}
+      <Sheet open={mobileFilterOpen} onOpenChange={setMobileFilterOpen}>
+        <SheetTrigger asChild>
+          <button className="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-full shadow-lg shadow-accent/30 font-body text-sm font-medium hover:bg-accent/90 transition-all">
+            <Filter className="w-4 h-4" />
+            Filters
+          </button>
+        </SheetTrigger>
+        <SheetContent side="left" className="w-80 bg-[hsl(var(--deep-alpine))] border-r border-accent/20 p-0">
+          <SheetHeader className="p-6 pb-4 border-b border-border/20">
+            <SheetTitle className="font-display text-xl text-foreground">Filter Collection</SheetTitle>
+          </SheetHeader>
+          <div className="p-6 overflow-y-auto max-h-[calc(100vh-100px)]">
+            <FilterSidebar
+              selectedColorFamily={selectedColorFamily}
+              setSelectedColorFamily={setSelectedColorFamily}
+              selectedStyle={selectedStyle}
+              setSelectedStyle={setSelectedStyle}
+              selectedApplication={selectedApplication}
+              setSelectedApplication={setSelectedApplication}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              filteredCount={filteredSlabs.length}
+              totalCount={slabs.length}
+            />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-6 bg-[hsl(var(--deep-alpine))] border-t border-border/20">
+            <Button 
+              variant="premium" 
+              className="w-full"
+              onClick={() => setMobileFilterOpen(false)}
+            >
+              Show {filteredSlabs.length} Results
+            </Button>
+          </div>
+        </SheetContent>
+      </Sheet>
 
       {/* Modal */}
       <Dialog open={!!selectedSlab} onOpenChange={() => setSelectedSlab(null)}>

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Collection from "./pages/Collection";
+import SlabDetail from "./pages/SlabDetail";
 import DealerLogin from "./pages/DealerLogin";
 import DealerDashboard from "./pages/DealerDashboard";
 import DealersList from "./pages/DealersList";
@@ -28,6 +29,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/:slug" element={<SlabDetail />} />
           <Route path="/dealer/login" element={<DealerLogin />} />
           <Route path="/dealer/dashboard" element={<DealerDashboard />} />
           <Route path="/dealer/dealers" element={<DealersList />} />

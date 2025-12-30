@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
-import stonesamples from "@/assets/stone-samples.jpg";
+import stonesamples from "@/assets/stone-collection-showcase.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {

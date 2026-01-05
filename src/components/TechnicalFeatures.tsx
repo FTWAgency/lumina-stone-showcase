@@ -15,7 +15,7 @@ const TechnicalFeatures = () => {
     {
       icon: <Droplets className="w-8 h-8" />,
       title: "Stain Resistant",
-      description: "Permanent colors that never stain"
+      description: "Lifetime anti-stain warranty protection"
     },
     {
       icon: (

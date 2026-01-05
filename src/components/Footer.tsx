@@ -86,17 +86,10 @@ const Footer = () => {
         </div>
         
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* LS Monogram */}
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 border border-accent/30 rounded-lg flex items-center justify-center">
-              <span className="font-display text-sm font-medium text-accent">LS</span>
-            </div>
-            <div className="font-body text-sm text-muted-foreground">
-              © 2025 Lumina Surfaces. All Rights Reserved.
-            </div>
+        <div className="mt-16 pt-8 border-t border-border flex justify-center items-center">
+          <div className="font-body text-sm text-muted-foreground">
+            © 2026 Lumina Surfaces. All Rights Reserved.
           </div>
-          
         </div>
       </div>
     </footer>

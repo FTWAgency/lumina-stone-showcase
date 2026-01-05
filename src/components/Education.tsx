@@ -20,32 +20,32 @@ const Education = () => {
             </p>
             
             <div className="grid grid-cols-2 gap-8">
-              <div className="bg-background p-8 rounded-2xl border border-background/20">
+              <div className="bg-white p-8 rounded-2xl border border-black/10">
                 <div className="text-4xl font-display font-medium text-destructive mb-3">95%+</div>
-                <div className="text-sm font-body text-foreground/70">Traditional stone contains harmful Silica</div>
+                <div className="text-sm font-body text-black/70">Traditional stone contains harmful Silica</div>
               </div>
-              <div className="bg-background p-8 rounded-2xl border border-primary/30 shadow-glow">
+              <div className="bg-white p-8 rounded-2xl border border-primary/30 shadow-glow">
                 <div className="text-4xl font-display font-medium text-primary mb-3">0%</div>
-                <div className="text-sm font-body text-foreground">Silica in Lumina products</div>
+                <div className="text-sm font-body text-black/80">Silica in Lumina products</div>
               </div>
             </div>
           </div>
           
           {/* Right visual */}
           <div className="relative">
-            <div className="bg-background rounded-2xl p-8 border border-background/20 shadow-premium overflow-hidden">
+            <div className="bg-white rounded-2xl p-8 border border-black/10 shadow-premium overflow-hidden">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/4e5fd5b8-af7d-47e5-9f93-360d3e4d50aa.png" 
                   alt="Lumina nano-technology surface" 
                   className="w-full h-80 object-cover rounded-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="font-display text-2xl font-medium text-foreground mb-3">
+                  <h3 className="font-display text-2xl font-medium text-white mb-3">
                     Crystalline Silica-Free Composition
                   </h3>
-                  <p className="font-body text-foreground/80 text-base leading-relaxed">
+                  <p className="font-body text-white/90 text-base leading-relaxed">
                     Made from 90% recycled glass and engineered without crystalline silica — eliminating the risk of airborne particles during fabrication and protecting fabricators' health.
                   </p>
                 </div>

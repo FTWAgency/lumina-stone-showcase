@@ -82,14 +82,14 @@ const TechnicalFeatures = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-muted/20">
+    <section className="py-32 px-6 bg-[#DFD8C6]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
+          <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight text-background">
             Technical
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
           </h2>
-          <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="font-body text-xl text-background/70 max-w-2xl mx-auto leading-relaxed">
             Advanced manufacturing meets natural beauty in every Lumina surface.
           </p>
         </div>
@@ -98,7 +98,7 @@ const TechnicalFeatures = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group bg-secondary p-10 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
+              className="group bg-background p-10 rounded-2xl border border-background/20 hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
             >
               <div className="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mb-8 text-accent group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
@@ -116,7 +116,7 @@ const TechnicalFeatures = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="inline-block p-8 rounded-2xl border border-border shadow-sm bg-accent/10">
+          <div className="inline-block p-8 rounded-2xl border border-background/20 shadow-sm bg-background">
             <img 
               src="/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png" 
               alt="EPD Environmental Product Declaration Certificate" 

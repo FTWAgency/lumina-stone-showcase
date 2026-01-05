@@ -13,6 +13,10 @@ import luminaKitchen from "@/assets/lumina-kitchen.jpg";
 import luminaSlab from "@/assets/lumina-slab.jpg";
 import luminaBookmatch from "@/assets/lumina-bookmatch.png";
 import luminaCloseup from "@/assets/lumina-closeup.jpg";
+import calacattaSiennaKitchen from "@/assets/calacatta-sienna-kitchen.jpg";
+import calacattaSiennaSlab from "@/assets/calacatta-sienna-slab.jpg";
+import calacattaSiennaCloseup from "@/assets/calacatta-sienna-closeup.jpg";
+import calacattaSiennaBookmatch from "@/assets/calacatta-sienna-bookmatch.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -105,18 +109,19 @@ const designs: Design[] = [
     ],
   },
   { 
-    id: "calcutta-sienna",
-    name: "Calcutta Sienna", 
+    id: "calacatta-sienna",
+    name: "Calacatta Sienna", 
     pattern: "Defined flowing veining",
-    image: "/lovable-uploads/1c983e16-ba6b-40ac-9021-c9951c32d332.png",
+    image: calacattaSiennaKitchen,
     images: [
-      "/lovable-uploads/1c983e16-ba6b-40ac-9021-c9951c32d332.png",
-      "/lovable-uploads/0bfcd651-df72-4c9d-a913-0c4fda295440.png",
-      "/lovable-uploads/15a58520-bd5d-4630-8a78-c33ff14e8248.png",
+      calacattaSiennaKitchen,
+      calacattaSiennaSlab,
+      calacattaSiennaCloseup,
+      calacattaSiennaBookmatch,
     ],
-    colorFamily: "Earth Tones",
+    colorFamily: "White",
     style: "Bold",
-    details: "Calcutta Sienna makes a bold statement with its dramatic veining patterns. The defined, flowing lines create visual intrigue, making it the centerpiece of any design scheme.",
+    details: "Calacatta Sienna makes a bold statement with its dramatic veining patterns. The defined, flowing lines create visual intrigue, making it the centerpiece of any design scheme.",
     applications: [
       { name: "Accent Walls", icon: "accent" },
       { name: "Kitchen Backsplashes", icon: "kitchen" },

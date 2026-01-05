@@ -3,6 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
 import stonesamples from "@/assets/stone-collection-showcase.png";
 import designShowcaseBg from "@/assets/design-showcase-bg.png";
+import crystalloKitchen from "@/assets/crystallo-kitchen.jpg";
+import crystalloSlab from "@/assets/crystallo-slab.jpg";
+import crystalloBookmatch from "@/assets/crystallo-bookmatch.png";
+import cashmereTajKitchen from "@/assets/cashmere-taj-kitchen.jpg";
+import cashmereTajSlab from "@/assets/cashmere-taj-slab.jpg";
+import cashmereTajBookmatch from "@/assets/cashmere-taj-bookmatch.png";
+import luminaKitchen from "@/assets/lumina-kitchen.jpg";
+import luminaSlab from "@/assets/lumina-slab.jpg";
+import luminaBookmatch from "@/assets/lumina-bookmatch.png";
+import luminaCloseup from "@/assets/lumina-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -37,11 +47,11 @@ const designs: Design[] = [
     id: "crystallo",
     name: "Crystallo", 
     pattern: "Soft silver layering",
-    image: "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
+    image: crystalloKitchen,
     images: [
-      "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
-      "/lovable-uploads/4344fe9a-3d52-4f67-b5e4-193deaa82902.png",
-      "/lovable-uploads/57391c22-1049-4f7e-a9b5-8dbe023b18c8.png",
+      crystalloKitchen,
+      crystalloSlab,
+      crystalloBookmatch,
     ],
     colorFamily: "White",
     style: "Minimal",
@@ -57,11 +67,11 @@ const designs: Design[] = [
     id: "cashmere-taj",
     name: "Cashmere Taj", 
     pattern: "Creamy layered veins",
-    image: "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
+    image: cashmereTajKitchen,
     images: [
-      "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
-      "/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png",
-      "/lovable-uploads/4ad1487a-76f8-4980-943a-748decc450bd.png",
+      cashmereTajKitchen,
+      cashmereTajSlab,
+      cashmereTajBookmatch,
     ],
     colorFamily: "White",
     style: "Veined",
@@ -77,11 +87,12 @@ const designs: Design[] = [
     id: "lumina",
     name: "Lumina", 
     pattern: "Warm golden movement",
-    image: "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
+    image: luminaKitchen,
     images: [
-      "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
-      "/lovable-uploads/eb5c4701-7737-4d3a-bd3b-63ee0504195d.png",
-      "/lovable-uploads/b75b6f32-1d96-4d5a-a927-e74ec66d4c40.png",
+      luminaKitchen,
+      luminaSlab,
+      luminaCloseup,
+      luminaBookmatch,
     ],
     colorFamily: "Earth Tones",
     style: "Veined",

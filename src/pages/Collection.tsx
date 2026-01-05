@@ -17,6 +17,9 @@ import calacattaSiennaKitchen from "@/assets/calacatta-sienna-kitchen.jpg";
 import calacattaSiennaSlab from "@/assets/calacatta-sienna-slab.jpg";
 import calacattaSiennaCloseup from "@/assets/calacatta-sienna-closeup.jpg";
 import calacattaSiennaBookmatch from "@/assets/calacatta-sienna-bookmatch.png";
+import terraBeigeKitchen from "@/assets/terra-beige-kitchen.jpg";
+import terraBeigeSlab from "@/assets/terra-beige-slab.jpg";
+import terraBeigeCloseup from "@/assets/terra-beige-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -148,11 +151,11 @@ export const slabs: Slab[] = [
     id: "terra-beige",
     name: "Terra Beige",
     description: "Natural earth tones",
-    image: "/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png",
+    image: terraBeigeKitchen,
     images: [
-      "/lovable-uploads/2b5d0ca5-fed7-40c4-a3db-cecd1c8697f0.png",
-      "/lovable-uploads/095c3664-5f34-4792-b481-458b17ff08f7.png",
-      "/lovable-uploads/d51d4bbf-97fc-4ca3-b718-cc87dd34de31.png",
+      terraBeigeKitchen,
+      terraBeigeSlab,
+      terraBeigeCloseup,
     ],
     colorFamily: "Earth Tones",
     style: "Minimal",

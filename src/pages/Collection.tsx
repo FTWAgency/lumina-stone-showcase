@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, MapPin, FileText, ExternalLink, ChefHat, Bath, Flame, Building2, Sparkles, X, Filter, Search } from "lucide-react";
+import collectionHeroBg from "@/assets/collection-hero-bg.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -344,46 +345,16 @@ const Collection = () => {
         </div>
       </header>
 
-      {/* Hero Section with Layered Slab Background */}
+      {/* Hero Section with Mountain Background */}
       <section className="relative py-24 lg:py-32 px-6 text-center overflow-hidden">
-        {/* Layered slab background */}
+        {/* Mountain background image */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--deep-alpine))] via-transparent to-[hsl(var(--deep-alpine))] z-10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--deep-alpine))] via-transparent to-[hsl(var(--deep-alpine))] z-10" />
-          
-          {/* Angled slab overlays like mountain layers */}
-          <div 
-            className="absolute -left-20 top-0 w-[60%] h-full opacity-30 transform -skew-x-12"
-            style={{
-              backgroundImage: `url(${slabs[0].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
+          <img 
+            src={collectionHeroBg} 
+            alt="Mountain landscape" 
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div 
-            className="absolute left-1/4 top-10 w-[50%] h-full opacity-25 transform skew-x-6"
-            style={{
-              backgroundImage: `url(${slabs[2].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          <div 
-            className="absolute right-0 -top-10 w-[55%] h-full opacity-20 transform -skew-x-6"
-            style={{
-              backgroundImage: `url(${slabs[3].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          <div 
-            className="absolute -right-20 top-20 w-[45%] h-full opacity-15 transform skew-x-12"
-            style={{
-              backgroundImage: `url(${slabs[5].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--deep-alpine))]/80 via-[hsl(var(--deep-alpine))]/40 to-[hsl(var(--deep-alpine))]/90 z-10" />
         </div>
 
         <div className="relative z-20">

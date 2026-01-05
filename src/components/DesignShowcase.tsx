@@ -160,30 +160,39 @@ const DesignShowcase = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={designShowcaseBg} 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[hsl(var(--deep-alpine))]/85" />
-      </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
-            Inspired by Nature.<br />
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Perfected by Technology.
-            </span>
-          </h2>
-          
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We replicate the elegance of natural stone using precision print technology. 
-            Each slab is unique, durable, and stunning — crafted for discerning spaces.
-          </p>
+    <>
+      {/* Top section with background image */}
+      <section className="pt-32 pb-16 px-6 relative overflow-hidden">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={designShowcaseBg} 
+            alt="" 
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-[hsl(var(--deep-alpine))]/80" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[hsl(var(--deep-alpine))] to-transparent" />
         </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center">
+            <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
+              Inspired by Nature.<br />
+              <span className="bg-gradient-accent bg-clip-text text-transparent">
+                Perfected by Technology.
+              </span>
+            </h2>
+            
+            <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We replicate the elegance of natural stone using precision print technology. 
+              Each slab is unique, durable, and stunning — crafted for discerning spaces.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom section with solid background */}
+      <section className="pb-32 px-6 bg-[hsl(var(--deep-alpine))]">
+        <div className="max-w-7xl mx-auto">
 
         {/* Featured showcase image */}
         <div className="mb-20 relative rounded-2xl overflow-hidden shadow-premium">
@@ -346,7 +355,8 @@ const DesignShowcase = () => {
           )}
         </DialogContent>
       </Dialog>
-    </section>
+      </section>
+    </>
   );
 };
 

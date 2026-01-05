@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChefHat, Bath, Flame, Building2, Sparkles, MapPin, FileText, ExternalLink } from "lucide-react";
 import stonesamples from "@/assets/stone-collection-showcase.png";
+import designShowcaseBg from "@/assets/design-showcase-bg.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -159,8 +160,17 @@ const DesignShowcase = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-32 px-6 bg-gradient-stone">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-32 px-6 relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={designShowcaseBg} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[hsl(var(--deep-alpine))]/85" />
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h2 className="font-display text-4xl lg:text-5xl font-medium mb-8 leading-tight">
             Inspired by Nature.<br />

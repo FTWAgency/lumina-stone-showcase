@@ -8,6 +8,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import luminaLogo from "@/assets/lumina-logo.svg";
+import luminaInitialLogo from "@/assets/lumina-initial-logo.svg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,7 +51,12 @@ const Navigation = () => {
     }`}>
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center gap-2">
+          <img 
+            src={luminaInitialLogo} 
+            alt="Lumina" 
+            className="h-8 w-auto"
+          />
           <img 
             src={luminaLogo} 
             alt="Lumina Surfaces" 

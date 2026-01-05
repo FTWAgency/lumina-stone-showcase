@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import luminaInitialLogo from "@/assets/lumina-initial-logo.svg";
+import luminaLogo from "@/assets/lumina-logo.svg";
 
 const Footer = () => {
   return (
@@ -8,15 +9,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-8">
-              {/* Lumina Logo */}
-              <div className="w-14 h-14 flex items-center justify-center group hover:scale-105 transition-transform duration-300">
-                <img src={luminaInitialLogo} alt="Lumina Surfaces" className="w-12 h-12" />
-              </div>
-              <div>
-                <span className="font-display text-2xl font-medium text-foreground block">Lumina</span>
-                <span className="font-body text-sm text-accent">Surfaces</span>
-              </div>
+            <div className="flex items-center gap-4 mb-8 group hover:scale-105 transition-transform duration-300">
+              <img src={luminaInitialLogo} alt="Lumina Surfaces" className="w-12 h-12" />
+              <img src={luminaLogo} alt="Lumina Surfaces" className="h-8" />
             </div>
             
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8 max-w-md">

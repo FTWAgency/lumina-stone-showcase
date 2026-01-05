@@ -9,6 +9,10 @@ import crystalloKitchen from "@/assets/crystallo-kitchen.jpg";
 import cashmereTajSlab from "@/assets/cashmere-taj-slab.jpg";
 import cashmereTajBookmatch from "@/assets/cashmere-taj-bookmatch.png";
 import cashmereTajKitchen from "@/assets/cashmere-taj-kitchen.jpg";
+import luminaSlab from "@/assets/lumina-slab.jpg";
+import luminaCloseup from "@/assets/lumina-closeup.jpg";
+import luminaBookmatch from "@/assets/lumina-bookmatch.png";
+import luminaKitchen from "@/assets/lumina-kitchen.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -98,11 +102,12 @@ export const slabs: Slab[] = [
     id: "lumina",
     name: "Lumina",
     description: "Warm golden movement",
-    image: "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
+    image: luminaKitchen,
     images: [
-      "/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png",
-      "/lovable-uploads/eb5c4701-7737-4d3a-bd3b-63ee0504195d.png",
-      "/lovable-uploads/b75b6f32-1d96-4d5a-a927-e74ec66d4c40.png",
+      luminaKitchen,
+      luminaSlab,
+      luminaCloseup,
+      luminaBookmatch,
     ],
     colorFamily: "Earth Tones",
     style: "Veined",

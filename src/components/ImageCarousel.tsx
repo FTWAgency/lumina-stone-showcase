@@ -27,7 +27,7 @@ const ImageCarousel = ({ images, alt, className }: ImageCarouselProps) => {
       <img
         src={images[currentIndex]}
         alt={`${alt} - Image ${currentIndex + 1}`}
-        className="w-full h-full object-cover transition-opacity duration-300"
+        className="w-full h-full object-contain transition-opacity duration-300"
       />
 
       {/* Navigation Arrows - only show if multiple images */}

@@ -366,7 +366,7 @@ const Collection = () => {
             Back to Home
           </Link>
           <Link to="/" className="font-display text-xl font-medium tracking-wide text-foreground">
-            LUMINA
+            Lumina
           </Link>
         </div>
       </header>

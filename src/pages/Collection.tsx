@@ -20,6 +20,10 @@ import calacattaSiennaBookmatch from "@/assets/calacatta-sienna-bookmatch.png";
 import terraBeigeKitchen from "@/assets/terra-beige-kitchen.jpg";
 import terraBeigeSlab from "@/assets/terra-beige-slab.jpg";
 import terraBeigeCloseup from "@/assets/terra-beige-closeup.jpg";
+import montBlancKitchen from "@/assets/mont-blanc-kitchen.jpg";
+import montBlancSlab from "@/assets/mont-blanc-slab.jpg";
+import montBlancCloseup from "@/assets/mont-blanc-closeup.jpg";
+import montBlancBookmatch from "@/assets/mont-blanc-bookmatch.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -171,11 +175,12 @@ export const slabs: Slab[] = [
     id: "mont-blanc",
     name: "Mont Blanc",
     description: "Cool marble striations",
-    image: "/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png",
+    image: montBlancKitchen,
     images: [
-      "/lovable-uploads/7bd69178-6a3a-44ca-b099-d6eb06ecc52f.png",
-      "/lovable-uploads/4e5fd5b8-af7d-47e5-9f93-360d3e4d50aa.png",
-      "/lovable-uploads/287c93a8-a3a8-4fdd-9836-c34efa2a13c5.png",
+      montBlancKitchen,
+      montBlancSlab,
+      montBlancCloseup,
+      montBlancBookmatch,
     ],
     colorFamily: "Gray",
     style: "Veined",

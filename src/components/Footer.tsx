@@ -1,5 +1,5 @@
-import { Mountain } from "lucide-react";
 import { Link } from "react-router-dom";
+import luminaInitialLogo from "@/assets/lumina-initial-logo.svg";
 
 const Footer = () => {
   return (
@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-8">
-              {/* Mountain Logo */}
-              <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center group hover:scale-105 transition-transform duration-300">
-                <Mountain className="w-8 h-8 text-primary-foreground" />
+              {/* Lumina Logo */}
+              <div className="w-14 h-14 flex items-center justify-center group hover:scale-105 transition-transform duration-300">
+                <img src={luminaInitialLogo} alt="Lumina Surfaces" className="w-12 h-12" />
               </div>
               <div>
                 <span className="font-display text-2xl font-medium text-foreground block">Lumina</span>

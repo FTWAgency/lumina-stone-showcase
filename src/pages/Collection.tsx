@@ -274,7 +274,7 @@ const FilterSidebar = ({
               className={`
                 w-full flex items-center gap-3 px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
                 ${selectedColorFamily === color 
-                  ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
+                  ? "bg-accent/20 text-foreground border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
                   : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
                 }
               `}
@@ -314,7 +314,7 @@ const FilterSidebar = ({
               className={`
                 w-full text-left px-4 py-3 rounded-xl font-body text-sm transition-all duration-300
                 ${selectedStyle === style 
-                  ? "bg-accent/20 text-accent border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
+                  ? "bg-accent/20 text-foreground border border-accent/40 shadow-[0_0_15px_hsl(var(--accent)/0.2)]" 
                   : "bg-transparent text-foreground/70 border border-transparent hover:bg-secondary/30 hover:text-foreground"
                 }
               `}

@@ -1,4 +1,5 @@
 import { Droplets } from "lucide-react";
+import epdLogo from "@/assets/epd-logo.png";
 
 const TechnicalFeatures = () => {
   const features = [
@@ -118,7 +119,7 @@ const TechnicalFeatures = () => {
         <div className="text-center mt-16">
           <div className="inline-block p-8 rounded-2xl border border-background/20 shadow-sm bg-background">
             <img 
-              src="/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png" 
+              src={epdLogo} 
               alt="EPD Environmental Product Declaration Certificate" 
               className="h-20 mx-auto"
             />

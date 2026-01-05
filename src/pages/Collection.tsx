@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, MapPin, FileText, ExternalLink, ChefHat, Bath, Flame, Building2, Sparkles, X, Filter, Search } from "lucide-react";
 import collectionHeroBg from "@/assets/collection-hero-bg.png";
+import crystalloSlab from "@/assets/crystallo-slab.jpg";
+import crystalloCloseup from "@/assets/crystallo-closeup.jpg";
+import crystalloBookmatch from "@/assets/crystallo-bookmatch.png";
+import crystalloKitchen from "@/assets/crystallo-kitchen.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -50,11 +54,12 @@ export const slabs: Slab[] = [
     id: "crystallo",
     name: "Crystallo",
     description: "Soft silver layering",
-    image: "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
+    image: crystalloSlab,
     images: [
-      "/lovable-uploads/fe2704b4-db2c-440f-8442-395a1f9f7e84.png",
-      "/lovable-uploads/4344fe9a-3d52-4f67-b5e4-193deaa82902.png",
-      "/lovable-uploads/57391c22-1049-4f7e-a9b5-8dbe023b18c8.png",
+      crystalloSlab,
+      crystalloCloseup,
+      crystalloBookmatch,
+      crystalloKitchen,
     ],
     colorFamily: "White",
     style: "Minimal",

@@ -6,6 +6,9 @@ import crystalloSlab from "@/assets/crystallo-slab.jpg";
 import crystalloCloseup from "@/assets/crystallo-closeup.jpg";
 import crystalloBookmatch from "@/assets/crystallo-bookmatch.png";
 import crystalloKitchen from "@/assets/crystallo-kitchen.jpg";
+import cashmereTajSlab from "@/assets/cashmere-taj-slab.jpg";
+import cashmereTajBookmatch from "@/assets/cashmere-taj-bookmatch.png";
+import cashmereTajKitchen from "@/assets/cashmere-taj-kitchen.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -75,11 +78,11 @@ export const slabs: Slab[] = [
     id: "cashmere-taj",
     name: "Cashmere Taj",
     description: "Creamy layered veins",
-    image: "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
+    image: cashmereTajKitchen,
     images: [
-      "/lovable-uploads/ffbbb8e7-46b2-4942-930d-c253317e9e67.png",
-      "/lovable-uploads/88c7e25f-db71-4819-849d-39379394915f.png",
-      "/lovable-uploads/4ad1487a-76f8-4980-943a-748decc450bd.png",
+      cashmereTajKitchen,
+      cashmereTajSlab,
+      cashmereTajBookmatch,
     ],
     colorFamily: "White",
     style: "Veined",

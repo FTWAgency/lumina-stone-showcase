@@ -139,7 +139,7 @@ const SlabDetail = () => {
                     </div>
                     <div>
                       <p className="font-body text-sm text-foreground/50 mb-1">Thickness Options</p>
-                      <p className="font-body text-foreground">2 cm, 3 cm</p>
+                      <p className="font-body text-foreground">2 cm</p>
                     </div>
                     <div>
                       <p className="font-body text-sm text-foreground/50 mb-1">Surface Finish</p>

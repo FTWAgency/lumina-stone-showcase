@@ -50,6 +50,9 @@ import celestialKitchen from "@/assets/celestial-kitchen.png";
 import celestialSlab from "@/assets/celestial-slab.png";
 import prestigeKitchen from "@/assets/prestige-kitchen.jpg";
 import prestigeSlab from "@/assets/prestige-slab.jpg";
+import natureSandKitchen from "@/assets/nature-sand-kitchen.png";
+import natureSandSlab from "@/assets/nature-sand-slab.jpg";
+import natureSandCloseup from "@/assets/nature-sand-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -390,6 +393,26 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "The perfect combination of light gray traces and powerful stone-gray veins with mimosa yellow and olive undertones. A bold yet elegant design set against the purest lily-white background. Prestige is modeled after a unique stone known as Breccia and when cross-cut creates a pattern that has always been reserved for the most prestigious applications.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "nature-sand",
+    name: "Nature Sand",
+    description: "Fossil-like organic elegance",
+    image: natureSandKitchen,
+    images: [
+      natureSandKitchen,
+      natureSandSlab,
+      natureSandCloseup,
+    ],
+    colorFamily: "Beige",
+    style: "Organic",
+    details: "Nature Sand features a soft gray-beige base with subtle fossil-like textures and natural stone movement. Its earthy tones create a warm, organic elegance perfect for modern and rustic interiors alike.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

@@ -24,6 +24,10 @@ import montBlancKitchen from "@/assets/mont-blanc-kitchen.jpg";
 import montBlancSlab from "@/assets/mont-blanc-slab.jpg";
 import montBlancCloseup from "@/assets/mont-blanc-closeup.jpg";
 import montBlancBookmatch from "@/assets/mont-blanc-bookmatch.png";
+import imperialDanbyKitchen from "@/assets/imperial-danby-kitchen.jpg";
+import imperialDanbySlab from "@/assets/imperial-danby-slab.jpg";
+import imperialDanbyCloseup from "@/assets/imperial-danby-closeup.jpg";
+import imperialDanbyBookmatch from "@/assets/imperial-danby-bookmatch.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -190,6 +194,27 @@ export const slabs: Slab[] = [
       { name: "Minimalist Bathrooms", icon: "bath" },
       { name: "Feature Walls", icon: "accent" },
       { name: "Corporate Offices", icon: "commercial" },
+    ],
+  },
+  {
+    id: "imperial-danby",
+    name: "Imperial Danby",
+    description: "Refined white with gray veining",
+    image: imperialDanbyKitchen,
+    images: [
+      imperialDanbyKitchen,
+      imperialDanbyCloseup,
+      imperialDanbySlab,
+      imperialDanbyBookmatch,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "Imperial Danby features a refined white background accented with subtle gray veining, capturing the elegance of classic marble. Its soft movement and timeless look make it a versatile choice for luxurious interiors.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
     ],
   },
 ];

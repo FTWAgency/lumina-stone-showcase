@@ -653,7 +653,7 @@ const Collection = () => {
                           <h3 className="font-display text-2xl font-medium text-foreground mb-1">
                             {slab.name}
                           </h3>
-                          <p className="font-body text-base text-accent italic mb-4">
+                          <p className="font-body text-base text-foreground/80 italic mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                             {slab.description}
                           </p>
                           <Button 

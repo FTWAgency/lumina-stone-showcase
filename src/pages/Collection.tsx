@@ -31,6 +31,7 @@ import imperialDanbyBookmatch from "@/assets/imperial-danby-bookmatch.png";
 import opulenceKitchen from "@/assets/opulence-kitchen.jpg";
 import opulenceSlab from "@/assets/opulence-slab.jpg";
 import opulenceCloseup from "@/assets/opulence-closeup.jpg";
+import nebulaKitchen from "@/assets/nebula-kitchen.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -233,6 +234,24 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "A predominantly white slab with subtle yet complex linear veining. The thin streaks of ash grey, light olive, and other earth tones make this a fascinating piece of stone and convey a sense of wonder. We also love that the veins in this stone are not sharp and defined making this a popular selection for those seeking subtlety in their design choices.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "nebula",
+    name: "Nebula",
+    description: "Complex grey and bronze veining",
+    image: nebulaKitchen,
+    images: [
+      nebulaKitchen,
+    ],
+    colorFamily: "Gray",
+    style: "Bold",
+    details: "This stone is complex and dynamic, inspiring an exciting energy that calls to the adventurous at heart. The grey and black veins work their way through mixed hues of alabaster while the mineral tones of rust, gold, and bronze add depth to the texture. Let the bold expression of these slabs infuse your space with the raw power of the natural world.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

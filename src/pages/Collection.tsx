@@ -32,6 +32,10 @@ import opulenceKitchen from "@/assets/opulence-kitchen.jpg";
 import opulenceSlab from "@/assets/opulence-slab.jpg";
 import opulenceCloseup from "@/assets/opulence-closeup.jpg";
 import nebulaKitchen from "@/assets/nebula-kitchen.png";
+import radianceKitchen from "@/assets/radiance-kitchen.jpg";
+import radianceSlab from "@/assets/radiance-slab.jpg";
+import radianceCloseup from "@/assets/radiance-closeup.jpg";
+import radianceBookmatch from "@/assets/radiance-bookmatch.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -252,6 +256,27 @@ export const slabs: Slab[] = [
     colorFamily: "Gray",
     style: "Bold",
     details: "This stone is complex and dynamic, inspiring an exciting energy that calls to the adventurous at heart. The grey and black veins work their way through mixed hues of alabaster while the mineral tones of rust, gold, and bronze add depth to the texture. Let the bold expression of these slabs infuse your space with the raw power of the natural world.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "radiance",
+    name: "Radiance",
+    description: "Pencil veins on milky white",
+    image: radianceKitchen,
+    images: [
+      radianceKitchen,
+      radianceSlab,
+      radianceCloseup,
+      radianceBookmatch,
+    ],
+    colorFamily: "White",
+    style: "Minimal",
+    details: "The famous saying again holds true that, \"less is more.\" The pencil veins in grey draw a simple yet harmonized pattern set against a milky white backdrop. The veining in this stone appears to sit just below the surface, giving it an understated and mysterious quality.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

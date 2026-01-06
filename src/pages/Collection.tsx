@@ -28,6 +28,9 @@ import imperialDanbyKitchen from "@/assets/imperial-danby-kitchen.jpg";
 import imperialDanbySlab from "@/assets/imperial-danby-slab.jpg";
 import imperialDanbyCloseup from "@/assets/imperial-danby-closeup.jpg";
 import imperialDanbyBookmatch from "@/assets/imperial-danby-bookmatch.png";
+import opulenceKitchen from "@/assets/opulence-kitchen.jpg";
+import opulenceSlab from "@/assets/opulence-slab.jpg";
+import opulenceCloseup from "@/assets/opulence-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -210,6 +213,26 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "Imperial Danby features a refined white background accented with subtle gray veining, capturing the elegance of classic marble. Its soft movement and timeless look make it a versatile choice for luxurious interiors.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "opulence",
+    name: "Opulence",
+    description: "Subtle linear veining",
+    image: opulenceKitchen,
+    images: [
+      opulenceKitchen,
+      opulenceSlab,
+      opulenceCloseup,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "A predominantly white slab with subtle yet complex linear veining. The thin streaks of ash grey, light olive, and other earth tones make this a fascinating piece of stone and convey a sense of wonder. We also love that the veins in this stone are not sharp and defined making this a popular selection for those seeking subtlety in their design choices.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

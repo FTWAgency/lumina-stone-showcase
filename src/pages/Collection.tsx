@@ -90,8 +90,8 @@ export const slabs: Slab[] = [
     ],
   },
   {
-    id: "cashmere-taj",
-    name: "Cashmere Taj",
+    id: "taj-mahal",
+    name: "Taj Mahal",
     description: "Creamy layered veins",
     image: cashmereTajKitchen,
     images: [

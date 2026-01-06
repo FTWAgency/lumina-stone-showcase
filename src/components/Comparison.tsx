@@ -3,9 +3,8 @@ const Comparison = () => {
     { name: "Silica-Free", lumina: true, traditional: false },
     { name: "Safer for Fabricators", lumina: true, traditional: false },
     { name: "Stain Resistant", lumina: true, traditional: true },
-    { name: "UV Resistant", lumina: true, traditional: false },
     { name: "Recycled Content", lumina: true, traditional: false },
-    { name: "15-Year Warranty", lumina: true, traditional: false },
+    { name: "25-Year Manufacturer Warranty", lumina: true, traditional: false },
     { name: "Nano-Ink Technology", lumina: true, traditional: false },
     { name: "Lightweight Design", lumina: true, traditional: false }
   ];

@@ -39,6 +39,9 @@ import radianceBookmatch from "@/assets/radiance-bookmatch.png";
 import nebulaWhiteKitchen from "@/assets/nebula-white-kitchen.jpg";
 import nebulaWhiteSlab from "@/assets/nebula-white-slab.jpg";
 import nebulaWhiteCloseup from "@/assets/nebula-white-closeup.jpg";
+import eternalWhiteKitchen from "@/assets/eternal-white-kitchen.jpg";
+import eternalWhiteSlab from "@/assets/eternal-white-slab.jpg";
+import eternalWhiteCloseup from "@/assets/eternal-white-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -300,6 +303,26 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Minimal",
     details: "Nebula White displays a soft grayish-white base with delicate, cloud-like veining that adds depth and movement. Its airy elegance brings a refined, marble-look finish to both modern and traditional spaces.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "eternal-white",
+    name: "Eternal White",
+    description: "Luminous white with soft gray veining",
+    image: eternalWhiteKitchen,
+    images: [
+      eternalWhiteKitchen,
+      eternalWhiteSlab,
+      eternalWhiteCloseup,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "Eternal White features a luminous white base with soft gray veining, reminiscent of natural marble. Its flowing patterns bring sophistication and timeless beauty to any space.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

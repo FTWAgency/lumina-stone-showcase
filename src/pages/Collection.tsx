@@ -42,6 +42,10 @@ import nebulaWhiteCloseup from "@/assets/nebula-white-closeup.jpg";
 import eternalWhiteKitchen from "@/assets/eternal-white-kitchen.jpg";
 import eternalWhiteSlab from "@/assets/eternal-white-slab.jpg";
 import eternalWhiteCloseup from "@/assets/eternal-white-closeup.jpg";
+import biancoSerenaKitchen from "@/assets/bianco-serena-kitchen.jpg";
+import biancoSerenaSlab from "@/assets/bianco-serena-slab.jpg";
+import biancoSerenaCloseup from "@/assets/bianco-serena-closeup.jpg";
+import biancoSerenaBookmatch from "@/assets/bianco-serena-bookmatch.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -323,6 +327,27 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "Eternal White features a luminous white base with soft gray veining, reminiscent of natural marble. Its flowing patterns bring sophistication and timeless beauty to any space.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "bianco-serena",
+    name: "Bianco Serena",
+    description: "Bold gray and golden veining",
+    image: biancoSerenaKitchen,
+    images: [
+      biancoSerenaKitchen,
+      biancoSerenaSlab,
+      biancoSerenaCloseup,
+      biancoSerenaBookmatch,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "Bianco Serena features a bright white base with bold gray and soft golden veining, reminiscent of luxurious Italian marble. Its striking contrast and natural movement make it a statement piece for elegant interiors.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

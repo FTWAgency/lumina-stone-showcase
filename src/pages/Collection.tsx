@@ -46,6 +46,8 @@ import biancoSerenaKitchen from "@/assets/bianco-serena-kitchen.jpg";
 import biancoSerenaSlab from "@/assets/bianco-serena-slab.jpg";
 import biancoSerenaCloseup from "@/assets/bianco-serena-closeup.jpg";
 import biancoSerenaBookmatch from "@/assets/bianco-serena-bookmatch.png";
+import celestialKitchen from "@/assets/celestial-kitchen.png";
+import celestialSlab from "@/assets/celestial-slab.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -348,6 +350,25 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "Bianco Serena features a bright white base with bold gray and soft golden veining, reminiscent of luxurious Italian marble. Its striking contrast and natural movement make it a statement piece for elegant interiors.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "celestial",
+    name: "Celestial",
+    description: "Powerful grey toned waves",
+    image: celestialKitchen,
+    images: [
+      celestialKitchen,
+      celestialSlab,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "Powerful grey toned waves and flow against a cool white background. The interplay of textures and shapes are a striking display of Mother Nature's powerful forces and conveys a sense of freedom and movement.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

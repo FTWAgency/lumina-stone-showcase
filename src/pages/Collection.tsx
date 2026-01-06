@@ -48,6 +48,8 @@ import biancoSerenaCloseup from "@/assets/bianco-serena-closeup.jpg";
 import biancoSerenaBookmatch from "@/assets/bianco-serena-bookmatch.png";
 import celestialKitchen from "@/assets/celestial-kitchen.png";
 import celestialSlab from "@/assets/celestial-slab.png";
+import prestigeKitchen from "@/assets/prestige-kitchen.jpg";
+import prestigeSlab from "@/assets/prestige-slab.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -369,6 +371,25 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Veined",
     details: "Powerful grey toned waves and flow against a cool white background. The interplay of textures and shapes are a striking display of Mother Nature's powerful forces and conveys a sense of freedom and movement.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "prestige",
+    name: "Prestige",
+    description: "Breccia-inspired elegance",
+    image: prestigeKitchen,
+    images: [
+      prestigeKitchen,
+      prestigeSlab,
+    ],
+    colorFamily: "White",
+    style: "Veined",
+    details: "The perfect combination of light gray traces and powerful stone-gray veins with mimosa yellow and olive undertones. A bold yet elegant design set against the purest lily-white background. Prestige is modeled after a unique stone known as Breccia and when cross-cut creates a pattern that has always been reserved for the most prestigious applications.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

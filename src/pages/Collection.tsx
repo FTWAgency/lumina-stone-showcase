@@ -196,7 +196,7 @@ export const slabs: Slab[] = [
   {
     id: "mont-blanc",
     name: "Mont Blanc",
-    description: "Cool marble striations",
+    description: "Sweeping gray striations",
     image: montBlancKitchen,
     images: [
       montBlancKitchen,
@@ -204,14 +204,14 @@ export const slabs: Slab[] = [
       montBlancCloseup,
       montBlancBookmatch,
     ],
-    colorFamily: "Gray",
+    colorFamily: "White",
     style: "Veined",
-    details: "Named after Europe's highest peak, Mont Blanc features crisp white surfaces with elegant grey striations. The cool tones evoke alpine majesty and pristine natural beauty. This design brings a sense of clarity and sophistication to modern and contemporary spaces.",
+    details: "Mont Blanc displays a luminous white background with sweeping gray striations, evoking the elegance of natural marble. Its dramatic linear veining creates a bold yet refined statement for luxurious interiors.",
     applications: [
-      { name: "Modern Kitchens", icon: "kitchen" },
-      { name: "Minimalist Bathrooms", icon: "bath" },
-      { name: "Feature Walls", icon: "accent" },
-      { name: "Corporate Offices", icon: "commercial" },
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
     ],
   },
   {

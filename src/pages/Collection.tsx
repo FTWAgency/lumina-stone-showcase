@@ -36,6 +36,9 @@ import radianceKitchen from "@/assets/radiance-kitchen.jpg";
 import radianceSlab from "@/assets/radiance-slab.jpg";
 import radianceCloseup from "@/assets/radiance-closeup.jpg";
 import radianceBookmatch from "@/assets/radiance-bookmatch.png";
+import nebulaWhiteKitchen from "@/assets/nebula-white-kitchen.jpg";
+import nebulaWhiteSlab from "@/assets/nebula-white-slab.jpg";
+import nebulaWhiteCloseup from "@/assets/nebula-white-closeup.jpg";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -277,6 +280,26 @@ export const slabs: Slab[] = [
     colorFamily: "White",
     style: "Minimal",
     details: "The famous saying again holds true that, \"less is more.\" The pencil veins in grey draw a simple yet harmonized pattern set against a milky white backdrop. The veining in this stone appears to sit just below the surface, giving it an understated and mysterious quality.",
+    applications: [
+      { name: "Kitchen Countertops", icon: "kitchen" },
+      { name: "Bathroom Vanities", icon: "bath" },
+      { name: "Accent Walls", icon: "accent" },
+      { name: "Commercial Spaces", icon: "commercial" },
+    ],
+  },
+  {
+    id: "nebula-white",
+    name: "Nebula White",
+    description: "Cloud-like veining on grayish-white",
+    image: nebulaWhiteKitchen,
+    images: [
+      nebulaWhiteKitchen,
+      nebulaWhiteSlab,
+      nebulaWhiteCloseup,
+    ],
+    colorFamily: "White",
+    style: "Minimal",
+    details: "Nebula White displays a soft grayish-white base with delicate, cloud-like veining that adds depth and movement. Its airy elegance brings a refined, marble-look finish to both modern and traditional spaces.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

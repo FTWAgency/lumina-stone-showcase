@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Search, LocateFixed, ChevronDown, Calendar, Package, Navigation as NavigationIcon } from "lucide-react";
+import DealerMap from "@/components/DealerMap";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -252,55 +253,14 @@ const FindDealer = () => {
       <section className="pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Map Placeholder */}
+            {/* Map */}
             <div className="order-2 lg:order-1">
-              <div className="sticky top-28 bg-secondary/20 rounded-2xl border border-border/20 overflow-hidden h-[500px] lg:h-[calc(100vh-220px)]">
-                <div className="w-full h-full relative bg-[hsl(var(--slate-blue))]/30">
-                  {/* Grid pattern overlay */}
-                  <div 
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                      backgroundImage: `
-                        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-                      `,
-                      backgroundSize: "40px 40px",
-                    }}
-                  />
-                  
-                  {/* Dealer pins */}
-                  {dealers.map((dealer, index) => (
-                    <button
-                      key={dealer.id}
-                      onClick={() => setSelectedDealer(dealer.id)}
-                      className={`absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
-                        selectedDealer === dealer.id ? "scale-125 z-10" : "hover:scale-110"
-                      }`}
-                      style={{
-                        left: `${20 + (index * 15)}%`,
-                        top: `${25 + (index * 12)}%`,
-                      }}
-                    >
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center shadow-lg ${
-                        selectedDealer === dealer.id 
-                          ? "bg-accent text-background" 
-                          : "bg-[hsl(var(--warm-gold))] text-background"
-                      }`}>
-                        <MapPin className="w-5 h-5" />
-                      </div>
-                      {selectedDealer === dealer.id && (
-                        <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-background/95 backdrop-blur-sm px-3 py-2 rounded-lg whitespace-nowrap shadow-xl border border-border/20">
-                          <p className="font-display text-sm text-foreground">{dealer.name}</p>
-                        </div>
-                      )}
-                    </button>
-                  ))}
-
-                  {/* Map attribution placeholder */}
-                  <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg">
-                    <p className="font-body text-xs text-foreground/50">Interactive map • West Coast Region</p>
-                  </div>
-                </div>
+              <div className="sticky top-28 rounded-2xl border border-border/20 overflow-hidden h-[500px] lg:h-[calc(100vh-220px)]">
+                <DealerMap
+                  dealers={dealers}
+                  selectedDealer={selectedDealer}
+                  onDealerSelect={setSelectedDealer}
+                />
               </div>
             </div>
 

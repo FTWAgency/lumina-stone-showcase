@@ -95,7 +95,7 @@ const DealerMap = ({ dealers, selectedDealer, onDealerSelect }: DealerMapProps) 
         </div>
       `);
 
-      const marker = new mapboxgl.Marker(el)
+      const marker = new mapboxgl.Marker({ element: el, anchor: 'center' })
         .setLngLat([dealer.lng, dealer.lat])
         .setPopup(popup)
         .addTo(map.current!);

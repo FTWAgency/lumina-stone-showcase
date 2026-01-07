@@ -74,6 +74,19 @@ const slabOptions = [
 
 type FormType = "sample" | "visit";
 
+// Calculate distance between two coordinates using Haversine formula
+const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number): number => {
+  const R = 3959; // Earth's radius in miles
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLng = (lng2 - lng1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+    Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+};
+
 const FindDealer = () => {
   const { toast } = useToast();
   const [searchQuery, setSearchQuery] = useState("");
@@ -81,6 +94,7 @@ const FindDealer = () => {
   const [selectedDealer, setSelectedDealer] = useState<number | null>(null);
   const [isSearching, setIsSearching] = useState(false);
   const [showRadiusDropdown, setShowRadiusDropdown] = useState(false);
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -99,6 +113,19 @@ const FindDealer = () => {
     message: "",
   });
 
+  // Calculate distances for dealers based on user location
+  const dealersWithDistance = dealers.map(dealer => ({
+    ...dealer,
+    distance: userLocation
+      ? Math.round(calculateDistance(userLocation.lat, userLocation.lng, dealer.lat, dealer.lng) * 10) / 10
+      : null
+  })).sort((a, b) => {
+    if (a.distance === null && b.distance === null) return 0;
+    if (a.distance === null) return 1;
+    if (b.distance === null) return -1;
+    return a.distance - b.distance;
+  });
+
   const handleSearch = () => {
     setIsSearching(true);
     setTimeout(() => setIsSearching(false), 800);
@@ -107,11 +134,24 @@ const FindDealer = () => {
   const handleUseLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        () => {
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          });
           setSearchQuery("Current Location");
+          toast({
+            title: "Location found",
+            description: "Showing distances from your current location.",
+          });
         },
         (error) => {
           console.error("Geolocation error:", error);
+          toast({
+            title: "Location access denied",
+            description: "Please enable location access to see distances.",
+            variant: "destructive",
+          });
         }
       );
     }
@@ -276,7 +316,7 @@ const FindDealer = () => {
               </div>
 
               <div className="space-y-4 max-h-[calc(100vh-300px)] overflow-y-auto pr-2 scrollbar-thin">
-                {dealers.map((dealer) => (
+                {dealersWithDistance.map((dealer) => (
                   <div
                     key={dealer.id}
                     onClick={() => setSelectedDealer(dealer.id)}
@@ -295,7 +335,7 @@ const FindDealer = () => {
                         </p>
                       </div>
                       <span className="font-body text-sm text-accent bg-accent/10 px-3 py-1 rounded-full shrink-0 ml-3">
-                        {dealer.distance} mi
+                        {dealer.distance !== null ? `${dealer.distance} mi` : "-- mi"}
                       </span>
                     </div>
 
@@ -347,7 +387,7 @@ const FindDealer = () => {
               </div>
 
               {/* No Results Fallback */}
-              {dealers.length === 0 && (
+              {dealersWithDistance.length === 0 && (
                 <div className="text-center py-16 bg-secondary/20 rounded-2xl border border-border/20">
                   <MapPin className="w-12 h-12 text-foreground/30 mx-auto mb-4" />
                   <h3 className="font-display text-xl text-foreground mb-2">No Dealers Found</h3>

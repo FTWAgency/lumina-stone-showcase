@@ -87,7 +87,7 @@ const DealerUserDashboard = ({ role }: DealerUserDashboardProps) => {
         <CardContent className="space-y-2">
           <Button
             variant="outline"
-            className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+            className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
             onClick={() => navigate("/dealer/consignments")}
           >
             View Consignments
@@ -95,7 +95,7 @@ const DealerUserDashboard = ({ role }: DealerUserDashboardProps) => {
           {role === "client_sales_rep" && (
             <Button
               variant="outline"
-              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+              className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               onClick={() => navigate("/dealer/sales")}
             >
               Record Sale

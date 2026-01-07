@@ -485,28 +485,28 @@ const SuperAdminDashboard = () => {
           <CardContent className="space-y-2">
             <Button
               variant="outline"
-              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+              className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               onClick={() => navigate("/dealer/dealers")}
             >
               Manage Dealers
             </Button>
             <Button
               variant="outline"
-              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+              className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               onClick={() => navigate("/dealer/inventory")}
             >
               View Inventory
             </Button>
             <Button
               variant="outline"
-              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+              className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               onClick={() => navigate("/dealer/consignments")}
             >
               Manage Consignments
             </Button>
             <Button
               variant="outline"
-              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
+              className="w-full justify-start bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               onClick={() => navigate("/dealer/invoices")}
             >
               Manage Invoices

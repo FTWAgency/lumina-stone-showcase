@@ -65,9 +65,9 @@ export function DealerSidebar() {
 
   return (
     <Sidebar className={isCollapsed ? "w-16" : "w-64"} collapsible="icon">
-      <SidebarContent className="bg-lumina-surface border-r border-lumina-divider">
+      <SidebarContent className="bg-white border-r border-gray-200">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-lumina-gray px-4 py-3 text-xs font-semibold uppercase tracking-wider">
+          <SidebarGroupLabel className="text-gray-500 px-4 py-3 text-xs font-medium uppercase tracking-wider">
             {isCollapsed ? "" : "Navigation"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -78,10 +78,10 @@ export function DealerSidebar() {
                     <NavLink
                       to={item.url}
                       className={({ isActive }) =>
-                        `flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
+                        `flex items-center gap-3 px-4 py-2.5 rounded-md transition-all ${
                           isActive
-                            ? "bg-lumina-blue/10 text-lumina-blue font-medium border-l-4 border-lumina-blue"
-                            : "hover:bg-lumina-white text-lumina-gray hover:text-lumina-black"
+                            ? "bg-gray-100 text-gray-900 font-medium"
+                            : "hover:bg-gray-50 text-gray-600 hover:text-gray-900"
                         }`
                       }
                     >
@@ -100,10 +100,10 @@ export function DealerSidebar() {
 
         {/* Role Badge */}
         {!isCollapsed && userRole && (
-          <div className="mt-auto p-4 border-t border-lumina-divider">
-            <div className="bg-lumina-white rounded-lg p-3 border border-lumina-divider">
-              <p className="text-xs text-lumina-gray mb-1 uppercase tracking-wider">Your Role</p>
-              <p className="text-sm font-semibold text-lumina-black capitalize">
+          <div className="mt-auto p-4 border-t border-gray-200">
+            <div className="bg-gray-50 rounded-md p-3">
+              <p className="text-xs text-gray-500 mb-1 uppercase tracking-wider">Your Role</p>
+              <p className="text-sm font-medium text-gray-900 capitalize">
                 {userRole.replace(/_/g, " ")}
               </p>
             </div>

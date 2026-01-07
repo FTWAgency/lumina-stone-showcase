@@ -302,41 +302,39 @@ const SuperAdminDashboard = () => {
   };
 
   return (
-    <div className="space-y-8 animate-fade-in-up">
+    <div className="space-y-6">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
-          <h2 className="text-4xl font-serif font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent">
+          <h2 className="text-2xl font-semibold text-gray-900">
             Super Admin Dashboard
           </h2>
-          <p className="text-lumina-gray mt-2">
+          <p className="text-gray-500 mt-1">
             Complete system analytics and dealer performance metrics
           </p>
         </div>
         <Button 
-          variant="lumina" 
-          size="lg"
+          size="default"
           onClick={() => navigate("/dealer/invoices")}
-          className="shadow-premium"
+          className="bg-gray-900 hover:bg-gray-800 text-white"
         >
           View Invoices
         </Button>
       </div>
 
       {/* Filters */}
-      <Card className="bg-lumina-surface border-lumina-divider shadow-card">
-        <CardHeader>
-          <CardTitle className="text-lumina-black font-serif text-xl flex items-center justify-between">
+      <Card className="bg-white border-gray-200 shadow-sm">
+        <CardHeader className="pb-4">
+          <CardTitle className="text-gray-900 font-medium text-lg flex items-center justify-between">
             <span>Filters & Exports</span>
             <div className="flex items-center space-x-2">
               <Switch 
                 id="demo-mode" 
                 checked={demoMode} 
                 onCheckedChange={handleToggleDemoData}
-                className={demoMode ? 'animate-pulse-glow' : ''}
               />
-              <Label htmlFor="demo-mode" className="flex items-center gap-2 text-lumina-gray text-sm">
-                <Database className="h-4 w-4 text-lumina-blue" />
+              <Label htmlFor="demo-mode" className="flex items-center gap-2 text-gray-600 text-sm">
+                <Database className="h-4 w-4" />
                 Demo Data
               </Label>
             </div>
@@ -345,13 +343,13 @@ const SuperAdminDashboard = () => {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <Label className="text-sm text-lumina-gray mb-2 block uppercase tracking-wide">Date Range</Label>
+              <Label className="text-sm text-gray-500 mb-2 block">Date Range</Label>
               <DateRangePicker date={dateRange} onDateChange={setDateRange} />
             </div>
             <div>
-              <Label className="text-sm text-lumina-gray mb-2 block uppercase tracking-wide">Dealer Filter</Label>
+              <Label className="text-sm text-gray-500 mb-2 block">Dealer Filter</Label>
               <Select value={selectedDealer} onValueChange={setSelectedDealer}>
-                <SelectTrigger className="bg-lumina-surface border-lumina-divider text-lumina-black">
+                <SelectTrigger className="bg-white border-gray-200 text-gray-900">
                   <SelectValue placeholder="All Dealers" />
                 </SelectTrigger>
                 <SelectContent>
@@ -365,31 +363,31 @@ const SuperAdminDashboard = () => {
               </Select>
             </div>
             <div>
-              <Label className="text-sm text-lumina-gray mb-2 block uppercase tracking-wide">Export Data</Label>
+              <Label className="text-sm text-gray-500 mb-2 block">Export Data</Label>
               <div className="flex gap-2">
                 <Button
-                  variant="lumina-secondary"
+                  variant="outline"
                   size="sm"
                   onClick={handleExportConsignments}
-                  className="flex-1"
+                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Consignments
                 </Button>
                 <Button
-                  variant="lumina-secondary"
+                  variant="outline"
                   size="sm"
                   onClick={handleExportInvoices}
-                  className="flex-1"
+                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Invoices
                 </Button>
                 <Button
-                  variant="lumina-secondary"
+                  variant="outline"
                   size="sm"
                   onClick={handleExportSales}
-                  className="flex-1"
+                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Sales
@@ -400,72 +398,72 @@ const SuperAdminDashboard = () => {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
+            <CardTitle className="text-sm font-medium text-gray-500">
               Total Consignment Value
             </CardTitle>
-            <DollarSign className="h-5 w-5 text-lumina-gold" />
+            <DollarSign className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent animate-count-up">
+            <div className="text-2xl font-semibold text-gray-900">
               ${stats.totalValue.toLocaleString()}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '50ms' }}>
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
+            <CardTitle className="text-sm font-medium text-gray-500">
               Total Sales
             </CardTitle>
-            <TrendingUp className="h-5 w-5 text-lumina-blue" />
+            <TrendingUp className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-blue animate-count-up">
+            <div className="text-2xl font-semibold text-gray-900">
               {stats.totalSales}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
+            <CardTitle className="text-sm font-medium text-gray-500">
               Pieces Assigned
             </CardTitle>
-            <Package className="h-5 w-5 text-lumina-teal" />
+            <Package className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-black animate-count-up">
+            <div className="text-2xl font-semibold text-gray-900">
               {stats.piecesAssigned}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
+            <CardTitle className="text-sm font-medium text-gray-500">
               Total Invoiced
             </CardTitle>
-            <DollarSign className="h-5 w-5 text-lumina-gold" />
+            <DollarSign className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent animate-count-up">
+            <div className="text-2xl font-semibold text-gray-900">
               ${stats.totalInvoiced.toLocaleString()}
             </div>
           </CardContent>
         </Card>
 
-        <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium text-lumina-gray uppercase tracking-wider">
+            <CardTitle className="text-sm font-medium text-gray-500">
               Active Dealers
             </CardTitle>
-            <Users className="h-5 w-5 text-lumina-teal" />
+            <Users className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-lumina-black animate-count-up">
+            <div className="text-2xl font-semibold text-gray-900">
               {topDealers.length}
             </div>
           </CardContent>
@@ -473,42 +471,42 @@ const SuperAdminDashboard = () => {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <DealerLeaderboard data={leaderboardData} />
         <AgedConsignment data={agedConsignmentData} />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <SellThroughRate data={sellThroughData} />
-        <Card className="bg-lumina-card border-lumina-blue/20 shadow-card hover:shadow-blue-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+        <Card className="bg-white border-gray-200 shadow-sm">
           <CardHeader>
-            <CardTitle className="text-gradient-blue-gold font-serif text-2xl">Quick Actions</CardTitle>
+            <CardTitle className="text-gray-900 font-medium text-lg">Quick Actions</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3">
+          <CardContent className="space-y-2">
             <Button
-              variant="lumina"
-              className="w-full"
+              variant="outline"
+              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
               onClick={() => navigate("/dealer/dealers")}
             >
               Manage Dealers
             </Button>
             <Button
-              variant="lumina"
-              className="w-full"
+              variant="outline"
+              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
               onClick={() => navigate("/dealer/inventory")}
             >
               View Inventory
             </Button>
             <Button
-              variant="lumina"
-              className="w-full"
+              variant="outline"
+              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
               onClick={() => navigate("/dealer/consignments")}
             >
               Manage Consignments
             </Button>
             <Button
-              variant="lumina"
-              className="w-full"
+              variant="outline"
+              className="w-full justify-start border-gray-200 text-gray-700 hover:bg-gray-50"
               onClick={() => navigate("/dealer/invoices")}
             >
               Manage Invoices

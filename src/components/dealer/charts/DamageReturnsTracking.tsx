@@ -15,49 +15,49 @@ interface DamageReturnsTrackingProps {
 
 const DamageReturnsTracking = ({ data }: DamageReturnsTrackingProps) => {
   return (
-    <Card className="bg-lumina-surface border-lumina-divider shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+    <Card className="bg-white border-gray-200 shadow-sm">
       <CardHeader>
-        <CardTitle className="bg-gradient-to-r from-lumina-gold to-lumina-teal bg-clip-text text-transparent font-serif text-2xl">
+        <CardTitle className="text-gray-900 font-medium text-lg">
           Damage & Returns Tracking
         </CardTitle>
       </CardHeader>
       <CardContent>
         {data.length === 0 ? (
-          <p className="text-lumina-gray text-center py-8">No damage or returns recorded</p>
+          <p className="text-gray-500 text-center py-8">No damage or returns recorded</p>
         ) : (
           <div className="overflow-x-auto">
             <Table>
               <TableHeader>
-                <TableRow className="border-lumina-divider hover:bg-lumina-white/50">
-                  <TableHead className="text-lumina-gray font-semibold uppercase text-xs tracking-wider">Item</TableHead>
-                  <TableHead className="text-lumina-gray font-semibold uppercase text-xs tracking-wider">Dealer</TableHead>
-                  <TableHead className="text-lumina-gray font-semibold uppercase text-xs tracking-wider">Quantity</TableHead>
-                  <TableHead className="text-lumina-gray font-semibold uppercase text-xs tracking-wider">Status</TableHead>
-                  <TableHead className="text-lumina-gray font-semibold uppercase text-xs tracking-wider">Date</TableHead>
+                <TableRow className="border-gray-200">
+                  <TableHead className="text-gray-500 font-medium text-xs">Item</TableHead>
+                  <TableHead className="text-gray-500 font-medium text-xs">Dealer</TableHead>
+                  <TableHead className="text-gray-500 font-medium text-xs">Quantity</TableHead>
+                  <TableHead className="text-gray-500 font-medium text-xs">Status</TableHead>
+                  <TableHead className="text-gray-500 font-medium text-xs">Date</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {data.map((item, index) => (
+                {data.map((item) => (
                   <TableRow 
                     key={item.id}
-                    className="border-lumina-divider hover:bg-lumina-white/50 transition-colors animate-fade-in-up"
-                    style={{ animationDelay: `${index * 50}ms` }}
+                    className="border-gray-100 hover:bg-gray-50"
                   >
-                    <TableCell className="font-medium text-lumina-black">{item.item}</TableCell>
-                    <TableCell className="text-lumina-gray">{item.dealer}</TableCell>
-                    <TableCell className="text-lumina-black">{item.quantity}</TableCell>
+                    <TableCell className="font-medium text-gray-900">{item.item}</TableCell>
+                    <TableCell className="text-gray-600">{item.dealer}</TableCell>
+                    <TableCell className="text-gray-900">{item.quantity}</TableCell>
                     <TableCell>
                       <Badge 
+                        variant="outline"
                         className={
                           item.status === "damaged" 
-                            ? "bg-lumina-red/10 text-lumina-red border-lumina-red/30" 
-                            : "bg-lumina-blue/10 text-lumina-blue border-lumina-blue/30"
+                            ? "border-red-200 text-red-700 bg-red-50" 
+                            : "border-gray-200 text-gray-700 bg-gray-50"
                         }
                       >
                         {item.status}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-lumina-gray">{new Date(item.date).toLocaleDateString()}</TableCell>
+                    <TableCell className="text-gray-600">{new Date(item.date).toLocaleDateString()}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

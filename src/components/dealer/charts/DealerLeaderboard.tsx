@@ -42,7 +42,7 @@ const DealerLeaderboard = ({ data }: DealerLeaderboardProps) => {
                 }}
                 formatter={(value: any) => [`$${value.toLocaleString()}`, "Total Invoiced"]}
               />
-              <Bar dataKey="totalInvoiced" radius={[0, 4, 4, 0]} fill="#6b7280" />
+              <Bar dataKey="totalInvoiced" radius={[0, 4, 4, 0]} fill="#3b82f6" />
             </BarChart>
           </ResponsiveContainer>
         )}

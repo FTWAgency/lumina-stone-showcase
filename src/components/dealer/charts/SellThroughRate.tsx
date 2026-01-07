@@ -12,9 +12,9 @@ const SellThroughRate = ({ data }: SellThroughRateProps) => {
   const sortedData = [...data].sort((a, b) => b.rate - a.rate);
 
   const getColor = (rate: number) => {
-    if (rate >= 80) return "#374151";
-    if (rate >= 50) return "#6b7280";
-    return "#9ca3af";
+    if (rate >= 80) return "#22c55e"; // Green - excellent
+    if (rate >= 50) return "#3b82f6"; // Blue - good
+    return "#f59e0b"; // Amber - needs attention
   };
 
   return (

@@ -223,8 +223,8 @@ export const slabs: Slab[] = [
     ],
   },
   {
-    id: "imperial-danby",
-    name: "Imperial Danby",
+    id: "danby",
+    name: "Danby",
     description: "Refined white with gray veining",
     image: imperialDanbyKitchen,
     images: [
@@ -235,7 +235,7 @@ export const slabs: Slab[] = [
     ],
     colorFamily: "White",
     style: "Veined",
-    details: "Imperial Danby features a refined white background accented with subtle gray veining, capturing the elegance of classic marble. Its soft movement and timeless look make it a versatile choice for luxurious interiors.",
+    details: "Danby features a refined white background accented with subtle gray veining, capturing the elegance of classic marble. Its soft movement and timeless look make it a versatile choice for luxurious interiors.",
     applications: [
       { name: "Kitchen Countertops", icon: "kitchen" },
       { name: "Bathroom Vanities", icon: "bath" },

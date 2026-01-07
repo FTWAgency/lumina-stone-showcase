@@ -404,7 +404,7 @@ const SuperAdminDashboard = () => {
             <CardTitle className="text-sm font-medium text-gray-500">
               Total Consignment Value
             </CardTitle>
-            <DollarSign className="h-4 w-4 text-gray-400" />
+            <DollarSign className="h-4 w-4 text-emerald-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-semibold text-gray-900">
@@ -418,7 +418,7 @@ const SuperAdminDashboard = () => {
             <CardTitle className="text-sm font-medium text-gray-500">
               Total Sales
             </CardTitle>
-            <TrendingUp className="h-4 w-4 text-gray-400" />
+            <TrendingUp className="h-4 w-4 text-blue-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-semibold text-gray-900">
@@ -432,7 +432,7 @@ const SuperAdminDashboard = () => {
             <CardTitle className="text-sm font-medium text-gray-500">
               Pieces Assigned
             </CardTitle>
-            <Package className="h-4 w-4 text-gray-400" />
+            <Package className="h-4 w-4 text-violet-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-semibold text-gray-900">
@@ -446,7 +446,7 @@ const SuperAdminDashboard = () => {
             <CardTitle className="text-sm font-medium text-gray-500">
               Total Invoiced
             </CardTitle>
-            <DollarSign className="h-4 w-4 text-gray-400" />
+            <DollarSign className="h-4 w-4 text-amber-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-semibold text-gray-900">
@@ -460,7 +460,7 @@ const SuperAdminDashboard = () => {
             <CardTitle className="text-sm font-medium text-gray-500">
               Active Dealers
             </CardTitle>
-            <Users className="h-4 w-4 text-gray-400" />
+            <Users className="h-4 w-4 text-cyan-500" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-semibold text-gray-900">

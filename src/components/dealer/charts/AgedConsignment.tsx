@@ -9,10 +9,10 @@ interface AgedConsignmentProps {
 }
 
 const COLORS = {
-  "0-30 days": "#9ca3af",
-  "31-60 days": "#6b7280",
-  "61-90 days": "#4b5563",
-  "90+ days": "#374151",
+  "0-30 days": "#22c55e",   // Green - healthy
+  "31-60 days": "#3b82f6",  // Blue
+  "61-90 days": "#f59e0b",  // Amber - warning
+  "90+ days": "#ef4444",    // Red - critical
 };
 
 const AgedConsignment = ({ data }: AgedConsignmentProps) => {

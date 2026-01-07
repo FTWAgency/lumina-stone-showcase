@@ -369,7 +369,7 @@ const SuperAdminDashboard = () => {
                   variant="outline"
                   size="sm"
                   onClick={handleExportConsignments}
-                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
+                  className="flex-1 bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Consignments
@@ -378,7 +378,7 @@ const SuperAdminDashboard = () => {
                   variant="outline"
                   size="sm"
                   onClick={handleExportInvoices}
-                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
+                  className="flex-1 bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Invoices
@@ -387,7 +387,7 @@ const SuperAdminDashboard = () => {
                   variant="outline"
                   size="sm"
                   onClick={handleExportSales}
-                  className="flex-1 border-gray-200 text-gray-700 hover:bg-gray-50"
+                  className="flex-1 bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
                 >
                   <Download className="h-4 w-4 mr-1" />
                   Sales

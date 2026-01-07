@@ -25,8 +25,8 @@ export function DateRangePicker({ date, onDateChange }: DateRangePickerProps) {
             id="date"
             variant="outline"
             className={cn(
-              "justify-start text-left font-normal",
-              !date && "text-muted-foreground"
+              "justify-start text-left font-normal bg-white border-gray-200 text-gray-700 hover:bg-gray-100",
+              !date && "text-gray-500"
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />

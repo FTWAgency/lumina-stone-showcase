@@ -53,6 +53,7 @@ import prestigeSlab from "@/assets/prestige-slab.jpg";
 import natureSandKitchen from "@/assets/nature-sand-kitchen.png";
 import natureSandSlab from "@/assets/nature-sand-slab.jpg";
 import natureSandCloseup from "@/assets/nature-sand-closeup.jpg";
+import radianceCountertop from "@/assets/radiance-countertop.png";
 import { Button } from "@/components/ui/button";
 import ImageCarousel from "@/components/ImageCarousel";
 import {
@@ -846,10 +847,11 @@ const Collection = () => {
 
       {/* Bottom CTA Section */}
       <section className="py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--deep-alpine))] via-secondary/10 to-[hsl(var(--deep-alpine))]" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/4762d9ed-200e-4b28-86d9-8d1cd2c426df.png')] bg-cover bg-center blur-2xl" />
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${radianceCountertop})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/90" />
         
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="font-display text-4xl lg:text-5xl font-medium text-foreground mb-6">

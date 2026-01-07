@@ -131,7 +131,7 @@ export const slabs: Slab[] = [
     ],
     colorFamily: "White",
     style: "Veined",
-    details: "Inspired by the opulent marble of the Taj Mahal, Cashmere Taj features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur. The warm undertones create an inviting atmosphere while maintaining a sense of refined luxury.",
+    details: "Inspired by the opulent marble of the Taj Mahal, this design features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur. The warm undertones create an inviting atmosphere while maintaining a sense of refined luxury.",
     applications: [
       { name: "Kitchen Islands", icon: "kitchen" },
       { name: "Fireplace Surrounds", icon: "fireplace" },

@@ -68,8 +68,8 @@ const designs: Design[] = [
     ],
   },
   { 
-    id: "cashmere-taj",
-    name: "Cashmere Taj", 
+    id: "taj-mahal",
+    name: "Taj Mahal", 
     pattern: "Creamy layered veins",
     image: cashmereTajKitchen,
     images: [
@@ -79,7 +79,7 @@ const designs: Design[] = [
     ],
     colorFamily: "White",
     style: "Veined",
-    details: "Inspired by the opulent marble of the Taj Mahal, Cashmere Taj features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur.",
+    details: "Inspired by the opulent marble of the Taj Mahal, this design features creamy ivory tones with subtle golden veining. Each slab tells a story of timeless elegance and architectural grandeur.",
     applications: [
       { name: "Kitchen Islands", icon: "kitchen" },
       { name: "Fireplace Surrounds", icon: "fireplace" },

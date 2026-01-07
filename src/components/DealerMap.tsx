@@ -61,7 +61,6 @@ const DealerMap = ({ dealers, selectedDealer, onDealerSelect }: DealerMapProps) 
         justify-content: center;
         cursor: pointer;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
         border: 2px solid rgba(255, 255, 255, 0.2);
       `;
       el.innerHTML = `
@@ -71,14 +70,6 @@ const DealerMap = ({ dealers, selectedDealer, onDealerSelect }: DealerMapProps) 
         </svg>
       `;
 
-      el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.15)';
-        el.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.4)';
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)';
-        el.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
-      });
       el.addEventListener('click', () => {
         onDealerSelect(dealer.id);
       });

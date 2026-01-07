@@ -860,7 +860,7 @@ const Collection = () => {
           <p className="font-body text-xl text-foreground/70 mb-10 leading-relaxed">
             See it in person at a Lumina showroom near you.
           </p>
-          <Link to="/find-dealer">
+          <Link to="/find-a-dealer">
             <Button variant="premium" size="hero" className="gap-2">
               <MapPin className="w-5 h-5" />
               Find a Dealer

@@ -2,23 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gotti VF Font Family */
-@font-face {
-  font-family: 'Gotti';
-  src: url('/fonts/Gotti-ExtraLight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gotti';
-  src: url('/fonts/Gotti-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Gotti Font Family - Used weights only */
 @font-face {
   font-family: 'Gotti';
   src: url('/fonts/Gotti-Regular.otf') format('opentype');
@@ -47,22 +31,6 @@
   font-family: 'Gotti';
   src: url('/fonts/Gotti-Bold.otf') format('opentype');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gotti';
-  src: url('/fonts/Gotti-ExtraBold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gotti';
-  src: url('/fonts/Gotti-Black.otf') format('opentype');
-  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
